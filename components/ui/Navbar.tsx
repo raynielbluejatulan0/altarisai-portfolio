@@ -24,10 +24,10 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <a href="#hero" className="flex items-center gap-2.5">
-            <span className="w-7 h-7 rounded-md bg-white/[0.06] border border-white/[0.12] flex items-center justify-center shrink-0">
-              <span className="text-[10px] font-bold text-white tracking-tight leading-none">RBJ</span>
+            <span className="w-7 h-7 rounded-md bg-primary/10 border border-primary/50 flex items-center justify-center shrink-0">
+              <span className="text-[10px] font-bold text-primary tracking-tight leading-none">RBJ</span>
             </span>
-            <span className="font-bold text-lg text-white">Rayniel Blue Jatulan</span>
+            <span className="font-bold text-lg text-primary underline underline-offset-2">Rayniel Blue Jatulan</span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
