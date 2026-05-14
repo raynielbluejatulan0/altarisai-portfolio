@@ -1,7 +1,9 @@
 import { HeroSection } from "@/components/sections/HeroSection";
 import { AboutSection } from "@/components/sections/AboutSection";
+import { MarketingStudioSection } from "@/components/sections/MarketingStudioSection";
 import { ImageGallerySection } from "@/components/sections/ImageGallerySection";
-import { VideoShowcaseSection } from "@/components/sections/VideoShowcaseSection";
+import { CinematicSection } from "@/components/sections/CinematicSection";
+import { AnimationSection } from "@/components/sections/AnimationSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { ToolsSection } from "@/components/sections/ToolsSection";
 import { ProcessSection } from "@/components/sections/ProcessSection";
@@ -12,8 +14,10 @@ export default function Home() {
     <>
       <HeroSection />
       <AboutSection />
+      <MarketingStudioSection />
       <ImageGallerySection />
-      <VideoShowcaseSection />
+      <CinematicSection />
+      <AnimationSection />
       <ServicesSection />
       <ToolsSection />
       <ProcessSection />
