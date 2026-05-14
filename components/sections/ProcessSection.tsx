@@ -27,11 +27,11 @@ export function ProcessSection() {
           <motion.div key={step.step} variants={fadeInUp} className="relative">
             {/* Connector line */}
             {i < PROCESS_STEPS.length - 1 && (
-              <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-primary/30 to-transparent z-0" />
+              <div className="hidden lg:block absolute top-8 left-full w-full h-px bg-gradient-to-r from-white/10 to-transparent z-0" />
             )}
             <div className="glow-card rounded-2xl p-6 relative z-10">
-              <div className="w-12 h-12 rounded-full bg-primary/10 border border-primary/30 flex items-center justify-center mb-4">
-                <span className="text-primary font-bold text-sm">{step.step}</span>
+              <div className="w-12 h-12 rounded-full bg-white/[0.05] border border-white/[0.10] flex items-center justify-center mb-4">
+                <span className="text-white/60 font-bold text-sm">{step.step}</span>
               </div>
               <h3 className="font-bold text-foreground mb-2">{step.title}</h3>
               <p className="text-foreground-muted text-sm leading-relaxed">{step.description}</p>

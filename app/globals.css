@@ -34,8 +34,8 @@
 
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: #0A0714; }
-  ::-webkit-scrollbar-thumb { background: rgba(168, 85, 247, 0.25); border-radius: 9999px; }
-  ::-webkit-scrollbar-thumb:hover { background: rgba(168, 85, 247, 0.45); }
+  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.12); border-radius: 9999px; }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.22); }
 }
 
 @layer components {

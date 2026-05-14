@@ -35,12 +35,12 @@ const config: Config = {
           800: "#9D174D",
           900: "#831843",
         },
-        background: "#0A0714",
+        background: "#080808",
         surface: {
-          DEFAULT: "#0D0A1A",
-          50: "#141028",
-          100: "#110E24",
-          200: "#0F0C20",
+          DEFAULT: "#141414",
+          50: "#1C1C1C",
+          100: "#181818",
+          200: "#161616",
         },
         foreground: {
           DEFAULT: "#E0E0E0",
@@ -101,8 +101,8 @@ const config: Config = {
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-glow": "radial-gradient(ellipse at top, rgba(168, 85, 247, 0.12) 0%, transparent 60%)",
-        "card-gradient": "linear-gradient(135deg, rgba(168, 85, 247, 0.05) 0%, transparent 100%)",
+        "hero-glow": "radial-gradient(ellipse at top, rgba(255, 255, 255, 0.015) 0%, transparent 60%)",
+        "card-gradient": "linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%)",
       },
       maxWidth: {
         "8xl": "88rem",

@@ -31,10 +31,10 @@ export function ServicesSection() {
         {CONTENT_TYPES.map((type) => {
           const Icon = iconMap[type.icon];
           return (
-            <motion.div key={type.title} variants={fadeInUp} className="glow-card rounded-2xl p-6 hover:border-primary/30 transition-all duration-300">
+            <motion.div key={type.title} variants={fadeInUp} className="glow-card rounded-2xl p-6 transition-all duration-300">
               {Icon && (
-                <div className="w-12 h-12 rounded-xl bg-primary/10 border border-primary/20 flex items-center justify-center mb-4">
-                  <Icon size={22} className="text-primary" />
+                <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/[0.08] flex items-center justify-center mb-4">
+                  <Icon size={22} className="text-white/50" />
                 </div>
               )}
               <h3 className="font-bold text-foreground text-lg mb-2">{type.title}</h3>

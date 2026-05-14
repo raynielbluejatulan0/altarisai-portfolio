@@ -12,9 +12,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles = {
-  primary: "bg-primary hover:bg-primary-600 text-black font-semibold shadow-glow-sm hover:shadow-glow-md",
-  secondary: "bg-secondary/10 text-secondary border border-secondary/20 hover:bg-secondary/20 hover:border-secondary/40",
-  outline: "bg-transparent text-foreground border border-white/10 hover:border-primary/40 hover:bg-white/5",
+  primary: "bg-white hover:bg-white/90 text-black font-semibold",
+  secondary: "bg-white/[0.06] text-white border border-white/10 hover:bg-white/[0.10] hover:border-white/20",
+  outline: "bg-transparent text-white border border-white/20 hover:border-white/40 hover:bg-white/[0.05]",
   ghost: "bg-transparent text-foreground-muted hover:text-foreground hover:bg-white/5",
 };
 
@@ -25,9 +25,9 @@ const sizeStyles = {
 };
 
 const hoverVariants = {
-  primary: { scale: 1.04, boxShadow: "0 0 35px rgba(168, 85, 247, 0.45)", transition: { ...ease.spring } },
-  secondary: { scale: 1.04, boxShadow: "0 0 25px rgba(236, 72, 153, 0.25)", transition: { ...ease.spring } },
-  outline: { scale: 1.03, borderColor: "rgba(168, 85, 247, 0.5)", transition: { ...ease.spring } },
+  primary: { scale: 1.04, transition: { ...ease.spring } },
+  secondary: { scale: 1.04, transition: { ...ease.spring } },
+  outline: { scale: 1.03, transition: { ...ease.spring } },
   ghost: { scale: 1.03, transition: { ...ease.spring } },
 };
 

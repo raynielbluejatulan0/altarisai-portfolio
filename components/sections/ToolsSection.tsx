@@ -6,12 +6,12 @@ import { SectionContainer } from "@/components/ui/SectionContainer";
 import { TOOLS_USED } from "@/lib/constants";
 
 const CATEGORY_COLORS: Record<string, string> = {
-  Image: "bg-primary/10 text-primary border-primary/20",
-  Video: "bg-secondary/10 text-secondary border-secondary/20",
-  Audio: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20",
-  Avatar: "bg-amber-500/10 text-amber-400 border-amber-500/20",
-  Editing: "bg-blue-500/10 text-blue-400 border-blue-500/20",
-  Design: "bg-rose-500/10 text-rose-400 border-rose-500/20",
+  Image: "bg-white/[0.04] text-white/60 border-white/[0.08]",
+  Video: "bg-white/[0.04] text-white/60 border-white/[0.08]",
+  Audio: "bg-white/[0.04] text-white/60 border-white/[0.08]",
+  Avatar: "bg-white/[0.04] text-white/60 border-white/[0.08]",
+  Editing: "bg-white/[0.04] text-white/60 border-white/[0.08]",
+  Design: "bg-white/[0.04] text-white/60 border-white/[0.08]",
 };
 
 export function ToolsSection() {
