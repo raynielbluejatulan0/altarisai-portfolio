@@ -8,6 +8,7 @@ import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Button } from "@/components/ui/Button";
 import {
   MARKETING_VIDEOS,
+  MARKETING_VIDEOS_MIXED,
   MARKETING_VIDEO_CATEGORIES,
   type MarketingVideo,
 } from "@/lib/constants";
@@ -132,7 +133,7 @@ export function MarketingStudioSection() {
 
   const filtered =
     active === "All"
-      ? MARKETING_VIDEOS
+      ? MARKETING_VIDEOS_MIXED
       : MARKETING_VIDEOS.filter((v) => v.category === active);
 
   const scrollAutoplay = active !== "All";

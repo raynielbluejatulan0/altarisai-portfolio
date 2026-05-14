@@ -151,6 +151,29 @@ export type MarketingVideo = {
   category: MarketingVideoCategory;
 };
 
+// Round-robin interleave by category — computed once at module load, never reshuffled
+function interleaveByCategory<T extends { category: string }>(items: T[]): T[] {
+  const groups = new Map<string, T[]>();
+  for (const item of items) {
+    if (!groups.has(item.category)) groups.set(item.category, []);
+    groups.get(item.category)!.push(item);
+  }
+  const buckets = [...groups.values()];
+  const indices = new Array(buckets.length).fill(0);
+  const result: T[] = [];
+  let added = true;
+  while (added) {
+    added = false;
+    for (let b = 0; b < buckets.length; b++) {
+      if (indices[b] < buckets[b].length) {
+        result.push(buckets[b][indices[b]++]);
+        added = true;
+      }
+    }
+  }
+  return result;
+}
+
 export const MARKETING_VIDEO_CATEGORIES: MarketingVideoCategory[] = [
   "UGC",
   "Tryons",
@@ -221,3 +244,6 @@ export const MARKETING_VIDEOS: MarketingVideo[] = [
   { src: "/videos/setting-tiny_reviewer-1.mp4", title: "Tiny Reviewer", category: "Unrealistic Scene" },
   { src: "/videos/setting-train_surf-1.mp4",    title: "Train Surf",    category: "Unrealistic Scene" },
 ];
+
+// Fixed interleaved order for "All" view — mixes categories, never changes on refresh
+export const MARKETING_VIDEOS_MIXED = interleaveByCategory(MARKETING_VIDEOS);
