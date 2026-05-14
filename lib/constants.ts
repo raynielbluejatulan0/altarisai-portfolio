@@ -136,69 +136,88 @@ export const VIDEO_GALLERY: { src: string; poster: string; title: string; catego
 
 // ─── Marketing Studio Videos ──────────────────────────────────────────────────
 
+export type MarketingVideoCategory =
+  | "UGC"
+  | "Tryons"
+  | "Hypermotion"
+  | "Commercial"
+  | "Hooks"
+  | "Realistic Scene"
+  | "Unrealistic Scene";
+
 export type MarketingVideo = {
   src: string;
   title: string;
-  chapter: "Format" | "Hook" | "Setting";
-  subcategory: "UGC" | "Commercial" | "Stunt" | "Subtle" | "Realistic" | "Unrealistic";
+  category: MarketingVideoCategory;
 };
 
+export const MARKETING_VIDEO_CATEGORIES: MarketingVideoCategory[] = [
+  "UGC",
+  "Tryons",
+  "Hypermotion",
+  "Commercial",
+  "Hooks",
+  "Realistic Scene",
+  "Unrealistic Scene",
+];
+
 export const MARKETING_VIDEOS: MarketingVideo[] = [
-  // ── Formats: UGC ──────────────────────────────────────────────────────────
-  { src: "/videos/format-ugc-1.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-ugc-2.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-ugc-3.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-ugc-4.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-ugc-5.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-ugc-6.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-ugc-7.mp4", title: "UGC", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-tutorial-1.mp4", title: "Tutorial", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-tutorial-2.mp4", title: "Tutorial", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-unboxing-1.mp4", title: "Unboxing", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-unboxing-2.mp4", title: "Unboxing", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-unboxing-3.mp4", title: "Unboxing", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-unboxing-4.mp4", title: "Unboxing", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-unboxing-5.mp4", title: "Unboxing", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-virtual-tryon-1.mp4", title: "Virtual Try On", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-virtual-tryon-2.mp4", title: "Virtual Try On", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-virtual-tryon-3.mp4", title: "Virtual Try On", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-virtual-tryon-4.mp4", title: "Virtual Try On", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-virtual-tryon-5.mp4", title: "Virtual Try On", chapter: "Format", subcategory: "UGC" },
-  { src: "/videos/format-virtual-tryon-6.mp4", title: "Virtual Try On", chapter: "Format", subcategory: "UGC" },
-  // ── Formats: Commercial ───────────────────────────────────────────────────
-  { src: "/videos/format-hyper-motion-1.mp4", title: "Hyper Motion", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-hyper-motion-2.mp4", title: "Hyper Motion", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-hyper-motion-3.mp4", title: "Hyper Motion", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-hyper-motion-4.mp4", title: "Hyper Motion", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-tv-spot-1.mp4", title: "TV Spot", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-tv-spot-2.mp4", title: "TV Spot", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-wild-card-1.mp4", title: "Wild Card", chapter: "Format", subcategory: "Commercial" },
-  { src: "/videos/format-pro-tryon-1.mp4", title: "Pro Try On", chapter: "Format", subcategory: "Commercial" },
-  // ── Hooks: Stunt ──────────────────────────────────────────────────────────
-  { src: "/videos/hooks_product_hit-1.mp4", title: "Product Hit", chapter: "Hook", subcategory: "Stunt" },
-  { src: "/videos/hooks_random_object_mic-1.mp4", title: "Random Object Mic", chapter: "Hook", subcategory: "Stunt" },
-  { src: "/videos/hooks_blizzard-1.mp4", title: "Blizzard", chapter: "Hook", subcategory: "Stunt" },
-  { src: "/videos/hooks_product_crash-1.mp4", title: "Product Crash", chapter: "Hook", subcategory: "Stunt" },
-  { src: "/videos/hooks_product_dodge-1.mp4", title: "Product Dodge", chapter: "Hook", subcategory: "Stunt" },
-  { src: "/videos/hooks_camera_bump-1.mp4", title: "Camera Bump", chapter: "Hook", subcategory: "Stunt" },
-  { src: "/videos/hooks_epic_fail-1.mp4", title: "Epic Fail", chapter: "Hook", subcategory: "Stunt" },
-  // ── Hooks: Subtle ─────────────────────────────────────────────────────────
-  { src: "/videos/hooks_spicy-1.mp4", title: "Spicy", chapter: "Hook", subcategory: "Subtle" },
-  { src: "/videos/hooks_interview-1.mp4", title: "Interview", chapter: "Hook", subcategory: "Subtle" },
-  // ── Settings: Realistic ───────────────────────────────────────────────────
-  { src: "/videos/setting-bedroom-1.mp4", title: "Bedroom", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-nature-1.mp4", title: "Nature", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-gym-1.mp4", title: "Gym", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-bathroom-1.mp4", title: "Bathroom", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-kitchen-1.mp4", title: "Kitchen", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-car_roof-1.mp4", title: "Car Roof", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-in_car-1.mp4", title: "In Car", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-street-1.mp4", title: "Street", chapter: "Setting", subcategory: "Realistic" },
-  { src: "/videos/setting-office-1.mp4", title: "Office", chapter: "Setting", subcategory: "Realistic" },
-  // ── Settings: Unrealistic ─────────────────────────────────────────────────
-  { src: "/videos/setting-airplane_wing-1.mp4", title: "Airplane Wing", chapter: "Setting", subcategory: "Unrealistic" },
-  { src: "/videos/setting-roofing-1.mp4", title: "Roofing", chapter: "Setting", subcategory: "Unrealistic" },
-  { src: "/videos/setting-volcano_rim-1.mp4", title: "Volcano Rim", chapter: "Setting", subcategory: "Unrealistic" },
-  { src: "/videos/setting-tiny_reviewer-1.mp4", title: "Tiny Reviewer", chapter: "Setting", subcategory: "Unrealistic" },
-  { src: "/videos/setting-train_surf-1.mp4", title: "Train Surf", chapter: "Setting", subcategory: "Unrealistic" },
+  // ── UGC ───────────────────────────────────────────────────────────────────
+  { src: "/videos/format-ugc-1.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-ugc-2.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-ugc-3.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-ugc-4.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-ugc-5.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-ugc-6.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-ugc-7.mp4",      title: "UGC",      category: "UGC" },
+  { src: "/videos/format-tutorial-1.mp4", title: "Tutorial", category: "UGC" },
+  { src: "/videos/format-tutorial-2.mp4", title: "Tutorial", category: "UGC" },
+  { src: "/videos/format-unboxing-1.mp4", title: "Unboxing", category: "UGC" },
+  { src: "/videos/format-unboxing-2.mp4", title: "Unboxing", category: "UGC" },
+  { src: "/videos/format-unboxing-3.mp4", title: "Unboxing", category: "UGC" },
+  { src: "/videos/format-unboxing-4.mp4", title: "Unboxing", category: "UGC" },
+  { src: "/videos/format-unboxing-5.mp4", title: "Unboxing", category: "UGC" },
+  // ── Tryons ────────────────────────────────────────────────────────────────
+  { src: "/videos/format-virtual-tryon-1.mp4", title: "Virtual Try On", category: "Tryons" },
+  { src: "/videos/format-virtual-tryon-2.mp4", title: "Virtual Try On", category: "Tryons" },
+  { src: "/videos/format-virtual-tryon-3.mp4", title: "Virtual Try On", category: "Tryons" },
+  { src: "/videos/format-virtual-tryon-4.mp4", title: "Virtual Try On", category: "Tryons" },
+  { src: "/videos/format-virtual-tryon-5.mp4", title: "Virtual Try On", category: "Tryons" },
+  { src: "/videos/format-virtual-tryon-6.mp4", title: "Virtual Try On", category: "Tryons" },
+  { src: "/videos/format-pro-tryon-1.mp4",     title: "Pro Try On",     category: "Tryons" },
+  // ── Hypermotion ───────────────────────────────────────────────────────────
+  { src: "/videos/format-hyper-motion-1.mp4", title: "Hyper Motion", category: "Hypermotion" },
+  { src: "/videos/format-hyper-motion-2.mp4", title: "Hyper Motion", category: "Hypermotion" },
+  { src: "/videos/format-hyper-motion-3.mp4", title: "Hyper Motion", category: "Hypermotion" },
+  { src: "/videos/format-hyper-motion-4.mp4", title: "Hyper Motion", category: "Hypermotion" },
+  // ── Commercial ────────────────────────────────────────────────────────────
+  { src: "/videos/format-tv-spot-1.mp4",   title: "TV Spot",   category: "Commercial" },
+  { src: "/videos/format-tv-spot-2.mp4",   title: "TV Spot",   category: "Commercial" },
+  { src: "/videos/format-wild-card-1.mp4", title: "Wild Card", category: "Commercial" },
+  // ── Hooks ─────────────────────────────────────────────────────────────────
+  { src: "/videos/hooks_product_hit-1.mp4",       title: "Product Hit",       category: "Hooks" },
+  { src: "/videos/hooks_random_object_mic-1.mp4", title: "Random Object Mic", category: "Hooks" },
+  { src: "/videos/hooks_blizzard-1.mp4",          title: "Blizzard",          category: "Hooks" },
+  { src: "/videos/hooks_product_crash-1.mp4",     title: "Product Crash",     category: "Hooks" },
+  { src: "/videos/hooks_product_dodge-1.mp4",     title: "Product Dodge",     category: "Hooks" },
+  { src: "/videos/hooks_camera_bump-1.mp4",       title: "Camera Bump",       category: "Hooks" },
+  { src: "/videos/hooks_epic_fail-1.mp4",         title: "Epic Fail",         category: "Hooks" },
+  { src: "/videos/hooks_spicy-1.mp4",             title: "Spicy",             category: "Hooks" },
+  { src: "/videos/hooks_interview-1.mp4",         title: "Interview",         category: "Hooks" },
+  // ── Realistic Scene ───────────────────────────────────────────────────────
+  { src: "/videos/setting-bedroom-1.mp4",  title: "Bedroom",  category: "Realistic Scene" },
+  { src: "/videos/setting-nature-1.mp4",   title: "Nature",   category: "Realistic Scene" },
+  { src: "/videos/setting-gym-1.mp4",      title: "Gym",      category: "Realistic Scene" },
+  { src: "/videos/setting-bathroom-1.mp4", title: "Bathroom", category: "Realistic Scene" },
+  { src: "/videos/setting-kitchen-1.mp4",  title: "Kitchen",  category: "Realistic Scene" },
+  { src: "/videos/setting-car_roof-1.mp4", title: "Car Roof", category: "Realistic Scene" },
+  { src: "/videos/setting-in_car-1.mp4",   title: "In Car",   category: "Realistic Scene" },
+  { src: "/videos/setting-street-1.mp4",   title: "Street",   category: "Realistic Scene" },
+  { src: "/videos/setting-office-1.mp4",   title: "Office",   category: "Realistic Scene" },
+  // ── Unrealistic Scene ─────────────────────────────────────────────────────
+  { src: "/videos/setting-airplane_wing-1.mp4", title: "Airplane Wing", category: "Unrealistic Scene" },
+  { src: "/videos/setting-roofing-1.mp4",       title: "Roofing",       category: "Unrealistic Scene" },
+  { src: "/videos/setting-volcano_rim-1.mp4",   title: "Volcano Rim",   category: "Unrealistic Scene" },
+  { src: "/videos/setting-tiny_reviewer-1.mp4", title: "Tiny Reviewer", category: "Unrealistic Scene" },
+  { src: "/videos/setting-train_surf-1.mp4",    title: "Train Surf",    category: "Unrealistic Scene" },
 ];
