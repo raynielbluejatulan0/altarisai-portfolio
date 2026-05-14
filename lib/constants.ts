@@ -3,7 +3,7 @@ export const SITE = {
   tagline: "AI Content Creator",
   description:
     "AI Content Creator specializing in AI-generated images, videos, and social media content. Helping brands create stunning visuals at scale. GMT+8.",
-  url: "https://your-domain.com",
+  url: "https://altarisai.online",
 };
 
 export const NAV_LINKS = [
@@ -115,31 +115,43 @@ export const IMPACT_STATS = [
 ];
 
 export const IMAGE_GALLERY: { src: string; alt: string; category: string }[] = [
-  { src: "/images/sample-1.jpg", alt: "AI generated product shot", category: "Product" },
-  { src: "/images/sample-2.jpg", alt: "AI generated concept art", category: "Concept Art" },
-  { src: "/images/sample-3.jpg", alt: "AI social media visual", category: "Social Media" },
-  { src: "/images/sample-4.jpg", alt: "AI brand visual", category: "Brand" },
-  { src: "/images/sample-5.jpg", alt: "AI generated ad creative", category: "Ad Creative" },
-  { src: "/images/sample-6.jpg", alt: "AI generated lifestyle image", category: "Lifestyle" },
+  { src: "", alt: "Futuristic product shot — hero angle with studio lighting", category: "Product" },
+  { src: "", alt: "Cyberpunk cityscape concept art at dusk", category: "Concept Art" },
+  { src: "", alt: "Bold social media visual for lifestyle brand", category: "Social Media" },
+  { src: "", alt: "Minimalist brand identity visual with purple tones", category: "Brand" },
+  { src: "", alt: "High-converting ad creative for e-commerce", category: "Ad Creative" },
+  { src: "", alt: "Golden hour lifestyle photography — AI generated", category: "Lifestyle" },
+  { src: "", alt: "Cinematic AI portrait — dramatic lighting", category: "Portrait" },
+  { src: "", alt: "Fantasy world illustration with epic atmosphere", category: "Fantasy" },
+  { src: "", alt: "Futuristic architecture visualization — exterior view", category: "Architecture" },
+  { src: "", alt: "Product flat-lay — clean white background", category: "Product" },
+  { src: "", alt: "Abstract brand visual — gradient and geometry", category: "Brand" },
+  { src: "", alt: "TikTok-ready vertical social media graphic", category: "Social Media" },
 ];
 
 export const VIDEO_GALLERY: { src: string; poster: string; title: string; category: string }[] = [
   {
-    src: "/videos/sample-1.mp4",
-    poster: "/images/poster-1.jpg",
-    title: "AI Product Video",
+    src: "",
+    poster: "",
+    title: "AI Product Showcase",
     category: "Product Demo",
   },
   {
-    src: "/videos/sample-2.mp4",
-    poster: "/images/poster-2.jpg",
+    src: "",
+    poster: "",
     title: "Social Media Reel",
     category: "Social Media",
   },
   {
-    src: "/videos/sample-3.mp4",
-    poster: "/images/poster-3.jpg",
+    src: "",
+    poster: "",
     title: "Animated Ad Creative",
     category: "Ad Creative",
+  },
+  {
+    src: "",
+    poster: "",
+    title: "AI Cinematic Clip",
+    category: "Cinematic",
   },
 ];

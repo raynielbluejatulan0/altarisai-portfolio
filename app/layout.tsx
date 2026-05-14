@@ -21,6 +21,22 @@ const spaceMono = Space_Mono({
 export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.tagline}`,
   description: SITE.description,
+  metadataBase: new URL(SITE.url),
+  openGraph: {
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: SITE.description,
+    url: SITE.url,
+    siteName: SITE.name,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.tagline}`,
+    description: SITE.description,
+  },
+  alternates: {
+    canonical: SITE.url,
+  },
 };
 
 export default function RootLayout({
