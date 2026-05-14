@@ -1,94 +1,57 @@
 "use client";
 
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Film, Zap, MapPin, Play } from "lucide-react";
+import { Film, Zap, MapPin } from "lucide-react";
 import { staggerContainer, fadeInUp } from "@/lib/animations";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { Button } from "@/components/ui/Button";
 import { MARKETING_VIDEOS, type MarketingVideo } from "@/lib/constants";
 
-// ─── Gradient pool ─────────────────────────────────────────────────────────────
-const GRADIENTS = [
-  { from: "rgba(168,85,247,0.22)", to: "rgba(236,72,153,0.12)" },
-  { from: "rgba(236,72,153,0.22)", to: "rgba(168,85,247,0.12)" },
-  { from: "rgba(99,102,241,0.24)", to: "rgba(168,85,247,0.14)" },
-  { from: "rgba(168,85,247,0.18)", to: "rgba(99,102,241,0.10)" },
-  { from: "rgba(139,92,246,0.24)", to: "rgba(236,72,153,0.12)" },
-  { from: "rgba(236,72,153,0.18)", to: "rgba(99,102,241,0.08)" },
-  { from: "rgba(244,63,94,0.16)", to: "rgba(168,85,247,0.10)" },
-];
-
-// ─── Video Card ────────────────────────────────────────────────────────────────
-function VideoCard({ video, index }: { video: MarketingVideo; index: number }) {
+// ─── Video Card — autoplays when scrolled into view ────────────────────────────
+function VideoCard({ video }: { video: MarketingVideo; index?: number }) {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [active, setActive] = useState(false);
-  const g = GRADIENTS[index % GRADIENTS.length];
 
-  const onEnter = () => {
-    setActive(true);
-    videoRef.current?.play().catch(() => {});
-  };
+  useEffect(() => {
+    const el = videoRef.current;
+    if (!el) return;
 
-  const onLeave = () => {
-    setActive(false);
-    if (videoRef.current) {
-      videoRef.current.pause();
-      videoRef.current.currentTime = 0;
-    }
-  };
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          el.play().catch(() => {});
+        } else {
+          el.pause();
+        }
+      },
+      { threshold: 0.25 }
+    );
+
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <motion.div
       variants={fadeInUp}
-      className="relative aspect-[9/16] rounded-xl overflow-hidden glow-card group cursor-pointer select-none"
-      onMouseEnter={onEnter}
-      onMouseLeave={onLeave}
+      className="relative aspect-[9/16] rounded-xl overflow-hidden glow-card group"
+      style={{ background: "#0D0A1A" }}
     >
-      {/* Gradient background */}
-      <div
-        className="absolute inset-0"
-        style={{ background: `linear-gradient(160deg, ${g.from} 0%, rgba(13,10,26,1) 55%, ${g.to} 100%)` }}
-      />
-
-      {/* Subtle grid texture */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(168,85,247,0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(168,85,247,0.3) 1px, transparent 1px)",
-          backgroundSize: "16px 16px",
-        }}
-      />
-
-      {/* Play icon — visible when idle */}
-      <div
-        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${
-          active ? "opacity-0" : "opacity-100"
-        }`}
-      >
-        <div className="w-9 h-9 rounded-full bg-white/8 border border-white/15 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-          <Play size={14} className="text-white/50 ml-0.5" />
-        </div>
-      </div>
-
-      {/* Actual video — lazy loaded, plays on hover */}
+      {/* Video — autoplays when visible */}
       <video
         ref={videoRef}
         src={video.src}
         muted
         loop
         playsInline
-        preload="none"
-        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${
-          active ? "opacity-100" : "opacity-0"
-        }`}
+        preload="metadata"
+        className="absolute inset-0 w-full h-full object-cover"
       />
 
-      {/* Bottom label — fades in on hover */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-2.5">
+      {/* Bottom label — always visible, subtle */}
+      <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/75 to-transparent pt-6 pb-2.5 px-2.5 pointer-events-none">
         <p className="text-white text-[11px] font-semibold leading-tight">{video.title}</p>
-        <span className="tag-purple text-[9px] mt-1 self-start">{video.subcategory}</span>
+        <span className="tag-purple text-[9px] mt-1 inline-block">{video.subcategory}</span>
       </div>
     </motion.div>
   );
@@ -102,16 +65,14 @@ interface ChapterProps {
   icon: React.ElementType;
   videos: MarketingVideo[];
   subcategories: string[];
-  defaultSub?: string;
 }
 
-function Chapter({ number, title, description, icon: Icon, videos, subcategories, defaultSub }: ChapterProps) {
-  const [active, setActive] = useState(defaultSub ?? "All");
+function Chapter({ number, title, description, icon: Icon, videos, subcategories }: ChapterProps) {
+  const [active, setActive] = useState("All");
   const filtered = active === "All" ? videos : videos.filter((v) => v.subcategory === active);
 
   return (
     <div className="mb-20 last:mb-0">
-      {/* Chapter header */}
       <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 mb-8">
         <div className="flex items-start gap-4">
           <span className="text-6xl font-black text-white/[0.04] leading-none select-none mt-1">{number}</span>
@@ -120,7 +81,7 @@ function Chapter({ number, title, description, icon: Icon, videos, subcategories
               <Icon size={15} className="text-primary" />
               <h3 className="text-lg font-bold text-foreground tracking-tight">{title}</h3>
             </div>
-            <p className="text-sm text-foreground-muted">{description}</p>
+            <p className="text-sm text-foreground-muted max-w-lg">{description}</p>
           </div>
         </div>
 
@@ -142,7 +103,6 @@ function Chapter({ number, title, description, icon: Icon, videos, subcategories
         </div>
       </div>
 
-      {/* Video grid — portrait 9:16 cards */}
       <motion.div
         key={active}
         className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-7 gap-2.5"
@@ -167,21 +127,20 @@ export function MarketingStudioSection() {
 
   return (
     <SectionContainer id="marketing" wide>
-      {/* Section header */}
       <div className="text-center mb-16">
         <p className="tag-purple inline-block mb-4">AI Marketing Studio</p>
         <h2 className="section-title">Marketing Studio</h2>
         <p className="section-subtitle">
-          Full-service AI video production for brands, e-commerce, and marketing agencies.
-          Every video engineered for maximum engagement — hover to preview.
+          I create AI-powered marketing videos for brands, e-commerce stores, and agencies.
+          Scroll to explore the full range of content I produce.
         </p>
       </div>
 
-      {/* Chapter 01 — Formats */}
+      {/* Chapter 01 — Content Styles */}
       <Chapter
         number="01"
-        title="Formats"
-        description="Pick the video type that fits your product and audience"
+        title="Content Styles"
+        description="From authentic UGC to high-production commercials — every video format your brand needs to grow."
         icon={Film}
         videos={formatVideos}
         subcategories={["UGC", "Commercial"]}
@@ -189,11 +148,11 @@ export function MarketingStudioSection() {
 
       <div className="border-t border-white/5 my-16" />
 
-      {/* Chapter 02 — Hooks */}
+      {/* Chapter 02 — Scroll-Stopping Hooks */}
       <Chapter
         number="02"
-        title="Hooks"
-        description="The first 3 seconds that stop the scroll and keep eyes on screen"
+        title="Scroll-Stopping Hooks"
+        description="The first 3 seconds that grab attention and keep viewers locked in — proven openers for every campaign."
         icon={Zap}
         videos={hookVideos}
         subcategories={["Stunt", "Subtle"]}
@@ -201,23 +160,22 @@ export function MarketingStudioSection() {
 
       <div className="border-t border-white/5 my-16" />
 
-      {/* Chapter 03 — Settings */}
+      {/* Chapter 03 — Scenes & Locations */}
       <Chapter
         number="03"
-        title="Settings"
-        description="Choose where the story unfolds — scenes that frame your product"
+        title="Scenes & Locations"
+        description="Place your product anywhere — from everyday real-life settings to impossible, head-turning scenes."
         icon={MapPin}
         videos={settingVideos}
         subcategories={["Realistic", "Unrealistic"]}
       />
 
-      {/* CTA */}
       <div className="mt-16 pt-12 border-t border-white/5 text-center">
         <p className="text-foreground-muted mb-6 text-sm">
-          Ready to create AI marketing videos for your brand?
+          Need marketing videos like these for your brand?
         </p>
         <Button href="#contact" size="lg">
-          Book a Marketing Package
+          Work With Me
         </Button>
       </div>
     </SectionContainer>
