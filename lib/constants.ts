@@ -158,7 +158,7 @@ function interleaveByCategory<T extends { category: string }>(items: T[]): T[] {
     if (!groups.has(item.category)) groups.set(item.category, []);
     groups.get(item.category)!.push(item);
   }
-  const buckets = [...groups.values()];
+  const buckets = Array.from(groups.values());
   const indices = new Array(buckets.length).fill(0);
   const result: T[] = [];
   let added = true;
