@@ -142,8 +142,8 @@ export function MarketingStudioSection() {
     <>
       <SectionContainer id="marketing" wide>
         <div className="text-center mb-12">
-          <p className="tag-purple inline-block mb-4">AI Marketing Studio</p>
-          <h2 className="section-title">Marketing Studio</h2>
+          <p className="tag-purple inline-block mb-4">Ad Creative</p>
+          <h2 className="section-title">Ad Creative</h2>
           <p className="section-subtitle">
             AI-powered marketing videos for brands, e-commerce stores, and agencies.
             Tap any video to watch it full screen.

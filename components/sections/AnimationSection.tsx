@@ -25,7 +25,7 @@ function Lightbox({ video, onClose }: { video: SimpleVideo; onClose: () => void 
       onClick={onClose}
     >
       <motion.div
-        className="relative w-full max-w-xs"
+        className="relative w-full max-w-4xl"
         initial={{ scale: 0.93, opacity: 0 }}
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.18, ease: "easeOut" }}
@@ -71,7 +71,7 @@ function AnimationCard({ video, onPlay }: { video: SimpleVideo; onPlay: (v: Simp
   return (
     <motion.div
       variants={fadeInUp}
-      className="relative aspect-[9/16] rounded-xl overflow-hidden glow-card group cursor-pointer"
+      className="relative aspect-video rounded-xl overflow-hidden glow-card group cursor-pointer"
       onClick={() => onPlay(video)}
     >
       <video
@@ -108,7 +108,7 @@ export function AnimationSection() {
         </div>
 
         <motion.div
-          className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-2.5"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
