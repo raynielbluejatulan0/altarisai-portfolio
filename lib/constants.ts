@@ -66,19 +66,23 @@ export const CONTENT_TYPES = [
 ];
 
 export const TOOLS_USED = [
-  { name: "Midjourney", category: "Image" },
-  { name: "DALL-E 3", category: "Image" },
-  { name: "Stable Diffusion", category: "Image" },
-  { name: "Runway ML", category: "Video" },
-  { name: "Pika Labs", category: "Video" },
-  { name: "Kling AI", category: "Video" },
-  { name: "Higgsfield AI", category: "Video" },
-  { name: "ElevenLabs", category: "Audio" },
-  { name: "HeyGen", category: "Avatar" },
-  { name: "CapCut", category: "Editing" },
-  { name: "Adobe Firefly", category: "Image" },
-  { name: "Canva AI", category: "Design" },
-  { name: "Leonardo AI", category: "Image" },
+  { name: "Higgsfield AI",        category: "Video" },
+  { name: "Veo 3.1",              category: "Video" },
+  { name: "Seedance 2.0",         category: "Video" },
+  { name: "Kling AI",             category: "Video" },
+  { name: "Kling Motion Control", category: "Video" },
+  { name: "Nano Banana Pro",      category: "Video" },
+  { name: "Runway ML",            category: "Video" },
+  { name: "Pika Labs",            category: "Video" },
+  { name: "Midjourney",           category: "Image" },
+  { name: "Leonardo AI",          category: "Image" },
+  { name: "Adobe Firefly",        category: "Image" },
+  { name: "DALL-E 3",             category: "Image" },
+  { name: "Stable Diffusion",     category: "Image" },
+  { name: "ElevenLabs",           category: "Audio" },
+  { name: "HeyGen",               category: "Avatar" },
+  { name: "CapCut",               category: "Editing" },
+  { name: "Canva AI",             category: "Design" },
 ];
 
 export const PROCESS_STEPS = [

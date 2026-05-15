@@ -1,20 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Video, Image as ImageIcon, Music, User, Scissors, Palette, type LucideIcon } from "lucide-react";
 import { staggerContainer, fadeInUp } from "@/lib/animations";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { TOOLS_USED } from "@/lib/constants";
 
-const CATEGORY_COLORS: Record<string, string> = {
-  Image: "bg-white/[0.04] text-white/60 border-white/[0.08]",
-  Video: "bg-white/[0.04] text-white/60 border-white/[0.08]",
-  Audio: "bg-white/[0.04] text-white/60 border-white/[0.08]",
-  Avatar: "bg-white/[0.04] text-white/60 border-white/[0.08]",
-  Editing: "bg-white/[0.04] text-white/60 border-white/[0.08]",
-  Design: "bg-white/[0.04] text-white/60 border-white/[0.08]",
+const CATEGORY_CONFIG: Record<string, { icon: LucideIcon; label: string }> = {
+  Video:   { icon: Video,      label: "Video Generation" },
+  Image:   { icon: ImageIcon,  label: "Image Generation" },
+  Audio:   { icon: Music,      label: "Audio & Voice" },
+  Avatar:  { icon: User,       label: "AI Avatars" },
+  Editing: { icon: Scissors,   label: "Editing" },
+  Design:  { icon: Palette,    label: "Design" },
 };
 
+const CATEGORY_ORDER = ["Video", "Image", "Audio", "Avatar", "Editing", "Design"];
+
 export function ToolsSection() {
+  const grouped = TOOLS_USED.reduce<Record<string, string[]>>((acc, tool) => {
+    if (!acc[tool.category]) acc[tool.category] = [];
+    acc[tool.category].push(tool.name);
+    return acc;
+  }, {});
+
+  const categories = CATEGORY_ORDER.filter((c) => grouped[c]);
+
   return (
     <SectionContainer id="tools" className="bg-surface/30">
       <div className="text-center mb-12">
@@ -26,22 +37,38 @@ export function ToolsSection() {
       </div>
 
       <motion.div
-        className="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto"
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-5xl mx-auto"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
       >
-        {TOOLS_USED.map((tool) => (
-          <motion.div
-            key={tool.name}
-            variants={fadeInUp}
-            className={`px-4 py-2 rounded-full border text-sm font-medium ${CATEGORY_COLORS[tool.category] ?? "bg-white/5 text-foreground-muted border-white/10"}`}
-          >
-            {tool.name}
-            <span className="ml-2 text-xs opacity-60">{tool.category}</span>
-          </motion.div>
-        ))}
+        {categories.map((cat) => {
+          const { icon: Icon, label } = CATEGORY_CONFIG[cat];
+          return (
+            <motion.div key={cat} variants={fadeInUp} className="glow-card rounded-2xl p-5">
+              {/* Category header */}
+              <div className="flex items-center gap-2.5 mb-4">
+                <div className="w-8 h-8 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center flex-shrink-0">
+                  <Icon size={15} className="text-primary" />
+                </div>
+                <span className="text-sm font-semibold text-foreground">{label}</span>
+              </div>
+
+              {/* Tool pills */}
+              <div className="flex flex-wrap gap-2">
+                {grouped[cat].map((name) => (
+                  <span
+                    key={name}
+                    className="text-xs text-foreground-muted bg-white/[0.04] border border-white/[0.07] px-3 py-1 rounded-full"
+                  >
+                    {name}
+                  </span>
+                ))}
+              </div>
+            </motion.div>
+          );
+        })}
       </motion.div>
     </SectionContainer>
   );
