@@ -57,15 +57,20 @@ function CinematicCard({ video, onPlay }: { video: SimpleVideo; onPlay: (v: Simp
   useEffect(() => {
     const el = videoRef.current;
     if (!el) return;
+    const showFirstFrame = () => { el.currentTime = 0.001; };
+    el.addEventListener("loadedmetadata", showFirstFrame);
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) el.play().catch(() => {});
         else el.pause();
       },
-      { threshold: 0.3 }
+      { threshold: 0.15 }
     );
     observer.observe(el);
-    return () => observer.disconnect();
+    return () => {
+      observer.disconnect();
+      el.removeEventListener("loadedmetadata", showFirstFrame);
+    };
   }, []);
 
   return (
