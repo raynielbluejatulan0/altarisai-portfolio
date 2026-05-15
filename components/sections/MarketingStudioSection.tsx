@@ -80,13 +80,18 @@ function VideoCard({
     const el = videoRef.current;
     if (!el) return;
 
-    // Force first frame to render on mobile (iOS Safari doesn't show poster without this)
     const showFirstFrame = () => { el.currentTime = 0.001; };
     el.addEventListener("loadedmetadata", showFirstFrame);
+    el.addEventListener("canplay", showFirstFrame);
+    if (el.readyState >= 1) showFirstFrame();
+    else el.load();
 
     if (!scrollAutoplay) {
       el.pause();
-      return () => el.removeEventListener("loadedmetadata", showFirstFrame);
+      return () => {
+        el.removeEventListener("loadedmetadata", showFirstFrame);
+        el.removeEventListener("canplay", showFirstFrame);
+      };
     }
 
     const observer = new IntersectionObserver(
@@ -100,6 +105,7 @@ function VideoCard({
     return () => {
       observer.disconnect();
       el.removeEventListener("loadedmetadata", showFirstFrame);
+      el.removeEventListener("canplay", showFirstFrame);
     };
   }, [scrollAutoplay]);
 
