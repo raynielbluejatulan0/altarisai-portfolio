@@ -107,10 +107,6 @@ export function ImageGallerySection() {
               </div>
             )}
 
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-start justify-end p-4">
-              <span className="tag-purple text-xs">{img.category}</span>
-            </div>
           </motion.div>
         ))}
       </motion.div>
@@ -160,7 +156,6 @@ export function ImageGallerySection() {
                 height={1200}
                 className="object-contain w-full max-h-[90vh] rounded-2xl"
               />
-              <p className="text-center text-sm text-white/50 mt-3">{currentImage.category}</p>
             </motion.div>
 
             {/* Next */}
