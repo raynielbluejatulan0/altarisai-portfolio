@@ -24,8 +24,8 @@ export function HeroSection() {
         <motion.div variants={fadeInUp} className="flex items-center justify-center mb-5">
           <span className="inline-flex items-center gap-2 text-xs text-foreground-muted border border-white/[0.08] bg-white/[0.03] px-3 py-1.5 rounded-full">
             <span className="relative flex w-2 h-2">
-              <span className="absolute inline-flex w-full h-full rounded-full bg-primary opacity-60 animate-ping" />
-              <span className="relative inline-flex w-2 h-2 rounded-full bg-primary" />
+              <span className="absolute inline-flex w-full h-full rounded-full bg-emerald-400 opacity-60 animate-ping" />
+              <span className="relative inline-flex w-2 h-2 rounded-full bg-emerald-400" />
             </span>
             Available for projects · GMT+8
           </span>

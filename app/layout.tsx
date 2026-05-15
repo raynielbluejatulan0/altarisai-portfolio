@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, Syne } from "next/font/google";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { SITE } from "@/lib/constants";
@@ -11,10 +11,10 @@ const inter = Inter({
   display: "swap",
 });
 
-const spaceMono = Space_Mono({
+const syne = Syne({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-space-mono",
+  weight: ["400", "500", "600", "700", "800"],
+  variable: "--font-syne",
   display: "swap",
 });
 
@@ -22,6 +22,9 @@ export const metadata: Metadata = {
   title: `${SITE.name} — ${SITE.tagline}`,
   description: SITE.description,
   metadataBase: new URL(SITE.url),
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
@@ -46,7 +49,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" dir="ltr">
-      <body className={`${inter.variable} ${spaceMono.variable} antialiased`}>
+      <body className={`${inter.variable} ${syne.variable} antialiased`}>
         <Navbar />
         <main id="main-content" role="main">
           {children}
