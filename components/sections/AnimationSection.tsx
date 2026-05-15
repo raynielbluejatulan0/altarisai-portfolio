@@ -105,7 +105,7 @@ export function AnimationSection() {
       <SectionContainer id="animation" className="bg-surface/20">
         <div className="text-center mb-12">
           <p className="tag-purple inline-block mb-4">AI Animation</p>
-          <h2 className="section-title">Animation Studio</h2>
+          <h2 className="section-title">Animation Videos</h2>
           <p className="section-subtitle">
             Motion graphics, animated ads, and character animations — AI-generated
             for motion designers, animators, and creative teams.
