@@ -17,10 +17,7 @@ export function ImageGallerySection() {
   const [active, setActive] = useState("All");
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
-  const filtered =
-    active === "All"
-      ? IMAGE_GALLERY
-      : IMAGE_GALLERY.filter((img) => img.category === active);
+  const filtered = active === "All" ? IMAGE_GALLERY : [];
 
   const openLightbox = (i: number) => setLightboxIndex(i);
   const closeLightbox = () => setLightboxIndex(null);
