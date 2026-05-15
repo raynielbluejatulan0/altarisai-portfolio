@@ -7,10 +7,9 @@ export const SITE = {
 };
 
 export const NAV_LINKS = [
-  { label: "Marketing", href: "#marketing" },
+  { label: "Work", href: "#marketing" },
   { label: "Gallery", href: "#gallery" },
-  { label: "Cinematic", href: "#cinematic" },
-  { label: "Animation", href: "#animation" },
+  { label: "About", href: "#about" },
   { label: "Services", href: "#services" },
   { label: "Contact", href: "#contact" },
 ];

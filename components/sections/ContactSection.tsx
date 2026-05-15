@@ -17,13 +17,13 @@ export function ContactSection() {
         whileInView="visible"
         viewport={{ once: true }}
       >
-        <motion.p variants={fadeInUp} className="tag-purple inline-block mb-4">Get In Touch</motion.p>
+        <motion.p variants={fadeInUp} className="tag-purple inline-block mb-4">Let&apos;s work</motion.p>
         <motion.h2 variants={fadeInUp} className="section-title mb-4">
-          Ready to Create{" "}
-          <span className="text-gradient">Something Stunning?</span>
+          Got a brand worth{" "}
+          <span className="text-gradient">scroll-stopping for?</span>
         </motion.h2>
         <motion.p variants={fadeInUp} className="text-foreground-muted text-lg mb-10">
-          Whether you need a full content pack, a one-off campaign, or ongoing visual production — let&apos;s talk.
+          One-off campaigns, full content packs, or ongoing creative production — tell me what you&apos;re shipping and I&apos;ll send back a plan within 24 hours.
         </motion.p>
 
         <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row items-center justify-center gap-4">
