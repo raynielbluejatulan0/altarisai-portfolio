@@ -246,3 +246,28 @@ export const MARKETING_VIDEOS: MarketingVideo[] = [
 
 // Fixed interleaved order for "All" view — mixes categories, never changes on refresh
 export const MARKETING_VIDEOS_MIXED = interleaveByCategory(MARKETING_VIDEOS);
+
+// ─── Simple video type for Cinematic + Animation ──────────────────────────────
+export type SimpleVideo = { src: string; title: string };
+
+// ─── Cinematic Videos ─────────────────────────────────────────────────────────
+export const CINEMATIC_VIDEOS: SimpleVideo[] = [
+  { src: "/videos/cinematic/hf_20260204_182647_a6d63383-06bb-4749-9816-3dfece9ccb5c.mp4", title: "Cinematic 1" },
+  { src: "/videos/cinematic/hf_20260204_182735_5727c7a6-b2a6-4f20-af8d-c96b85e93d73.mp4", title: "Cinematic 2" },
+  { src: "/videos/cinematic/hf_20260331_203031_a2259b49-ef79-49fa-bd6e-d473be2de7b9.mp4", title: "Cinematic 3" },
+  { src: "/videos/cinematic/hf_20260331_203140_95d654f0-9c43-4f35-a901-1dbca0539148.mp4", title: "Cinematic 4" },
+  { src: "/videos/cinematic/hf_20260409_094417_ba8bf934-a387-4bf5-8a24-f34be2a65d46.mp4", title: "Cinematic 5" },
+  { src: "/videos/cinematic/hf_20260409_094513_629920b7-4009-46de-b3b6-b80cc2185275.mp4", title: "Cinematic 6" },
+];
+
+// ─── Animation Videos ─────────────────────────────────────────────────────────
+export const ANIMATION_VIDEOS: SimpleVideo[] = [
+  { src: "/videos/animation/hf_20260331_185447_ef278b6b-430b-42ba-8b0b-05f1179fce0a.mp4", title: "Animation 1" },
+  { src: "/videos/animation/hf_20260331_191014_7fd359e3-6d88-44ed-b0ae-aa2972dcf0d6.mp4", title: "Animation 2" },
+  { src: "/videos/animation/hf_20260331_203048_4d65f51e-7818-4dc4-921b-407275cdd301.mp4", title: "Animation 3" },
+  { src: "/videos/animation/hf_20260331_203112_444c3863-8c35-4e34-9071-ab7166f06232.mp4", title: "Animation 4" },
+  { src: "/videos/animation/hf_20260331_203147_19ae6acb-3811-4522-b9ea-2edaf6c3f1ae.mp4", title: "Animation 5" },
+  { src: "/videos/animation/hf_20260409_094505_e898193e-ec14-4ecc-92ed-be976174fc88.mp4", title: "Animation 6" },
+  { src: "/videos/animation/hf_20260409_094517_68844b63-ca4b-49f3-9b98-cc8a13f56729.mp4", title: "Animation 7" },
+  { src: "/videos/animation/hf_20260409_094557_c0e3952b-1ecf-4621-9b06-eb86a7fe29e8.mp4", title: "Animation 8" },
+];

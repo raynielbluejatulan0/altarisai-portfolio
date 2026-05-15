@@ -40,12 +40,14 @@ export function HeroSection() {
         </div>
       </div>
 
-      {/* Vignette + readability overlay */}
+      {/* Base dark layer */}
+      <div className="absolute inset-0 z-10 bg-background/80 pointer-events-none" />
+      {/* Edge darkening — videos peek subtly on sides only */}
       <div
         className="absolute inset-0 z-10 pointer-events-none"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.85) 55%, rgba(8,8,8,0.98) 100%)",
+            "radial-gradient(ellipse 60% 80% at center, transparent 0%, rgba(8,8,8,0.5) 70%, rgba(8,8,8,0.97) 100%)",
         }}
       />
 
