@@ -118,10 +118,6 @@ export function ImageGallerySection() {
         })}
       </motion.div>
 
-      <p className="text-center text-xs text-foreground-dim mt-8">
-        Drop your images into{" "}
-        <code className="text-white/40">public/images/</code> to go live instantly.
-      </p>
     </SectionContainer>
   );
 }

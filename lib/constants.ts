@@ -122,18 +122,24 @@ export const IMPACT_STATS = [
 ];
 
 export const IMAGE_GALLERY: { src: string; alt: string; category: string }[] = [
-  { src: "", alt: "Futuristic product shot — hero angle with studio lighting", category: "Product" },
-  { src: "", alt: "Cyberpunk cityscape concept art at dusk", category: "Concept Art" },
-  { src: "", alt: "Bold social media visual for lifestyle brand", category: "Social Media" },
-  { src: "", alt: "Minimalist brand identity visual with purple tones", category: "Brand" },
-  { src: "", alt: "High-converting ad creative for e-commerce", category: "Ad Creative" },
-  { src: "", alt: "Golden hour lifestyle photography — AI generated", category: "Lifestyle" },
-  { src: "", alt: "Cinematic AI portrait — dramatic lighting", category: "Portrait" },
-  { src: "", alt: "Fantasy world illustration with epic atmosphere", category: "Fantasy" },
-  { src: "", alt: "Futuristic architecture visualization — exterior view", category: "Architecture" },
-  { src: "", alt: "Product flat-lay — clean white background", category: "Product" },
-  { src: "", alt: "Abstract brand visual — gradient and geometry", category: "Brand" },
-  { src: "", alt: "TikTok-ready vertical social media graphic", category: "Social Media" },
+  { src: "/images/bb8fbcdb-e32a-4e79-8e31-97603bf03c77.png", alt: "AI generated image", category: "Concept Art" },
+  { src: "/images/hf_20260328_212131_3a3c2ad6-071b-4e80-bcb0-af2d2b58965c.png", alt: "AI generated image", category: "Portrait" },
+  { src: "/images/hf_20260411_124101_b25145a6-9c3d-4e33-b741-659775c4d8d8.png", alt: "AI generated image", category: "Lifestyle" },
+  { src: "/images/hf_20260415_125832_dd7f43c8-8410-4f63-b530-1b4e93082ddd.png", alt: "AI generated image", category: "Ad Creative" },
+  { src: "/images/hf_20260421_144013_38e67ed5-cd38-4509-9855-9c4cc9b32fe6.png", alt: "AI generated image", category: "Portrait" },
+  { src: "/images/hf_20260422_123055_8f8580e9-6c4a-4040-a9f5-29d418853369.png", alt: "AI generated image", category: "Social Media" },
+  { src: "/images/hf_20260422_132318_ba7fc1f7-9011-47ca-bd0d-af690c4cf934.png", alt: "AI generated image", category: "Lifestyle" },
+  { src: "/images/hf_20260422_134519_6fed7b56-35c6-4f75-a58a-7ba86674d801.png", alt: "AI generated image", category: "Portrait" },
+  { src: "/images/hf_20260422_144420_5f74e1a3-ff9e-4f59-b8f8-799982bdd36b.png", alt: "AI generated image", category: "Ad Creative" },
+  { src: "/images/hf_20260422_200634_8bb59f51-35d3-4639-b5a9-673f64940854.png", alt: "AI generated image", category: "Social Media" },
+  { src: "/images/hf_20260422_201904_0d9cf28b-bbb3-452f-9ef9-6caf994c02f7.png", alt: "AI generated image", category: "Lifestyle" },
+  { src: "/images/hf_20260422_202551_baf580a8-979d-486e-b0a0-b0b09ee83d6d.png", alt: "AI generated image", category: "Portrait" },
+  { src: "/images/hf_20260422_212125_23fa9b40-6c58-4bb9-a831-ca4cf02c861c.png", alt: "AI generated image", category: "Concept Art" },
+  { src: "/images/hf_20260422_212327_3e910da2-86aa-4fac-adbe-4215fe2110a5.png", alt: "AI generated image", category: "Ad Creative" },
+  { src: "/images/hf_20260422_213610_8f9804a3-5fce-48c0-94e0-5147ab7cf3fd.png", alt: "AI generated image", category: "Social Media" },
+  { src: "/images/hf_20260422_215112_09f9313d-4c93-40d5-8d5b-e6a502fa93c1.png", alt: "AI generated image", category: "Lifestyle" },
+  { src: "/images/hf_20260422_215626_8f188629-c5bb-441a-a0fe-a0be4d976fc6.png", alt: "AI generated image", category: "Portrait" },
+  { src: "/images/hf_20260513_175529_dfbd7eca-f4c8-4ede-bdbe-ceed37cfe467.png", alt: "AI generated image", category: "Concept Art" },
 ];
 
 // kept for backwards compatibility — no longer used in page.tsx
