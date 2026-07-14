@@ -1,27 +1,29 @@
 import { HeroSection } from "@/components/sections/HeroSection";
-import { MarketingStudioSection } from "@/components/sections/MarketingStudioSection";
-import { AnimationSection } from "@/components/sections/AnimationSection";
-import { CinematicSection } from "@/components/sections/CinematicSection";
-import { ImageGallerySection } from "@/components/sections/ImageGallerySection";
-import { AboutSection } from "@/components/sections/AboutSection";
+import { ValuePropSection } from "@/components/sections/ValuePropSection";
+import { WhoIHelpSection } from "@/components/sections/WhoIHelpSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { ProcessSection } from "@/components/sections/ProcessSection";
-import { ToolsSection } from "@/components/sections/ToolsSection";
-import { ContactSection } from "@/components/sections/ContactSection";
+import { PortfolioPreviewSection } from "@/components/sections/PortfolioPreviewSection";
+import { WorkflowSection } from "@/components/sections/WorkflowSection";
+import { WhyMeSection } from "@/components/sections/WhyMeSection";
+import { TechStackSection } from "@/components/sections/TechStackSection";
+import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
+import { FAQSection } from "@/components/sections/FAQSection";
+import { CTASection } from "@/components/sections/CTASection";
 
 export default function Home() {
   return (
     <>
       <HeroSection />
-      <MarketingStudioSection />
-      <AnimationSection />
-      <CinematicSection />
-      <ImageGallerySection />
-      <AboutSection />
+      <ValuePropSection />
+      <WhoIHelpSection />
       <ServicesSection />
-      <ProcessSection />
-      <ToolsSection />
-      <ContactSection />
+      <PortfolioPreviewSection />
+      <WorkflowSection />
+      <WhyMeSection />
+      <TechStackSection />
+      <TestimonialsSection />
+      <FAQSection />
+      <CTASection />
     </>
   );
 }

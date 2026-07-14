@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Syne } from "next/font/google";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
-import { SITE } from "@/lib/constants";
+import { SITE, CONTACT } from "@/lib/constants";
 import "./globals.css";
 
 const inter = Inter({
@@ -19,7 +19,10 @@ const syne = Syne({
 });
 
 export const metadata: Metadata = {
-  title: `${SITE.name} — ${SITE.tagline}`,
+  title: {
+    default: `${SITE.name} — ${SITE.tagline}`,
+    template: `%s | ${SITE.name}`,
+  },
   description: SITE.description,
   metadataBase: new URL(SITE.url),
   icons: {
@@ -37,9 +40,30 @@ export const metadata: Metadata = {
     title: `${SITE.name} — ${SITE.tagline}`,
     description: SITE.description,
   },
-  alternates: {
-    canonical: SITE.url,
-  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": `${SITE.url}/#person`,
+      name: SITE.name,
+      url: SITE.url,
+      jobTitle: SITE.tagline,
+      email: `mailto:${CONTACT.email}`,
+    },
+    {
+      "@type": "ProfessionalService",
+      "@id": `${SITE.url}/#service`,
+      name: `${SITE.name} — ${SITE.tagline}`,
+      url: SITE.url,
+      description: SITE.description,
+      serviceType: "AI Video Advertising Production",
+      areaServed: "Worldwide",
+      provider: { "@id": `${SITE.url}/#person` },
+    },
+  ],
 };
 
 export default function RootLayout({
@@ -50,6 +74,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark" dir="ltr">
       <body className={`${inter.variable} ${syne.variable} antialiased`}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Navbar />
         <main id="main-content" role="main">
           {children}

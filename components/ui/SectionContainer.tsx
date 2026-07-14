@@ -13,11 +13,16 @@ interface SectionContainerProps {
   children: ReactNode;
   className?: string;
   wide?: boolean;
+  /** Hairline top rule — editorial rhythm between sections */
+  bordered?: boolean;
 }
 
-export function SectionContainer({ id, children, className = "", wide = false }: SectionContainerProps) {
+export function SectionContainer({ id, children, className = "", wide = false, bordered = false }: SectionContainerProps) {
   return (
-    <section id={id} className={`py-24 sm:py-32 px-4 sm:px-6 lg:px-8 ${className}`}>
+    <section
+      id={id}
+      className={`py-24 sm:py-32 px-4 sm:px-6 lg:px-8 ${bordered ? "border-t border-white/[0.06]" : ""} ${className}`}
+    >
       <motion.div
         className={`mx-auto ${wide ? "max-w-8xl" : "max-w-7xl"}`}
         variants={revealVariants}

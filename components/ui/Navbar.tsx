@@ -1,9 +1,10 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { NAV_LINKS } from "@/lib/constants";
+import { NAV_LINKS, CTA_PRIMARY, SITE } from "@/lib/constants";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,28 +24,28 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
-          <a href="#hero" className="flex items-center gap-2.5">
-            <span className="w-7 h-7 rounded-md bg-primary/10 border border-primary/50 flex items-center justify-center shrink-0">
-              <span className="text-[10px] font-bold text-primary tracking-tight leading-none">RBJ</span>
+          <Link href="/" className="flex items-center gap-2.5">
+            <span className="w-7 h-7 rounded-md bg-accent-faint border border-accent/40 flex items-center justify-center shrink-0">
+              <span className="text-[10px] font-bold text-accent tracking-tight leading-none">RBJ</span>
             </span>
-            <span className="font-bold text-lg text-primary underline underline-offset-2">Rayniel Blue Jatulan</span>
-          </a>
+            <span className="font-bold text-base sm:text-lg text-primary">{SITE.name}</span>
+          </Link>
 
           <div className="hidden md:flex items-center gap-8">
             {NAV_LINKS.map((link) => (
-              <a
+              <Link
                 key={link.href}
                 href={link.href}
                 className="text-sm text-foreground-muted hover:text-white transition-colors duration-200"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
             <a
-              href="#contact"
-              className="text-sm border border-white/20 text-white px-4 py-1.5 rounded hover:bg-white/[0.06] hover:border-white/30 transition-all duration-200"
+              href={CTA_PRIMARY.href}
+              className="text-sm border border-accent/30 text-white px-4 py-1.5 rounded-full hover:bg-accent-faint hover:border-accent/50 transition-all duration-200"
             >
-              Work With Me
+              {CTA_PRIMARY.label}
             </a>
           </div>
 
@@ -69,21 +70,21 @@ export function Navbar() {
           >
             <div className="px-4 py-4 flex flex-col gap-1">
               {NAV_LINKS.map((link) => (
-                <a
+                <Link
                   key={link.href}
                   href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="text-sm text-foreground-muted hover:text-white transition-colors py-3 px-2 rounded-lg hover:bg-white/[0.04]"
                 >
                   {link.label}
-                </a>
+                </Link>
               ))}
               <a
-                href="#contact"
+                href={CTA_PRIMARY.href}
                 onClick={() => setIsOpen(false)}
-                className="mt-2 text-sm text-center border border-white/20 text-white px-4 py-2 rounded hover:bg-white/[0.06] transition-all"
+                className="mt-2 text-sm text-center border border-accent/30 text-white px-4 py-2 rounded-full hover:bg-accent-faint transition-all"
               >
-                Work With Me
+                {CTA_PRIMARY.label}
               </a>
             </div>
           </motion.div>

@@ -35,9 +35,14 @@ const config: Config = {
           800: "#404040",
           900: "#262626",
         },
-        background: "#111111",
+        accent: {
+          DEFAULT: "#C8A96E",
+          muted: "#8C7A55",
+          faint: "rgba(200, 169, 110, 0.12)",
+        },
+        background: "#0A0A0A",
         surface: {
-          DEFAULT: "#1A1A1A",
+          DEFAULT: "#141414",
           50: "#222222",
           100: "#1E1E1E",
           200: "#1C1C1C",
@@ -52,6 +57,7 @@ const config: Config = {
         error: "#EF4444",
       },
       fontSize: {
+        "display-3xl": ["clamp(3rem, 8vw, 6.5rem)", { lineHeight: "0.95", letterSpacing: "-0.03em" }],
         "display-2xl": ["4.5rem", { lineHeight: "1.05", letterSpacing: "-0.02em" }],
         "display-xl": ["3.75rem", { lineHeight: "1.08", letterSpacing: "-0.02em" }],
         "display-lg": ["3rem", { lineHeight: "1.1", letterSpacing: "-0.02em" }],

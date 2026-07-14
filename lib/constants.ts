@@ -1,19 +1,17 @@
 export const SITE = {
   name: "Rayniel Blue Jatulan",
-  tagline: "AI Content Creator",
+  tagline: "AI Video Ads Specialist",
   description:
-    "AI Content Creator specializing in AI-generated images, videos, and social media content. Helping brands create stunning visuals at scale. GMT+8.",
+    "AI-powered video ad creatives for eCommerce and DTC brands — UGC-style ads, product commercials, and creative testing assets built to convert.",
   url: "https://altarisai.online",
 };
 
 export const NAV_LINKS = [
-  { label: "Ad Creative", href: "#marketing" },
-  { label: "Animation", href: "#animation" },
-  { label: "Cinematic", href: "#cinematic" },
-  { label: "Image Gallery", href: "#gallery" },
-  { label: "About", href: "#about" },
-  { label: "Services", href: "#services" },
-  { label: "Contact", href: "#contact" },
+  { label: "Services", href: "/#services" },
+  { label: "Portfolio", href: "/portfolio" },
+  { label: "Process", href: "/#process" },
+  { label: "FAQ", href: "/#faq" },
+  { label: "Contact", href: "/#contact" },
 ];
 
 export const CONTACT = {
@@ -22,264 +20,279 @@ export const CONTACT = {
   whatsappDisplay: "+63 917 142 5738",
 };
 
-export const CONTENT_TYPES = [
-  {
-    title: "AI Image Generation",
-    description:
-      "Stunning product shots, concept art, social media visuals, and brand imagery — generated at scale using Midjourney, DALL-E, and Stable Diffusion.",
-    icon: "Image",
-    examples: ["Product Photography", "Concept Art", "Brand Visuals", "Ad Creatives"],
-  },
-  {
-    title: "AI Video Creation",
-    description:
-      "Short-form video content, animated ads, and cinematic clips created with Runway, Pika, and Kling AI for social media and marketing campaigns.",
-    icon: "Video",
-    examples: ["Social Media Reels", "Product Demos", "Animated Ads", "Cinematic Clips"],
-  },
-  {
-    title: "Social Media Content",
-    description:
-      "Consistent, on-brand content packs for Instagram, TikTok, Facebook, and LinkedIn — ready to post, generated in bulk.",
-    icon: "Layout",
-    examples: ["Instagram Posts", "TikTok Videos", "Story Templates", "Carousel Posts"],
-  },
-  {
-    title: "YouTube Thumbnails & Assets",
-    description:
-      "Eye-catching thumbnails, channel art, and video graphics that drive clicks and build a recognizable brand presence on YouTube.",
-    icon: "Youtube",
-    examples: ["Thumbnails", "Channel Art", "End Screens", "Lower Thirds"],
-  },
-  {
-    title: "AI UGC Content",
-    description:
-      "Authentic-looking user-generated content and testimonial-style videos created with AI avatars and voiceovers — no filming required.",
-    icon: "Users",
-    examples: ["AI Testimonials", "Unboxing Videos", "Review Content", "Lifestyle Shots"],
-  },
-  {
-    title: "Brand Identity Visuals",
-    description:
-      "Logos, color palettes, mood boards, and full visual identity systems created with AI tools and refined for professional use.",
-    icon: "Palette",
-    examples: ["Logo Concepts", "Mood Boards", "Color Palettes", "Brand Guidelines"],
-  },
-];
+/* ─── CTAs — single swap point (replace href with Calendly URL later) ─────── */
 
-export const TOOLS_USED = [
-  { name: "Higgsfield AI",        category: "Video" },
-  { name: "Veo 3.1",              category: "Video" },
-  { name: "Seedance 2.0",         category: "Video" },
-  { name: "Kling AI",             category: "Video" },
-  { name: "Kling Motion Control", category: "Video" },
-  { name: "Nano Banana Pro",      category: "Video" },
-  { name: "Runway ML",            category: "Video" },
-  { name: "Pika Labs",            category: "Video" },
-  { name: "Midjourney",           category: "Image" },
-  { name: "Leonardo AI",          category: "Image" },
-  { name: "Adobe Firefly",        category: "Image" },
-  { name: "DALL-E 3",             category: "Image" },
-  { name: "Stable Diffusion",     category: "Image" },
-  { name: "ElevenLabs",           category: "Audio" },
-  { name: "HeyGen",               category: "Avatar" },
-  { name: "CapCut",               category: "Editing" },
-  { name: "Canva AI",             category: "Design" },
-];
-
-export const PROCESS_STEPS = [
-  {
-    step: "01",
-    title: "Brief & Direction",
-    description:
-      "We align on your brand, audience, and content goals. I map out the visual direction, tone, and formats before generating a single pixel.",
-  },
-  {
-    step: "02",
-    title: "AI Generation",
-    description:
-      "I engineer precise prompts across multiple AI tools to generate high-quality images and videos that match your brand identity.",
-  },
-  {
-    step: "03",
-    title: "Curation & Refinement",
-    description:
-      "From hundreds of outputs, I select and refine the best results — upscaling, editing, and polishing until every asset is production-ready.",
-  },
-  {
-    step: "04",
-    title: "Delivery",
-    description:
-      "Final assets delivered in your required formats, organized and ready to publish. Fast turnaround, unlimited revisions on direction.",
-  },
-];
-
-export const IMPACT_STATS = [
-  { value: "500+", label: "AI Images Created" },
-  { value: "52+", label: "AI Videos Produced" },
-  { value: "4+", label: "Years in AI Content" },
-  { value: "10+", label: "Brands Served" },
-];
-
-export const IMAGE_GALLERY: { src: string; alt: string; category: string }[] = [
-  { src: "/images/bb8fbcdb-e32a-4e79-8e31-97603bf03c77.png", alt: "AI generated image", category: "Concept Art" },
-  { src: "/images/hf_20260328_212131_3a3c2ad6-071b-4e80-bcb0-af2d2b58965c.png", alt: "AI generated image", category: "Portrait" },
-  { src: "/images/hf_20260411_124101_b25145a6-9c3d-4e33-b741-659775c4d8d8.png", alt: "AI generated image", category: "Lifestyle" },
-  { src: "/images/hf_20260415_125832_dd7f43c8-8410-4f63-b530-1b4e93082ddd.png", alt: "AI generated image", category: "Ad Creative" },
-  { src: "/images/hf_20260421_144013_38e67ed5-cd38-4509-9855-9c4cc9b32fe6.png", alt: "AI generated image", category: "Portrait" },
-  { src: "/images/hf_20260422_123055_8f8580e9-6c4a-4040-a9f5-29d418853369.png", alt: "AI generated image", category: "Social Media" },
-  { src: "/images/hf_20260422_132318_ba7fc1f7-9011-47ca-bd0d-af690c4cf934.png", alt: "AI generated image", category: "Lifestyle" },
-  { src: "/images/hf_20260422_134519_6fed7b56-35c6-4f75-a58a-7ba86674d801.png", alt: "AI generated image", category: "Portrait" },
-  { src: "/images/hf_20260422_144420_5f74e1a3-ff9e-4f59-b8f8-799982bdd36b.png", alt: "AI generated image", category: "Ad Creative" },
-  { src: "/images/hf_20260422_200634_8bb59f51-35d3-4639-b5a9-673f64940854.png", alt: "AI generated image", category: "Social Media" },
-  { src: "/images/hf_20260422_201904_0d9cf28b-bbb3-452f-9ef9-6caf994c02f7.png", alt: "AI generated image", category: "Lifestyle" },
-  { src: "/images/hf_20260422_202551_baf580a8-979d-486e-b0a0-b0b09ee83d6d.png", alt: "AI generated image", category: "Portrait" },
-  { src: "/images/hf_20260422_212125_23fa9b40-6c58-4bb9-a831-ca4cf02c861c.png", alt: "AI generated image", category: "Concept Art" },
-  { src: "/images/hf_20260422_212327_3e910da2-86aa-4fac-adbe-4215fe2110a5.png", alt: "AI generated image", category: "Ad Creative" },
-  { src: "/images/hf_20260422_213610_8f9804a3-5fce-48c0-94e0-5147ab7cf3fd.png", alt: "AI generated image", category: "Social Media" },
-  { src: "/images/hf_20260422_215112_09f9313d-4c93-40d5-8d5b-e6a502fa93c1.png", alt: "AI generated image", category: "Lifestyle" },
-  { src: "/images/hf_20260422_215626_8f188629-c5bb-441a-a0fe-a0be4d976fc6.png", alt: "AI generated image", category: "Portrait" },
-  { src: "/images/hf_20260513_175529_dfbd7eca-f4c8-4ede-bdbe-ceed37cfe467.png", alt: "AI generated image", category: "Concept Art" },
-];
-
-// kept for backwards compatibility — no longer used in page.tsx
-export const VIDEO_GALLERY: { src: string; poster: string; title: string; category: string }[] = [];
-
-// ─── Marketing Studio Videos ──────────────────────────────────────────────────
-
-export type MarketingVideoCategory =
-  | "UGC"
-  | "Tryons"
-  | "Hypermotion"
-  | "Commercial"
-  | "Hooks"
-  | "Realistic Scene"
-  | "Unrealistic Scene";
-
-export type MarketingVideo = {
-  src: string;
-  title: string;
-  category: MarketingVideoCategory;
+export const CTA_PRIMARY = {
+  label: "Book a Discovery Call",
+  href: `mailto:${CONTACT.email}?subject=${encodeURIComponent("Discovery Call — AI Video Ads")}`,
 };
 
-// Round-robin interleave by category — computed once at module load, never reshuffled
-function interleaveByCategory<T extends { category: string }>(items: T[]): T[] {
-  const groups = new Map<string, T[]>();
-  for (const item of items) {
-    if (!groups.has(item.category)) groups.set(item.category, []);
-    groups.get(item.category)!.push(item);
-  }
-  const buckets = Array.from(groups.values());
-  const indices = new Array(buckets.length).fill(0);
-  const result: T[] = [];
-  let added = true;
-  while (added) {
-    added = false;
-    for (let b = 0; b < buckets.length; b++) {
-      if (indices[b] < buckets[b].length) {
-        result.push(buckets[b][indices[b]++]);
-        added = true;
-      }
-    }
-  }
-  return result;
-}
+export const CTA_SECONDARY = {
+  label: "View Portfolio",
+  href: "/portfolio",
+};
 
-export const MARKETING_VIDEO_CATEGORIES: MarketingVideoCategory[] = [
-  "UGC",
-  "Tryons",
-  "Hypermotion",
-  "Commercial",
-  "Hooks",
-  "Realistic Scene",
-  "Unrealistic Scene",
+/* ─── Hero ────────────────────────────────────────────────────────────────── */
+
+export const HERO = {
+  eyebrow: "AI Video Ads Specialist",
+  // headline is split so the accent word can be styled independently
+  headlinePre: "AI video ads that",
+  headlineAccent: "stop the scroll",
+  headlinePost: "— and sell.",
+  subheadline:
+    "I help eCommerce and DTC brands ship high-converting ad creatives — strategy, script, and final cut in days, not weeks. No studios, no shoot days, no production bottleneck.",
+  status: "Available for projects · GMT+8",
+};
+
+/* ─── Value proposition ───────────────────────────────────────────────────── */
+
+export const VALUE_PROPS = [
+  {
+    title: "Strategy before pixels",
+    description:
+      "Every ad starts with research, customer psychology, and a hook plan — not a prompt. The creative is engineered to convert before a single frame is generated.",
+    icon: "Target",
+  },
+  {
+    title: "Production quality, AI speed",
+    description:
+      "Commercial-grade visuals without casting, studios, or shoot days. Concepts become finished ads in days, so you can test more angles for less.",
+    icon: "Zap",
+  },
+  {
+    title: "Built for testing",
+    description:
+      "Hooks, scripts, and variations delivered as structured test cells — so your media buyer learns something from every dollar spent.",
+    icon: "FlaskConical",
+  },
 ];
 
-export const MARKETING_VIDEOS: MarketingVideo[] = [
-  // ── UGC ───────────────────────────────────────────────────────────────────
-  { src: "/videos/format-ugc-1.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-ugc-2.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-ugc-3.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-ugc-4.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-ugc-5.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-ugc-6.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-ugc-7.mp4",      title: "UGC",      category: "UGC" },
-  { src: "/videos/format-tutorial-1.mp4", title: "Tutorial", category: "UGC" },
-  { src: "/videos/format-tutorial-2.mp4", title: "Tutorial", category: "UGC" },
-  { src: "/videos/format-unboxing-1.mp4", title: "Unboxing", category: "UGC" },
-  { src: "/videos/format-unboxing-2.mp4", title: "Unboxing", category: "UGC" },
-  { src: "/videos/format-unboxing-3.mp4", title: "Unboxing", category: "UGC" },
-  { src: "/videos/format-unboxing-4.mp4", title: "Unboxing", category: "UGC" },
-  { src: "/videos/format-unboxing-5.mp4", title: "Unboxing", category: "UGC" },
-  // ── Tryons ────────────────────────────────────────────────────────────────
-  { src: "/videos/format-virtual-tryon-1.mp4", title: "Virtual Try On", category: "Tryons" },
-  { src: "/videos/format-virtual-tryon-2.mp4", title: "Virtual Try On", category: "Tryons" },
-  { src: "/videos/format-virtual-tryon-3.mp4", title: "Virtual Try On", category: "Tryons" },
-  { src: "/videos/format-virtual-tryon-4.mp4", title: "Virtual Try On", category: "Tryons" },
-  { src: "/videos/format-virtual-tryon-5.mp4", title: "Virtual Try On", category: "Tryons" },
-  { src: "/videos/format-virtual-tryon-6.mp4", title: "Virtual Try On", category: "Tryons" },
-  { src: "/videos/format-pro-tryon-1.mp4",     title: "Pro Try On",     category: "Tryons" },
-  // ── Hypermotion ───────────────────────────────────────────────────────────
-  { src: "/videos/format-hyper-motion-1.mp4", title: "Hyper Motion", category: "Hypermotion" },
-  { src: "/videos/format-hyper-motion-2.mp4", title: "Hyper Motion", category: "Hypermotion" },
-  { src: "/videos/format-hyper-motion-3.mp4", title: "Hyper Motion", category: "Hypermotion" },
-  { src: "/videos/format-hyper-motion-4.mp4", title: "Hyper Motion", category: "Hypermotion" },
-  // ── Commercial ────────────────────────────────────────────────────────────
-  { src: "/videos/format-tv-spot-1.mp4",   title: "TV Spot",   category: "Commercial" },
-  { src: "/videos/format-tv-spot-2.mp4",   title: "TV Spot",   category: "Commercial" },
-  { src: "/videos/format-wild-card-1.mp4", title: "Wild Card", category: "Commercial" },
-  // ── Hooks ─────────────────────────────────────────────────────────────────
-  { src: "/videos/hooks_product_hit-1.mp4",       title: "Product Hit",       category: "Hooks" },
-  { src: "/videos/hooks_random_object_mic-1.mp4", title: "Random Object Mic", category: "Hooks" },
-  { src: "/videos/hooks_blizzard-1.mp4",          title: "Blizzard",          category: "Hooks" },
-  { src: "/videos/hooks_product_crash-1.mp4",     title: "Product Crash",     category: "Hooks" },
-  { src: "/videos/hooks_product_dodge-1.mp4",     title: "Product Dodge",     category: "Hooks" },
-  { src: "/videos/hooks_camera_bump-1.mp4",       title: "Camera Bump",       category: "Hooks" },
-  { src: "/videos/hooks_epic_fail-1.mp4",         title: "Epic Fail",         category: "Hooks" },
-  { src: "/videos/hooks_spicy-1.mp4",             title: "Spicy",             category: "Hooks" },
-  { src: "/videos/hooks_interview-1.mp4",         title: "Interview",         category: "Hooks" },
-  // ── Realistic Scene ───────────────────────────────────────────────────────
-  { src: "/videos/setting-bedroom-1.mp4",  title: "Bedroom",  category: "Realistic Scene" },
-  { src: "/videos/setting-nature-1.mp4",   title: "Nature",   category: "Realistic Scene" },
-  { src: "/videos/setting-gym-1.mp4",      title: "Gym",      category: "Realistic Scene" },
-  { src: "/videos/setting-bathroom-1.mp4", title: "Bathroom", category: "Realistic Scene" },
-  { src: "/videos/setting-kitchen-1.mp4",  title: "Kitchen",  category: "Realistic Scene" },
-  { src: "/videos/setting-car_roof-1.mp4", title: "Car Roof", category: "Realistic Scene" },
-  { src: "/videos/setting-in_car-1.mp4",   title: "In Car",   category: "Realistic Scene" },
-  { src: "/videos/setting-street-1.mp4",   title: "Street",   category: "Realistic Scene" },
-  { src: "/videos/setting-office-1.mp4",   title: "Office",   category: "Realistic Scene" },
-  // ── Unrealistic Scene ─────────────────────────────────────────────────────
-  { src: "/videos/setting-airplane_wing-1.mp4", title: "Airplane Wing", category: "Unrealistic Scene" },
-  { src: "/videos/setting-roofing-1.mp4",       title: "Roofing",       category: "Unrealistic Scene" },
-  { src: "/videos/setting-volcano_rim-1.mp4",   title: "Volcano Rim",   category: "Unrealistic Scene" },
-  { src: "/videos/setting-tiny_reviewer-1.mp4", title: "Tiny Reviewer", category: "Unrealistic Scene" },
-  { src: "/videos/setting-train_surf-1.mp4",    title: "Train Surf",    category: "Unrealistic Scene" },
+/* ─── Who I help ──────────────────────────────────────────────────────────── */
+
+export const AUDIENCES = [
+  {
+    title: "eCommerce & DTC Brands",
+    description:
+      "You need a steady stream of fresh ad creative to fight fatigue — without burning budget on monthly shoots.",
+    icon: "ShoppingBag",
+  },
+  {
+    title: "Shopify Stores",
+    description:
+      "You're scaling paid social and the bottleneck isn't media buying — it's creative volume and iteration speed.",
+    icon: "Store",
+  },
+  {
+    title: "Amazon Sellers",
+    description:
+      "You need scroll-stopping video for listings and external traffic that makes your product the obvious choice.",
+    icon: "Package",
+  },
+  {
+    title: "Marketing Agencies",
+    description:
+      "You need a reliable creative partner who delivers client-ready ad assets on agency timelines, white-label friendly.",
+    icon: "Briefcase",
+  },
 ];
 
-// Fixed interleaved order for "All" view — mixes categories, never changes on refresh
-export const MARKETING_VIDEOS_MIXED = interleaveByCategory(MARKETING_VIDEOS);
-
-// ─── Simple video type for Cinematic + Animation ──────────────────────────────
-export type SimpleVideo = { src: string; title: string };
-
-// ─── Cinematic Videos ─────────────────────────────────────────────────────────
-export const CINEMATIC_VIDEOS: SimpleVideo[] = [
-  { src: "/videos/cinematic/hf_20260204_182647_a6d63383-06bb-4749-9816-3dfece9ccb5c.mp4", title: "Cinematic 1" },
-  { src: "/videos/cinematic/hf_20260204_182735_5727c7a6-b2a6-4f20-af8d-c96b85e93d73.mp4", title: "Cinematic 2" },
-  { src: "/videos/cinematic/hf_20260331_203031_a2259b49-ef79-49fa-bd6e-d473be2de7b9.mp4", title: "Cinematic 3" },
-  { src: "/videos/cinematic/hf_20260331_203140_95d654f0-9c43-4f35-a901-1dbca0539148.mp4", title: "Cinematic 4" },
-  { src: "/videos/cinematic/hf_20260409_094417_ba8bf934-a387-4bf5-8a24-f34be2a65d46.mp4", title: "Cinematic 5" },
-  { src: "/videos/cinematic/hf_20260409_094513_629920b7-4009-46de-b3b6-b80cc2185275.mp4", title: "Cinematic 6" },
+export const AUDIENCE_NICHES = [
+  "Beauty",
+  "Skincare",
+  "Supplements",
+  "Apparel",
+  "Food & Beverage",
+  "Home Products",
+  "Pet Products",
+  "Tech",
+  "SaaS",
 ];
 
-// ─── Animation Videos ─────────────────────────────────────────────────────────
-export const ANIMATION_VIDEOS: SimpleVideo[] = [
-  { src: "/videos/animation/hf_20260331_185447_ef278b6b-430b-42ba-8b0b-05f1179fce0a.mp4", title: "Animation 1" },
-  { src: "/videos/animation/hf_20260331_191014_7fd359e3-6d88-44ed-b0ae-aa2972dcf0d6.mp4", title: "Animation 2" },
-  { src: "/videos/animation/hf_20260331_203048_4d65f51e-7818-4dc4-921b-407275cdd301.mp4", title: "Animation 3" },
-  { src: "/videos/animation/hf_20260331_203112_444c3863-8c35-4e34-9071-ab7166f06232.mp4", title: "Animation 4" },
-  { src: "/videos/animation/hf_20260331_203147_19ae6acb-3811-4522-b9ea-2edaf6c3f1ae.mp4", title: "Animation 5" },
-  { src: "/videos/animation/hf_20260409_094505_e898193e-ec14-4ecc-92ed-be976174fc88.mp4", title: "Animation 6" },
-  { src: "/videos/animation/hf_20260409_094517_68844b63-ca4b-49f3-9b98-cc8a13f56729.mp4", title: "Animation 7" },
-  { src: "/videos/animation/hf_20260409_094557_c0e3952b-1ecf-4621-9b06-eb86a7fe29e8.mp4", title: "Animation 8" },
+/* ─── Services — outcome-focused ──────────────────────────────────────────── */
+
+export const SERVICES = [
+  {
+    title: "AI UGC Ads",
+    icon: "Users",
+    problem: "Real UGC is slow, inconsistent, and expensive to source at volume.",
+    solution:
+      "Authentic-feeling, UGC-style video ads generated and edited to platform-native standards — ready for Meta and TikTok.",
+    benefits: ["Native feel that earns watch time", "Unlimited talent variety", "Days, not weeks"],
+    deliverables: ["9:16 UGC ads", "Hook variations", "Caption versions"],
+  },
+  {
+    title: "AI Product Commercials",
+    icon: "Clapperboard",
+    problem: "Commercial production quality is priced out of reach for most growing brands.",
+    solution:
+      "Cinematic product spots — macro shots, dynamic scenes, brand-grade polish — produced entirely through an AI pipeline.",
+    benefits: ["Broadcast-level visuals", "No studio or crew costs", "Full creative control"],
+    deliverables: ["Hero commercial", "16:9 + 9:16 versions", "Cutdowns"],
+  },
+  {
+    title: "Social Media Ads",
+    icon: "Smartphone",
+    problem: "Feeds move fast — last month's creative is already invisible.",
+    solution:
+      "Platform-tuned ad creatives built for the scroll: thumb-stopping openers, tight pacing, and sound-off-safe storytelling.",
+    benefits: ["Placement-optimized formats", "Fresh angles monthly", "Consistent brand system"],
+    deliverables: ["Feed + Stories + Reels formats", "Multiple aspect ratios", "Text-overlay variants"],
+  },
+  {
+    title: "Product Launch Videos",
+    icon: "Rocket",
+    problem: "Launches get one first impression — most products waste it on a spec list.",
+    solution:
+      "A launch package that makes the product feel inevitable: hero film for the moment, cutdowns for the campaign that follows.",
+    benefits: ["One cohesive launch story", "Assets for every channel", "Momentum past day one"],
+    deliverables: ["Launch film", "Feature cutdowns", "Teaser assets"],
+  },
+  {
+    title: "Creative Strategy",
+    icon: "Compass",
+    problem: "Great production wasted on the wrong angle still doesn't convert.",
+    solution:
+      "Research-driven creative direction: competitor analysis, customer psychology, and angle mapping before anything is produced.",
+    benefits: ["Angles grounded in research", "Clear testing roadmap", "No guesswork creative"],
+    deliverables: ["Creative brief", "Angle map", "Testing plan"],
+  },
+  {
+    title: "Scriptwriting & Storyboards",
+    icon: "PenLine",
+    problem: "Weak scripts make even beautiful footage forgettable.",
+    solution:
+      "Conversion-focused scripts with beat-by-beat timing, plus visual storyboards that lock the creative before production.",
+    benefits: ["Hooks engineered first", "Every second accounted for", "Alignment before production"],
+    deliverables: ["Full scripts", "Storyboard frames", "Hook alternatives"],
+  },
+  {
+    title: "AI Image & Video Production",
+    icon: "Sparkles",
+    problem: "Brands need constant visual content, but shoots don't scale.",
+    solution:
+      "A full AI production pipeline — product imagery, lifestyle scenes, and video generation — matched to your brand's look.",
+    benefits: ["Brand-consistent output", "Any scene, any setting", "Volume without fatigue"],
+    deliverables: ["Product imagery sets", "Lifestyle scenes", "Generated video"],
+  },
+  {
+    title: "Editing & Post-Production",
+    icon: "Scissors",
+    problem: "Raw generative output isn't an ad — the edit is where it converts.",
+    solution:
+      "Professional editing: pacing, sound design, captions, color, and platform-specific finishing on every deliverable.",
+    benefits: ["Retention-focused pacing", "Sound-off optimized", "Polished final delivery"],
+    deliverables: ["Final edits", "Caption styling", "Format exports"],
+  },
+  {
+    title: "Creative Testing Assets",
+    icon: "FlaskConical",
+    problem: "One ad tells you nothing — structured variation is how accounts scale.",
+    solution:
+      "Variant sets built for clean testing: one variable per cell across hooks, angles, and CTAs, mapped in a testing matrix.",
+    benefits: ["Readable test results", "Faster winning-ad discovery", "Efficient iteration loop"],
+    deliverables: ["Variant sets", "Testing matrix", "Iteration recommendations"],
+  },
+];
+
+/* ─── Creative workflow — 12 steps ────────────────────────────────────────── */
+
+export const WORKFLOW_STEPS = [
+  { step: "01", title: "Discovery", description: "Brand, product, offer, and goals — aligned before anything is made." },
+  { step: "02", title: "Product Research", description: "Reviews, objections, and use cases mined for creative raw material." },
+  { step: "03", title: "Competitor Research", description: "What the market is running, what's saturated, and where the gaps are." },
+  { step: "04", title: "Customer Psychology", description: "The real reason people buy — mapped into angles that resonate." },
+  { step: "05", title: "Creative Strategy", description: "Angles, formats, and a testing plan grounded in the research." },
+  { step: "06", title: "Hooks", description: "The first two seconds, engineered — multiple openers per concept." },
+  { step: "07", title: "Script", description: "Beat-by-beat scripts where every line earns the next second of watch time." },
+  { step: "08", title: "Storyboard", description: "The full ad visualized frame by frame before production begins." },
+  { step: "09", title: "AI Images", description: "Product and scene imagery generated to match your brand's look." },
+  { step: "10", title: "AI Video", description: "Scenes brought to motion through a professional AI video pipeline." },
+  { step: "11", title: "Editing", description: "Pacing, sound design, captions, and grade — where the ad becomes an ad." },
+  { step: "12", title: "Final Delivery", description: "Every format, ratio, and variant — organized and ready to launch." },
+];
+
+/* ─── Why work with me ────────────────────────────────────────────────────── */
+
+export const WHY_ME = [
+  {
+    title: "A marketer first",
+    description:
+      "The goal is never 'impressive AI' — it's ads that convert. Every creative decision traces back to customer psychology and performance.",
+  },
+  {
+    title: "Full pipeline, one person",
+    description:
+      "Strategy, script, visuals, edit, delivery — no handoffs, no telephone game, no waiting on a production chain.",
+  },
+  {
+    title: "Testing velocity",
+    description:
+      "AI production means more concepts tested per month. More tests, faster learning, quicker path to your winning creative.",
+  },
+  {
+    title: "Direct collaboration",
+    description:
+      "You work with the person making your ads. Feedback lands directly on the work — usually turned around within a day.",
+  },
+];
+
+export const ABOUT = {
+  paragraphs: [
+    "I build advertising creatives, not AI demos. Since 2022 I've worked across the full generative stack — images, video, voice — with one lens: does this make someone stop, watch, and buy?",
+    "Today I run a complete AI production pipeline for eCommerce and DTC brands: research-backed creative strategy in, finished ad creatives out. The tools change monthly. The marketing thinking is what compounds.",
+  ],
+};
+
+/* ─── Technology — production pipeline framing ────────────────────────────── */
+
+export const TECH_STACK = [
+  { name: "Claude", role: "Research, strategy & scripts" },
+  { name: "Google Flow", role: "Production orchestration" },
+  { name: "Veo 3", role: "AI video generation" },
+  { name: "Nano Banana Pro", role: "AI image generation" },
+  { name: "ElevenLabs", role: "Voiceover & sound" },
+  { name: "CapCut Pro", role: "Editing & captions" },
+  { name: "Photoshop", role: "Finishing & retouch" },
+];
+
+/* ─── FAQ ─────────────────────────────────────────────────────────────────── */
+
+export const FAQS = [
+  {
+    q: "How long does production take?",
+    a: "Most ad packages are delivered within 3–7 business days depending on scope. A single UGC-style ad with hook variations typically ships in 3–4 days; full launch packages take about a week.",
+  },
+  {
+    q: "Can you match our brand's look and style?",
+    a: "Yes — brand matching is step one. I work from your brand guidelines, existing creative, and product imagery so everything delivered looks like it came from your team.",
+  },
+  {
+    q: "Is everything made with AI?",
+    a: "Generation is AI-powered; the thinking isn't. Strategy, scripts, direction, curation, and editing are human work. AI replaces the camera and the studio — not the marketer.",
+  },
+  {
+    q: "Can I request revisions?",
+    a: "Of course. Every project includes revision rounds, and direction-level feedback is usually turned around within a day. The goal is an ad you're confident putting spend behind.",
+  },
+  {
+    q: "Can you create multiple ad variations?",
+    a: "That's the core advantage. Hooks, angles, and CTA variations are delivered as structured test sets — one variable per cell — so your testing actually produces answers.",
+  },
+  {
+    q: "Do you provide scripts and storyboards?",
+    a: "Yes. Every video is built on a beat-timed script and a visual storyboard, which you approve before production. You'll always know exactly what's being made.",
+  },
+  {
+    q: "Can you work with our existing footage?",
+    a: "Yes — existing footage, product shots, and past creative can be edited, extended, or blended with AI-generated scenes to stretch what you already have.",
+  },
+];
+
+/* ─── Testimonials — placeholders only, never fabricated ─────────────────── */
+
+export const TESTIMONIAL_PLACEHOLDERS = [
+  { quote: null, author: null, role: "eCommerce Brand — Coming Soon" },
+  { quote: null, author: null, role: "Marketing Agency — Coming Soon" },
+  { quote: null, author: null, role: "DTC Founder — Coming Soon" },
 ];
