@@ -2,7 +2,7 @@ import { HeroSection } from "@/components/sections/HeroSection";
 import { ValuePropSection } from "@/components/sections/ValuePropSection";
 import { WhoIHelpSection } from "@/components/sections/WhoIHelpSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
-import { PortfolioPreviewSection } from "@/components/sections/PortfolioPreviewSection";
+import { FeaturedWorkSection } from "@/components/sections/FeaturedWorkSection";
 import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { WhyMeSection } from "@/components/sections/WhyMeSection";
 import { TechStackSection } from "@/components/sections/TechStackSection";
@@ -17,7 +17,7 @@ export default function Home() {
       <ValuePropSection />
       <WhoIHelpSection />
       <ServicesSection />
-      <PortfolioPreviewSection />
+      <FeaturedWorkSection />
       <WorkflowSection />
       <WhyMeSection />
       <TechStackSection />

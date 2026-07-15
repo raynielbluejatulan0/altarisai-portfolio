@@ -1,5 +1,11 @@
 import { Quote } from "lucide-react";
-import type { Testimonial } from "@/lib/portfolio";
+
+export interface Testimonial {
+  /** null → renders a polished "Coming Soon" state — never fabricate quotes */
+  quote: string | null;
+  author: string | null;
+  role?: string;
+}
 
 interface TestimonialCardProps {
   testimonial: Testimonial;

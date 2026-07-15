@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SITE } from "@/lib/constants";
-import { PORTFOLIO_PROJECTS } from "@/lib/portfolio";
+import { CATEGORIES } from "@/lib/media";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -14,9 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "weekly",
       priority: 0.9,
     },
-    ...PORTFOLIO_PROJECTS.map((project) => ({
-      url: `${SITE.url}/portfolio/${project.slug}`,
-      changeFrequency: "monthly" as const,
+    ...CATEGORIES.map((cat) => ({
+      url: `${SITE.url}/portfolio/${cat.slug}`,
+      changeFrequency: "weekly" as const,
       priority: 0.7,
     })),
   ];

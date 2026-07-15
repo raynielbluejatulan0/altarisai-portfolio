@@ -1,31 +1,37 @@
 import type { Metadata } from "next";
-import { PortfolioGrid } from "@/components/portfolio/PortfolioGrid";
-import { PORTFOLIO_PROJECTS } from "@/lib/portfolio";
+import { PortfolioExplorer } from "@/components/gallery/PortfolioExplorer";
+import { CTASection } from "@/components/sections/CTASection";
+import { TOTAL_CATEGORIES, TOTAL_ITEMS } from "@/lib/media";
 
 export const metadata: Metadata = {
-  title: "Portfolio — AI Video Ad Case Studies",
+  title: "Portfolio — AI Video Ads & Creative",
   description:
-    "AI-powered advertising creatives across beauty, supplements, fashion, food, home, pets, tech, SaaS, and automotive — full case studies from strategy to final ad.",
+    "The full body of work: UGC ads, VSLs, 3D Pixar-style animation, product commercials, news-style segments, real estate walkthroughs, podcasts, and more — produced end to end with AI.",
 };
 
 export default function PortfolioPage() {
   return (
-    <div className="px-4 pb-24 pt-32 sm:px-6 sm:pb-32 sm:pt-40 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        {/* Page header */}
-        <div className="mb-16 text-center">
-          <span className="tag">Portfolio</span>
-          <h1 className="section-title mt-5 text-balance">
-            Ad creative, documented <span className="text-gradient">end to end.</span>
-          </h1>
-          <p className="section-subtitle">
-            Every case study walks the full pipeline — research, hooks, script, storyboard, AI
-            production, and final delivery. Client work is added as campaigns wrap and results come in.
-          </p>
-        </div>
+    <>
+      <div className="px-4 pb-24 pt-32 sm:px-6 sm:pb-28 sm:pt-40 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          {/* Page header */}
+          <div className="mb-4 text-center">
+            <span className="tag">Portfolio</span>
+            <h1 className="section-title mt-5 text-balance">
+              My work, <span className="text-gradient">start to finish.</span>
+            </h1>
+            <p className="section-subtitle">
+              {TOTAL_ITEMS} pieces across {TOTAL_CATEGORIES} categories — every one produced through my
+              full AI pipeline, from strategy and script to final edit. Browse by style, tap any piece
+              to play it full screen.
+            </p>
+          </div>
 
-        <PortfolioGrid projects={PORTFOLIO_PROJECTS} />
+          <PortfolioExplorer />
+        </div>
       </div>
-    </div>
+
+      <CTASection />
+    </>
   );
 }

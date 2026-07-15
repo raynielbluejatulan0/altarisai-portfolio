@@ -10,13 +10,13 @@ export function WorkflowSection() {
   return (
     <SectionContainer id="process" bordered>
       <SectionHeading
-        eyebrow="Creative Process"
+        eyebrow="My Creative Process"
         title={
           <>
-            Twelve steps between a brief <span className="text-gradient">and a winning ad.</span>
+            Every piece follows the same <span className="text-gradient">proven pipeline.</span>
           </>
         }
-        subtitle="A production pipeline built like a performance team runs it — research first, generation late, editing always."
+        subtitle="From product research to final delivery — this is the workflow behind every ad in my portfolio. Research first, generation late, editing always."
       />
 
       <motion.ol
