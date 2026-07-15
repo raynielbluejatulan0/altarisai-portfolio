@@ -6,7 +6,6 @@ import { FeaturedWorkSection } from "@/components/sections/FeaturedWorkSection";
 import { WorkflowSection } from "@/components/sections/WorkflowSection";
 import { WhyMeSection } from "@/components/sections/WhyMeSection";
 import { TechStackSection } from "@/components/sections/TechStackSection";
-import { TestimonialsSection } from "@/components/sections/TestimonialsSection";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CTASection } from "@/components/sections/CTASection";
 
@@ -21,7 +20,6 @@ export default function Home() {
       <WorkflowSection />
       <WhyMeSection />
       <TechStackSection />
-      <TestimonialsSection />
       <FAQSection />
       <CTASection />
     </>
