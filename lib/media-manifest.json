@@ -1,553 +1,8 @@
 {
-  "generatedAt": "2026-07-15T06:08:04.482Z",
-  "categoryCount": 10,
-  "itemCount": 65,
+  "generatedAt": "2026-07-15T11:45:32.825Z",
+  "categoryCount": 11,
+  "itemCount": 67,
   "categories": [
-    {
-      "slug": "3d-pixar",
-      "name": "3D Pixar Style",
-      "description": "Stylized 3D character animation with a cinematic, studio-quality finish.",
-      "count": 10,
-      "items": [
-        {
-          "id": "3d-pixar-1",
-          "title": "3D Pixar Style · 1",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/1.mp4",
-          "poster": "/portfolio/media/3d-pixar/1.jpg",
-          "width": 720,
-          "height": 1290,
-          "orientation": "portrait",
-          "duration": 44,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-2",
-          "title": "3D Pixar Style · 2",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/2.mp4",
-          "poster": "/portfolio/media/3d-pixar/2.jpg",
-          "width": 720,
-          "height": 1290,
-          "orientation": "portrait",
-          "duration": 55,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-3",
-          "title": "3D Pixar Style · 3",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/3.mp4",
-          "poster": "/portfolio/media/3d-pixar/3.jpg",
-          "width": 720,
-          "height": 1290,
-          "orientation": "portrait",
-          "duration": 50,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-4",
-          "title": "3D Pixar Style · 4",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/4.mp4",
-          "poster": "/portfolio/media/3d-pixar/4.jpg",
-          "width": 720,
-          "height": 1298,
-          "orientation": "portrait",
-          "duration": 48,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-5",
-          "title": "3D Pixar Style · 5",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/5.mp4",
-          "poster": "/portfolio/media/3d-pixar/5.jpg",
-          "width": 720,
-          "height": 1290,
-          "orientation": "portrait",
-          "duration": 49,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-6",
-          "title": "3D Pixar Style · 6",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/6.mp4",
-          "poster": "/portfolio/media/3d-pixar/6.jpg",
-          "width": 720,
-          "height": 1290,
-          "orientation": "portrait",
-          "duration": 46,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-7",
-          "title": "3D Pixar Style · 7",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/7.mp4",
-          "poster": "/portfolio/media/3d-pixar/7.jpg",
-          "width": 720,
-          "height": 1280,
-          "orientation": "portrait",
-          "duration": 46,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-8",
-          "title": "3D Pixar Style · 8",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/8.mp4",
-          "poster": "/portfolio/media/3d-pixar/8.jpg",
-          "width": 1072,
-          "height": 1920,
-          "orientation": "portrait",
-          "duration": 47,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-9",
-          "title": "3D Pixar Style · 9",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/9.mp4",
-          "poster": "/portfolio/media/3d-pixar/9.jpg",
-          "width": 1066,
-          "height": 1920,
-          "orientation": "portrait",
-          "duration": 52,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        },
-        {
-          "id": "3d-pixar-10",
-          "title": "3D Pixar Style · 10",
-          "type": "video",
-          "src": "/portfolio/media/3d-pixar/10.mp4",
-          "poster": "/portfolio/media/3d-pixar/10.jpg",
-          "width": 1930,
-          "height": 1080,
-          "orientation": "landscape",
-          "duration": 55,
-          "category": "3D Pixar Style",
-          "categorySlug": "3d-pixar"
-        }
-      ]
-    },
-    {
-      "slug": "graphics-designs",
-      "name": "Graphics Design",
-      "description": "Brand graphics, thumbnails, and static ad creative designed to stop the scroll.",
-      "count": 8,
-      "items": [
-        {
-          "id": "graphics-designs-1",
-          "title": "Graphics Design · 1",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/1.jpg",
-          "poster": "/portfolio/media/graphics-designs/1.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-2",
-          "title": "Graphics Design · 2",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/2.jpg",
-          "poster": "/portfolio/media/graphics-designs/2.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-3",
-          "title": "Graphics Design · 3",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/3.jpg",
-          "poster": "/portfolio/media/graphics-designs/3.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-4",
-          "title": "Graphics Design · 4",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/4.jpg",
-          "poster": "/portfolio/media/graphics-designs/4.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-5",
-          "title": "Graphics Design · 5",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/5.jpg",
-          "poster": "/portfolio/media/graphics-designs/5.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-6",
-          "title": "Graphics Design · 6",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/6.jpg",
-          "poster": "/portfolio/media/graphics-designs/6.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-7",
-          "title": "Graphics Design · 7",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/7.jpg",
-          "poster": "/portfolio/media/graphics-designs/7.jpg",
-          "width": 1344,
-          "height": 1680,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        },
-        {
-          "id": "graphics-designs-8",
-          "title": "Graphics Design · 8",
-          "type": "image",
-          "src": "/portfolio/media/graphics-designs/8.jpg",
-          "poster": "/portfolio/media/graphics-designs/8.jpg",
-          "width": 1296,
-          "height": 2304,
-          "orientation": "portrait",
-          "duration": 0,
-          "category": "Graphics Design",
-          "categorySlug": "graphics-designs"
-        }
-      ]
-    },
-    {
-      "slug": "music-video-3d",
-      "name": "3D Music Video",
-      "description": "3D-animated music videos with directed motion, mood, and rhythm.",
-      "count": 4,
-      "items": [
-        {
-          "id": "music-video-3d-1",
-          "title": "3D Music Video · 1",
-          "type": "video",
-          "src": "/portfolio/media/music-video-3d/1.mp4",
-          "poster": "/portfolio/media/music-video-3d/1.jpg",
-          "width": 1080,
-          "height": 1920,
-          "orientation": "portrait",
-          "duration": 70,
-          "category": "3D Music Video",
-          "categorySlug": "music-video-3d"
-        },
-        {
-          "id": "music-video-3d-2",
-          "title": "3D Music Video · 2",
-          "type": "video",
-          "src": "/portfolio/media/music-video-3d/2.mp4",
-          "poster": "/portfolio/media/music-video-3d/2.jpg",
-          "width": 1080,
-          "height": 1920,
-          "orientation": "portrait",
-          "duration": 58,
-          "category": "3D Music Video",
-          "categorySlug": "music-video-3d"
-        },
-        {
-          "id": "music-video-3d-3",
-          "title": "3D Music Video · 3",
-          "type": "video",
-          "src": "/portfolio/media/music-video-3d/3.mp4",
-          "poster": "/portfolio/media/music-video-3d/3.jpg",
-          "width": 1080,
-          "height": 1920,
-          "orientation": "portrait",
-          "duration": 73,
-          "category": "3D Music Video",
-          "categorySlug": "music-video-3d"
-        },
-        {
-          "id": "music-video-3d-4",
-          "title": "3D Music Video · 4",
-          "type": "video",
-          "src": "/portfolio/media/music-video-3d/4.mp4",
-          "poster": "/portfolio/media/music-video-3d/4.jpg",
-          "width": 1080,
-          "height": 1920,
-          "orientation": "portrait",
-          "duration": 67,
-          "category": "3D Music Video",
-          "categorySlug": "music-video-3d"
-        }
-      ]
-    },
-    {
-      "slug": "news-style",
-      "name": "News Style",
-      "description": "Broadcast-style news segments that lend authority and urgency to a message.",
-      "count": 2,
-      "items": [
-        {
-          "id": "news-style-1",
-          "title": "News Style · 1",
-          "type": "video",
-          "src": "/portfolio/media/news-style/1.mp4",
-          "poster": "/portfolio/media/news-style/1.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 40,
-          "category": "News Style",
-          "categorySlug": "news-style"
-        },
-        {
-          "id": "news-style-2",
-          "title": "News Style · 2",
-          "type": "video",
-          "src": "/portfolio/media/news-style/2.mp4",
-          "poster": "/portfolio/media/news-style/2.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 32,
-          "category": "News Style",
-          "categorySlug": "news-style"
-        }
-      ]
-    },
-    {
-      "slug": "podcast",
-      "name": "Podcast",
-      "description": "Podcast-style video content and clips built for reach and easy repurposing.",
-      "count": 6,
-      "items": [
-        {
-          "id": "podcast-1",
-          "title": "Podcast · 1",
-          "type": "video",
-          "src": "/portfolio/media/podcast/1.mp4",
-          "poster": "/portfolio/media/podcast/1.jpg",
-          "width": 720,
-          "height": 1280,
-          "orientation": "portrait",
-          "duration": 79,
-          "category": "Podcast",
-          "categorySlug": "podcast"
-        },
-        {
-          "id": "podcast-2",
-          "title": "Podcast · 2",
-          "type": "video",
-          "src": "/portfolio/media/podcast/2.mp4",
-          "poster": "/portfolio/media/podcast/2.jpg",
-          "width": 720,
-          "height": 1296,
-          "orientation": "portrait",
-          "duration": 66,
-          "category": "Podcast",
-          "categorySlug": "podcast"
-        },
-        {
-          "id": "podcast-3",
-          "title": "Podcast · 3",
-          "type": "video",
-          "src": "/portfolio/media/podcast/3.mp4",
-          "poster": "/portfolio/media/podcast/3.jpg",
-          "width": 720,
-          "height": 1296,
-          "orientation": "portrait",
-          "duration": 47,
-          "category": "Podcast",
-          "categorySlug": "podcast"
-        },
-        {
-          "id": "podcast-4",
-          "title": "Podcast · 4",
-          "type": "video",
-          "src": "/portfolio/media/podcast/4.mp4",
-          "poster": "/portfolio/media/podcast/4.jpg",
-          "width": 720,
-          "height": 1280,
-          "orientation": "portrait",
-          "duration": 27,
-          "category": "Podcast",
-          "categorySlug": "podcast"
-        },
-        {
-          "id": "podcast-5",
-          "title": "Podcast · 5",
-          "type": "video",
-          "src": "/portfolio/media/podcast/5.mp4",
-          "poster": "/portfolio/media/podcast/5.jpg",
-          "width": 720,
-          "height": 960,
-          "orientation": "portrait",
-          "duration": 39,
-          "category": "Podcast",
-          "categorySlug": "podcast"
-        },
-        {
-          "id": "podcast-6",
-          "title": "Podcast · 6",
-          "type": "video",
-          "src": "/portfolio/media/podcast/6.mp4",
-          "poster": "/portfolio/media/podcast/6.jpg",
-          "width": 1422,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 36,
-          "category": "Podcast",
-          "categorySlug": "podcast"
-        }
-      ]
-    },
-    {
-      "slug": "real-estate-walkthrough",
-      "name": "Real Estate Walkthrough",
-      "description": "Immersive property walkthroughs that sell the space before the first visit.",
-      "count": 1,
-      "items": [
-        {
-          "id": "real-estate-walkthrough-1",
-          "title": "Real Estate Walkthrough · 1",
-          "type": "video",
-          "src": "/portfolio/media/real-estate-walkthrough/1.mp4",
-          "poster": "/portfolio/media/real-estate-walkthrough/1.jpg",
-          "width": 1926,
-          "height": 1440,
-          "orientation": "landscape",
-          "duration": 121,
-          "category": "Real Estate Walkthrough",
-          "categorySlug": "real-estate-walkthrough"
-        }
-      ]
-    },
-    {
-      "slug": "shorts-affiliate",
-      "name": "Affiliate Shorts",
-      "description": "Short-form affiliate ads engineered to hook, demo, and drive the click.",
-      "count": 5,
-      "items": [
-        {
-          "id": "shorts-affiliate-brown-shirt",
-          "title": "Brown Shirt",
-          "type": "video",
-          "src": "/portfolio/media/shorts-affiliate/brown-shirt.mp4",
-          "poster": "/portfolio/media/shorts-affiliate/brown-shirt.jpg",
-          "width": 1440,
-          "height": 2528,
-          "orientation": "portrait",
-          "duration": 17,
-          "category": "Affiliate Shorts",
-          "categorySlug": "shorts-affiliate"
-        },
-        {
-          "id": "shorts-affiliate-gaming-fingersleeves",
-          "title": "Gaming Fingersleeves",
-          "type": "video",
-          "src": "/portfolio/media/shorts-affiliate/gaming-fingersleeves.mp4",
-          "poster": "/portfolio/media/shorts-affiliate/gaming-fingersleeves.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 21,
-          "category": "Affiliate Shorts",
-          "categorySlug": "shorts-affiliate"
-        },
-        {
-          "id": "shorts-affiliate-magnetic-watch-charger",
-          "title": "Magnetic Watch Charger",
-          "type": "video",
-          "src": "/portfolio/media/shorts-affiliate/magnetic-watch-charger.mp4",
-          "poster": "/portfolio/media/shorts-affiliate/magnetic-watch-charger.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 12,
-          "category": "Affiliate Shorts",
-          "categorySlug": "shorts-affiliate"
-        },
-        {
-          "id": "shorts-affiliate-phone-case",
-          "title": "Phone Case",
-          "type": "video",
-          "src": "/portfolio/media/shorts-affiliate/phone-case.mp4",
-          "poster": "/portfolio/media/shorts-affiliate/phone-case.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 12,
-          "category": "Affiliate Shorts",
-          "categorySlug": "shorts-affiliate"
-        },
-        {
-          "id": "shorts-affiliate-phone-cooler",
-          "title": "Phone Cooler",
-          "type": "video",
-          "src": "/portfolio/media/shorts-affiliate/phone-cooler.mp4",
-          "poster": "/portfolio/media/shorts-affiliate/phone-cooler.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 21,
-          "category": "Affiliate Shorts",
-          "categorySlug": "shorts-affiliate"
-        }
-      ]
-    },
-    {
-      "slug": "skeleton",
-      "name": "Concept Lab",
-      "description": "Experimental concept pieces and creative-range tests from the studio.",
-      "count": 1,
-      "items": [
-        {
-          "id": "skeleton-1",
-          "title": "Concept Lab · 1",
-          "type": "video",
-          "src": "/portfolio/media/skeleton/1.mp4",
-          "poster": "/portfolio/media/skeleton/1.jpg",
-          "width": 1408,
-          "height": 2560,
-          "orientation": "portrait",
-          "duration": 29,
-          "category": "Concept Lab",
-          "categorySlug": "skeleton"
-        }
-      ]
-    },
     {
       "slug": "ugc",
       "name": "UGC Ads",
@@ -925,6 +380,585 @@
           "duration": 40,
           "category": "VSL",
           "categorySlug": "vsl"
+        }
+      ]
+    },
+    {
+      "slug": "podcast",
+      "name": "Podcast",
+      "description": "Podcast-style video content and clips built for reach and easy repurposing.",
+      "count": 6,
+      "items": [
+        {
+          "id": "podcast-1",
+          "title": "Podcast · 1",
+          "type": "video",
+          "src": "/portfolio/media/podcast/1.mp4",
+          "poster": "/portfolio/media/podcast/1.jpg",
+          "width": 720,
+          "height": 1280,
+          "orientation": "portrait",
+          "duration": 79,
+          "category": "Podcast",
+          "categorySlug": "podcast"
+        },
+        {
+          "id": "podcast-2",
+          "title": "Podcast · 2",
+          "type": "video",
+          "src": "/portfolio/media/podcast/2.mp4",
+          "poster": "/portfolio/media/podcast/2.jpg",
+          "width": 720,
+          "height": 1296,
+          "orientation": "portrait",
+          "duration": 66,
+          "category": "Podcast",
+          "categorySlug": "podcast"
+        },
+        {
+          "id": "podcast-3",
+          "title": "Podcast · 3",
+          "type": "video",
+          "src": "/portfolio/media/podcast/3.mp4",
+          "poster": "/portfolio/media/podcast/3.jpg",
+          "width": 720,
+          "height": 1296,
+          "orientation": "portrait",
+          "duration": 47,
+          "category": "Podcast",
+          "categorySlug": "podcast"
+        },
+        {
+          "id": "podcast-4",
+          "title": "Podcast · 4",
+          "type": "video",
+          "src": "/portfolio/media/podcast/4.mp4",
+          "poster": "/portfolio/media/podcast/4.jpg",
+          "width": 720,
+          "height": 1280,
+          "orientation": "portrait",
+          "duration": 27,
+          "category": "Podcast",
+          "categorySlug": "podcast"
+        },
+        {
+          "id": "podcast-5",
+          "title": "Podcast · 5",
+          "type": "video",
+          "src": "/portfolio/media/podcast/5.mp4",
+          "poster": "/portfolio/media/podcast/5.jpg",
+          "width": 720,
+          "height": 960,
+          "orientation": "portrait",
+          "duration": 39,
+          "category": "Podcast",
+          "categorySlug": "podcast"
+        },
+        {
+          "id": "podcast-6",
+          "title": "Podcast · 6",
+          "type": "video",
+          "src": "/portfolio/media/podcast/6.mp4",
+          "poster": "/portfolio/media/podcast/6.jpg",
+          "width": 1422,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 36,
+          "category": "Podcast",
+          "categorySlug": "podcast"
+        }
+      ]
+    },
+    {
+      "slug": "3d-pixar",
+      "name": "3D Pixar Style",
+      "description": "Stylized 3D character animation with a cinematic, studio-quality finish.",
+      "count": 10,
+      "items": [
+        {
+          "id": "3d-pixar-1",
+          "title": "3D Pixar Style · 1",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/1.mp4",
+          "poster": "/portfolio/media/3d-pixar/1.jpg",
+          "width": 720,
+          "height": 1290,
+          "orientation": "portrait",
+          "duration": 44,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-2",
+          "title": "3D Pixar Style · 2",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/2.mp4",
+          "poster": "/portfolio/media/3d-pixar/2.jpg",
+          "width": 720,
+          "height": 1290,
+          "orientation": "portrait",
+          "duration": 55,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-3",
+          "title": "3D Pixar Style · 3",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/3.mp4",
+          "poster": "/portfolio/media/3d-pixar/3.jpg",
+          "width": 720,
+          "height": 1290,
+          "orientation": "portrait",
+          "duration": 50,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-4",
+          "title": "3D Pixar Style · 4",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/4.mp4",
+          "poster": "/portfolio/media/3d-pixar/4.jpg",
+          "width": 720,
+          "height": 1298,
+          "orientation": "portrait",
+          "duration": 48,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-5",
+          "title": "3D Pixar Style · 5",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/5.mp4",
+          "poster": "/portfolio/media/3d-pixar/5.jpg",
+          "width": 720,
+          "height": 1290,
+          "orientation": "portrait",
+          "duration": 49,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-6",
+          "title": "3D Pixar Style · 6",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/6.mp4",
+          "poster": "/portfolio/media/3d-pixar/6.jpg",
+          "width": 720,
+          "height": 1290,
+          "orientation": "portrait",
+          "duration": 46,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-7",
+          "title": "3D Pixar Style · 7",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/7.mp4",
+          "poster": "/portfolio/media/3d-pixar/7.jpg",
+          "width": 720,
+          "height": 1280,
+          "orientation": "portrait",
+          "duration": 46,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-8",
+          "title": "3D Pixar Style · 8",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/8.mp4",
+          "poster": "/portfolio/media/3d-pixar/8.jpg",
+          "width": 1072,
+          "height": 1920,
+          "orientation": "portrait",
+          "duration": 47,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-9",
+          "title": "3D Pixar Style · 9",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/9.mp4",
+          "poster": "/portfolio/media/3d-pixar/9.jpg",
+          "width": 1066,
+          "height": 1920,
+          "orientation": "portrait",
+          "duration": 52,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        },
+        {
+          "id": "3d-pixar-10",
+          "title": "3D Pixar Style · 10",
+          "type": "video",
+          "src": "/portfolio/media/3d-pixar/10.mp4",
+          "poster": "/portfolio/media/3d-pixar/10.jpg",
+          "width": 1930,
+          "height": 1080,
+          "orientation": "landscape",
+          "duration": 55,
+          "category": "3D Pixar Style",
+          "categorySlug": "3d-pixar"
+        }
+      ]
+    },
+    {
+      "slug": "claymation",
+      "name": "Claymation",
+      "description": "Charming stop-motion-style claymation with a handcrafted, tactile look.",
+      "count": 2,
+      "items": [
+        {
+          "id": "claymation-1",
+          "title": "Claymation · 1",
+          "type": "video",
+          "src": "/portfolio/media/claymation/1.mp4",
+          "poster": "/portfolio/media/claymation/1.jpg",
+          "width": 1440,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 55,
+          "category": "Claymation",
+          "categorySlug": "claymation"
+        },
+        {
+          "id": "claymation-2",
+          "title": "Claymation · 2",
+          "type": "video",
+          "src": "/portfolio/media/claymation/2.mp4",
+          "poster": "/portfolio/media/claymation/2.jpg",
+          "width": 1440,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 55,
+          "category": "Claymation",
+          "categorySlug": "claymation"
+        }
+      ]
+    },
+    {
+      "slug": "music-video-3d",
+      "name": "3D Music Video",
+      "description": "3D-animated music videos with directed motion, mood, and rhythm.",
+      "count": 4,
+      "items": [
+        {
+          "id": "music-video-3d-1",
+          "title": "3D Music Video · 1",
+          "type": "video",
+          "src": "/portfolio/media/music-video-3d/1.mp4",
+          "poster": "/portfolio/media/music-video-3d/1.jpg",
+          "width": 1080,
+          "height": 1920,
+          "orientation": "portrait",
+          "duration": 70,
+          "category": "3D Music Video",
+          "categorySlug": "music-video-3d"
+        },
+        {
+          "id": "music-video-3d-2",
+          "title": "3D Music Video · 2",
+          "type": "video",
+          "src": "/portfolio/media/music-video-3d/2.mp4",
+          "poster": "/portfolio/media/music-video-3d/2.jpg",
+          "width": 1080,
+          "height": 1920,
+          "orientation": "portrait",
+          "duration": 58,
+          "category": "3D Music Video",
+          "categorySlug": "music-video-3d"
+        },
+        {
+          "id": "music-video-3d-3",
+          "title": "3D Music Video · 3",
+          "type": "video",
+          "src": "/portfolio/media/music-video-3d/3.mp4",
+          "poster": "/portfolio/media/music-video-3d/3.jpg",
+          "width": 1080,
+          "height": 1920,
+          "orientation": "portrait",
+          "duration": 73,
+          "category": "3D Music Video",
+          "categorySlug": "music-video-3d"
+        },
+        {
+          "id": "music-video-3d-4",
+          "title": "3D Music Video · 4",
+          "type": "video",
+          "src": "/portfolio/media/music-video-3d/4.mp4",
+          "poster": "/portfolio/media/music-video-3d/4.jpg",
+          "width": 1080,
+          "height": 1920,
+          "orientation": "portrait",
+          "duration": 67,
+          "category": "3D Music Video",
+          "categorySlug": "music-video-3d"
+        }
+      ]
+    },
+    {
+      "slug": "news-style",
+      "name": "News Style",
+      "description": "Broadcast-style news segments that lend authority and urgency to a message.",
+      "count": 2,
+      "items": [
+        {
+          "id": "news-style-1",
+          "title": "News Style · 1",
+          "type": "video",
+          "src": "/portfolio/media/news-style/1.mp4",
+          "poster": "/portfolio/media/news-style/1.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 40,
+          "category": "News Style",
+          "categorySlug": "news-style"
+        },
+        {
+          "id": "news-style-2",
+          "title": "News Style · 2",
+          "type": "video",
+          "src": "/portfolio/media/news-style/2.mp4",
+          "poster": "/portfolio/media/news-style/2.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 32,
+          "category": "News Style",
+          "categorySlug": "news-style"
+        }
+      ]
+    },
+    {
+      "slug": "shorts-affiliate",
+      "name": "Affiliate Shorts",
+      "description": "Short-form affiliate ads engineered to hook, demo, and drive the click.",
+      "count": 5,
+      "items": [
+        {
+          "id": "shorts-affiliate-brown-shirt",
+          "title": "Brown Shirt",
+          "type": "video",
+          "src": "/portfolio/media/shorts-affiliate/brown-shirt.mp4",
+          "poster": "/portfolio/media/shorts-affiliate/brown-shirt.jpg",
+          "width": 1440,
+          "height": 2528,
+          "orientation": "portrait",
+          "duration": 17,
+          "category": "Affiliate Shorts",
+          "categorySlug": "shorts-affiliate"
+        },
+        {
+          "id": "shorts-affiliate-gaming-fingersleeves",
+          "title": "Gaming Fingersleeves",
+          "type": "video",
+          "src": "/portfolio/media/shorts-affiliate/gaming-fingersleeves.mp4",
+          "poster": "/portfolio/media/shorts-affiliate/gaming-fingersleeves.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 21,
+          "category": "Affiliate Shorts",
+          "categorySlug": "shorts-affiliate"
+        },
+        {
+          "id": "shorts-affiliate-magnetic-watch-charger",
+          "title": "Magnetic Watch Charger",
+          "type": "video",
+          "src": "/portfolio/media/shorts-affiliate/magnetic-watch-charger.mp4",
+          "poster": "/portfolio/media/shorts-affiliate/magnetic-watch-charger.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 12,
+          "category": "Affiliate Shorts",
+          "categorySlug": "shorts-affiliate"
+        },
+        {
+          "id": "shorts-affiliate-phone-case",
+          "title": "Phone Case",
+          "type": "video",
+          "src": "/portfolio/media/shorts-affiliate/phone-case.mp4",
+          "poster": "/portfolio/media/shorts-affiliate/phone-case.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 12,
+          "category": "Affiliate Shorts",
+          "categorySlug": "shorts-affiliate"
+        },
+        {
+          "id": "shorts-affiliate-phone-cooler",
+          "title": "Phone Cooler",
+          "type": "video",
+          "src": "/portfolio/media/shorts-affiliate/phone-cooler.mp4",
+          "poster": "/portfolio/media/shorts-affiliate/phone-cooler.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 21,
+          "category": "Affiliate Shorts",
+          "categorySlug": "shorts-affiliate"
+        }
+      ]
+    },
+    {
+      "slug": "skeleton",
+      "name": "Skeleton",
+      "description": "Experimental concept pieces and creative-range tests from the studio.",
+      "count": 1,
+      "items": [
+        {
+          "id": "skeleton-1",
+          "title": "Skeleton · 1",
+          "type": "video",
+          "src": "/portfolio/media/skeleton/1.mp4",
+          "poster": "/portfolio/media/skeleton/1.jpg",
+          "width": 1408,
+          "height": 2560,
+          "orientation": "portrait",
+          "duration": 29,
+          "category": "Skeleton",
+          "categorySlug": "skeleton"
+        }
+      ]
+    },
+    {
+      "slug": "real-estate-walkthrough",
+      "name": "Real Estate Walkthrough",
+      "description": "Immersive property walkthroughs that sell the space before the first visit.",
+      "count": 1,
+      "items": [
+        {
+          "id": "real-estate-walkthrough-1",
+          "title": "Real Estate Walkthrough · 1",
+          "type": "video",
+          "src": "/portfolio/media/real-estate-walkthrough/1.mp4",
+          "poster": "/portfolio/media/real-estate-walkthrough/1.jpg",
+          "width": 1926,
+          "height": 1440,
+          "orientation": "landscape",
+          "duration": 121,
+          "category": "Real Estate Walkthrough",
+          "categorySlug": "real-estate-walkthrough"
+        }
+      ]
+    },
+    {
+      "slug": "graphics-designs",
+      "name": "Graphics Design",
+      "description": "Brand graphics, thumbnails, and static ad creative designed to stop the scroll.",
+      "count": 8,
+      "items": [
+        {
+          "id": "graphics-designs-1",
+          "title": "Graphics Design · 1",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/1.jpg",
+          "poster": "/portfolio/media/graphics-designs/1.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-2",
+          "title": "Graphics Design · 2",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/2.jpg",
+          "poster": "/portfolio/media/graphics-designs/2.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-3",
+          "title": "Graphics Design · 3",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/3.jpg",
+          "poster": "/portfolio/media/graphics-designs/3.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-4",
+          "title": "Graphics Design · 4",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/4.jpg",
+          "poster": "/portfolio/media/graphics-designs/4.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-5",
+          "title": "Graphics Design · 5",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/5.jpg",
+          "poster": "/portfolio/media/graphics-designs/5.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-6",
+          "title": "Graphics Design · 6",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/6.jpg",
+          "poster": "/portfolio/media/graphics-designs/6.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-7",
+          "title": "Graphics Design · 7",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/7.jpg",
+          "poster": "/portfolio/media/graphics-designs/7.jpg",
+          "width": 1344,
+          "height": 1680,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
+        },
+        {
+          "id": "graphics-designs-8",
+          "title": "Graphics Design · 8",
+          "type": "image",
+          "src": "/portfolio/media/graphics-designs/8.jpg",
+          "poster": "/portfolio/media/graphics-designs/8.jpg",
+          "width": 1296,
+          "height": 2304,
+          "orientation": "portrait",
+          "duration": 0,
+          "category": "Graphics Design",
+          "categorySlug": "graphics-designs"
         }
       ]
     }

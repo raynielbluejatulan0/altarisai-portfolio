@@ -50,8 +50,27 @@ const NAME_OVERRIDES = {
   podcast: "Podcast",
   "real-estate-walkthrough": "Real Estate Walkthrough",
   "shorts-affiliate": "Affiliate Shorts",
-  skeleton: "Concept Lab",
+  skeleton: "Skeleton",
+  claymation: "Claymation",
 };
+
+/**
+ * Display order for categories (by slug). Anything not listed here is appended
+ * alphabetically, so new folders still show up automatically.
+ */
+const CATEGORY_ORDER = [
+  "ugc",
+  "vsl",
+  "podcast",
+  "3d-pixar",
+  "claymation",
+  "music-video-3d",
+  "news-style",
+  "shorts-affiliate",
+  "skeleton",
+  "real-estate-walkthrough",
+  "graphics-designs",
+];
 
 const DESCRIPTIONS = {
   ugc: "Authentic, creator-style ads engineered to feel native to the feed — and built to convert.",
@@ -64,6 +83,7 @@ const DESCRIPTIONS = {
   "real-estate-walkthrough": "Immersive property walkthroughs that sell the space before the first visit.",
   "shorts-affiliate": "Short-form affiliate ads engineered to hook, demo, and drive the click.",
   skeleton: "Experimental concept pieces and creative-range tests from the studio.",
+  claymation: "Charming stop-motion-style claymation with a handcrafted, tactile look.",
 };
 
 /* ── Helpers ──────────────────────────────────────────────────────────────── */
@@ -257,6 +277,17 @@ function main() {
       });
     }
   }
+
+  // Apply the configured display order (unlisted categories fall to the end).
+  const orderRank = (slug) => {
+    const i = CATEGORY_ORDER.indexOf(slug);
+    return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+  };
+  categories.sort((a, b) => {
+    const ra = orderRank(a.slug);
+    const rb = orderRank(b.slug);
+    return ra !== rb ? ra - rb : naturalCompare(a.name, b.name);
+  });
 
   const manifest = {
     generatedAt: new Date().toISOString(),
