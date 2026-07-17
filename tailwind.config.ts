@@ -50,7 +50,8 @@ const config: Config = {
         foreground: {
           DEFAULT: "#E0E0E0",
           muted: "#A0A8B8",
-          dim: "#6B7280",
+          // Lightened from #6B7280 to clear WCAG 4.5:1 on the near-black bg
+          dim: "#8B93A1",
         },
         success: "#10B981",
         warning: "#F59E0B",

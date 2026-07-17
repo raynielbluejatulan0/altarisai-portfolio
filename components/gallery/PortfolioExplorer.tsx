@@ -23,12 +23,19 @@ export function PortfolioExplorer() {
   return (
     <div>
       {/* Sticky tab bar */}
-      <div className="sticky top-16 z-30 -mx-4 mb-12 border-b border-white/[0.06] bg-background/80 px-4 py-3 backdrop-blur-md sm:top-16">
-        <div className="scrollbar-none flex gap-2 overflow-x-auto pb-1">
-          <Tab label="All Work" active={active === ALL} onClick={() => setActive(ALL)} />
-          {CATEGORIES.map((c) => (
-            <Tab key={c.slug} label={c.name} count={c.count} active={active === c.slug} onClick={() => setActive(c.slug)} />
-          ))}
+      <div className="sticky top-16 z-30 -mx-4 mb-12 border-b border-white/[0.06] bg-background/80 px-4 py-3 backdrop-blur-md">
+        <div className="relative">
+          <div className="scrollbar-none flex gap-2 overflow-x-auto pb-1">
+            <Tab label="All Work" active={active === ALL} onClick={() => setActive(ALL)} />
+            {CATEGORIES.map((c) => (
+              <Tab key={c.slug} label={c.name} count={c.count} active={active === c.slug} onClick={() => setActive(c.slug)} />
+            ))}
+          </div>
+          {/* Scroll affordance — signals more tabs on narrow screens */}
+          <div
+            className="pointer-events-none absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-background to-transparent xl:hidden"
+            aria-hidden
+          />
         </div>
       </div>
 

@@ -2,7 +2,7 @@ export const SITE = {
   name: "Rayniel Blue Jatulan",
   tagline: "AI Video Ads Specialist",
   description:
-    "AI-powered video ad creatives for eCommerce and DTC brands — UGC-style ads, product commercials, and creative testing assets built to convert.",
+    "AI-powered video ad creatives for eCommerce and DTC brands: UGC-style ads, product commercials, and creative testing assets built to convert.",
   url: "https://altarisai.online",
 };
 
@@ -20,11 +20,11 @@ export const CONTACT = {
   whatsappDisplay: "+63 917 142 5738",
 };
 
-/* ─── CTAs — single swap point (replace href with Calendly URL later) ─────── */
+/* ─── CTAs (single swap point: replace href with Calendly URL later) ─────── */
 
 export const CTA_PRIMARY = {
   label: "Book a Discovery Call",
-  href: `mailto:${CONTACT.email}?subject=${encodeURIComponent("Discovery Call — AI Video Ads")}`,
+  href: `mailto:${CONTACT.email}?subject=${encodeURIComponent("Discovery Call: AI Video Ads")}`,
 };
 
 export const CTA_SECONDARY = {
@@ -39,9 +39,9 @@ export const HERO = {
   // headline is split so the accent word can be styled independently
   headlinePre: "AI video ads that",
   headlineAccent: "stop the scroll",
-  headlinePost: "— and sell.",
+  headlinePost: "and sell.",
   subheadline:
-    "I help eCommerce and DTC brands ship high-converting ad creatives — strategy, script, and final cut in days, not weeks. No studios, no shoot days, no production bottleneck.",
+    "I help eCommerce and DTC brands ship high-converting ad creatives: strategy, script, and final cut in days, not weeks. No studios, no shoot days, no production bottleneck.",
   status: "Available for projects · GMT+8",
 };
 
@@ -51,7 +51,7 @@ export const VALUE_PROPS = [
   {
     title: "Strategy before pixels",
     description:
-      "Every ad starts with research, customer psychology, and a hook plan — not a prompt. The creative is engineered to convert before a single frame is generated.",
+      "Every ad starts with research, customer psychology, and a hook plan, not a prompt. The creative is engineered to convert before a single frame is generated.",
     icon: "Target",
   },
   {
@@ -63,7 +63,7 @@ export const VALUE_PROPS = [
   {
     title: "Built for testing",
     description:
-      "Hooks, scripts, and variations delivered as structured test cells — so your media buyer learns something from every dollar spent.",
+      "Hooks, scripts, and variations delivered as structured test cells, so your media buyer learns something from every dollar spent.",
     icon: "FlaskConical",
   },
 ];
@@ -74,13 +74,13 @@ export const AUDIENCES = [
   {
     title: "eCommerce & DTC Brands",
     description:
-      "You need a steady stream of fresh ad creative to fight fatigue — without burning budget on monthly shoots.",
+      "You need a steady stream of fresh ad creative to fight fatigue, without burning budget on monthly shoots.",
     icon: "ShoppingBag",
   },
   {
     title: "Shopify Stores",
     description:
-      "You're scaling paid social and the bottleneck isn't media buying — it's creative volume and iteration speed.",
+      "You're scaling paid social and the bottleneck isn't media buying, it's creative volume and iteration speed.",
     icon: "Store",
   },
   {
@@ -109,7 +109,7 @@ export const AUDIENCE_NICHES = [
   "SaaS",
 ];
 
-/* ─── Services — outcome-focused ──────────────────────────────────────────── */
+/* ─── Services (outcome-focused) ──────────────────────────────────────────── */
 
 export const SERVICES = [
   {
@@ -117,7 +117,7 @@ export const SERVICES = [
     icon: "Users",
     problem: "Real UGC is slow, inconsistent, and expensive to source at volume.",
     solution:
-      "Authentic-feeling, UGC-style video ads generated and edited to platform-native standards — ready for Meta and TikTok.",
+      "Authentic-feeling, UGC-style video ads generated and edited to platform-native standards, ready for Meta and TikTok.",
     benefits: ["Native feel that earns watch time", "Unlimited talent variety", "Days, not weeks"],
     deliverables: ["9:16 UGC ads", "Hook variations", "Caption versions"],
   },
@@ -126,14 +126,14 @@ export const SERVICES = [
     icon: "Clapperboard",
     problem: "Commercial production quality is priced out of reach for most growing brands.",
     solution:
-      "Cinematic product spots — macro shots, dynamic scenes, brand-grade polish — produced entirely through an AI pipeline.",
+      "Cinematic product spots (macro shots, dynamic scenes, brand-grade polish) produced entirely through an AI pipeline.",
     benefits: ["Broadcast-level visuals", "No studio or crew costs", "Full creative control"],
     deliverables: ["Hero commercial", "16:9 + 9:16 versions", "Cutdowns"],
   },
   {
     title: "Social Media Ads",
     icon: "Smartphone",
-    problem: "Feeds move fast — last month's creative is already invisible.",
+    problem: "Feeds move fast. Last month's creative is already invisible.",
     solution:
       "Platform-tuned ad creatives built for the scroll: thumb-stopping openers, tight pacing, and sound-off-safe storytelling.",
     benefits: ["Placement-optimized formats", "Fresh angles monthly", "Consistent brand system"],
@@ -142,7 +142,7 @@ export const SERVICES = [
   {
     title: "Product Launch Videos",
     icon: "Rocket",
-    problem: "Launches get one first impression — most products waste it on a spec list.",
+    problem: "Launches get one first impression. Most products waste it on a spec list.",
     solution:
       "A launch package that makes the product feel inevitable: hero film for the moment, cutdowns for the campaign that follows.",
     benefits: ["One cohesive launch story", "Assets for every channel", "Momentum past day one"],
@@ -171,14 +171,14 @@ export const SERVICES = [
     icon: "Sparkles",
     problem: "Brands need constant visual content, but shoots don't scale.",
     solution:
-      "A full AI production pipeline — product imagery, lifestyle scenes, and video generation — matched to your brand's look.",
+      "A full AI production pipeline (product imagery, lifestyle scenes, and video generation) matched to your brand's look.",
     benefits: ["Brand-consistent output", "Any scene, any setting", "Volume without fatigue"],
     deliverables: ["Product imagery sets", "Lifestyle scenes", "Generated video"],
   },
   {
     title: "Editing & Post-Production",
     icon: "Scissors",
-    problem: "Raw generative output isn't an ad — the edit is where it converts.",
+    problem: "Raw generative output isn't an ad. The edit is where it converts.",
     solution:
       "Professional editing: pacing, sound design, captions, color, and platform-specific finishing on every deliverable.",
     benefits: ["Retention-focused pacing", "Sound-off optimized", "Polished final delivery"],
@@ -187,7 +187,7 @@ export const SERVICES = [
   {
     title: "Creative Testing Assets",
     icon: "FlaskConical",
-    problem: "One ad tells you nothing — structured variation is how accounts scale.",
+    problem: "One ad tells you nothing. Structured variation is how accounts scale.",
     solution:
       "Variant sets built for clean testing: one variable per cell across hooks, angles, and CTAs, mapped in a testing matrix.",
     benefits: ["Readable test results", "Faster winning-ad discovery", "Efficient iteration loop"],
@@ -195,21 +195,21 @@ export const SERVICES = [
   },
 ];
 
-/* ─── Creative workflow — 12 steps ────────────────────────────────────────── */
+/* ─── Creative workflow (12 steps) ────────────────────────────────────────── */
 
 export const WORKFLOW_STEPS = [
-  { step: "01", title: "Discovery", description: "Brand, product, offer, and goals — aligned before anything is made." },
+  { step: "01", title: "Discovery", description: "Brand, product, offer, and goals, aligned before anything is made." },
   { step: "02", title: "Product Research", description: "Reviews, objections, and use cases mined for creative raw material." },
   { step: "03", title: "Competitor Research", description: "What the market is running, what's saturated, and where the gaps are." },
-  { step: "04", title: "Customer Psychology", description: "The real reason people buy — mapped into angles that resonate." },
+  { step: "04", title: "Customer Psychology", description: "The real reason people buy, mapped into angles that resonate." },
   { step: "05", title: "Creative Strategy", description: "Angles, formats, and a testing plan grounded in the research." },
-  { step: "06", title: "Hooks", description: "The first two seconds, engineered — multiple openers per concept." },
+  { step: "06", title: "Hooks", description: "The first two seconds, engineered, with multiple openers per concept." },
   { step: "07", title: "Script", description: "Beat-by-beat scripts where every line earns the next second of watch time." },
   { step: "08", title: "Storyboard", description: "The full ad visualized frame by frame before production begins." },
   { step: "09", title: "AI Images", description: "Product and scene imagery generated to match your brand's look." },
   { step: "10", title: "AI Video", description: "Scenes brought to motion through a professional AI video pipeline." },
-  { step: "11", title: "Editing", description: "Pacing, sound design, captions, and grade — where the ad becomes an ad." },
-  { step: "12", title: "Final Delivery", description: "Every format, ratio, and variant — organized and ready to launch." },
+  { step: "11", title: "Editing", description: "Pacing, sound design, captions, and grade: where the ad becomes an ad." },
+  { step: "12", title: "Final Delivery", description: "Every format, ratio, and variant, organized and ready to launch." },
 ];
 
 /* ─── Why work with me ────────────────────────────────────────────────────── */
@@ -218,12 +218,12 @@ export const WHY_ME = [
   {
     title: "A marketer first",
     description:
-      "The goal is never 'impressive AI' — it's ads that convert. Every creative decision traces back to customer psychology and performance.",
+      "The goal is never 'impressive AI'. It's ads that convert. Every creative decision traces back to customer psychology and performance.",
   },
   {
     title: "Full pipeline, one person",
     description:
-      "Strategy, script, visuals, edit, delivery — no handoffs, no telephone game, no waiting on a production chain.",
+      "Strategy, script, visuals, edit, delivery: no handoffs, no telephone game, no waiting on a production chain.",
   },
   {
     title: "Testing velocity",
@@ -233,18 +233,18 @@ export const WHY_ME = [
   {
     title: "Direct collaboration",
     description:
-      "You work with the person making your ads. Feedback lands directly on the work — usually turned around within a day.",
+      "You work with the person making your ads. Feedback lands directly on the work, usually turned around within a day.",
   },
 ];
 
 export const ABOUT = {
   paragraphs: [
-    "I build advertising creatives, not AI demos. Since 2022 I've worked across the full generative stack — images, video, voice — with one lens: does this make someone stop, watch, and buy?",
+    "I build advertising creatives, not AI demos. Since 2022 I've worked across the full generative stack (images, video, voice) with one lens: does this make someone stop, watch, and buy?",
     "Today I run a complete AI production pipeline for eCommerce and DTC brands: research-backed creative strategy in, finished ad creatives out. The tools change monthly. The marketing thinking is what compounds.",
   ],
 };
 
-/* ─── Technology — production pipeline framing ────────────────────────────── */
+/* ─── Technology (production pipeline framing) ────────────────────────────── */
 
 export const TECH_STACK = [
   { name: "Claude", role: "Research, strategy & scripts" },
@@ -265,11 +265,11 @@ export const FAQS = [
   },
   {
     q: "Can you match our brand's look and style?",
-    a: "Yes — brand matching is step one. I work from your brand guidelines, existing creative, and product imagery so everything delivered looks like it came from your team.",
+    a: "Yes, brand matching is step one. I work from your brand guidelines, existing creative, and product imagery so everything delivered looks like it came from your team.",
   },
   {
     q: "Is everything made with AI?",
-    a: "Generation is AI-powered; the thinking isn't. Strategy, scripts, direction, curation, and editing are human work. AI replaces the camera and the studio — not the marketer.",
+    a: "Generation is AI-powered; the thinking isn't. Strategy, scripts, direction, curation, and editing are human work. AI replaces the camera and the studio, not the marketer.",
   },
   {
     q: "Can I request revisions?",
@@ -277,7 +277,7 @@ export const FAQS = [
   },
   {
     q: "Can you create multiple ad variations?",
-    a: "That's the core advantage. Hooks, angles, and CTA variations are delivered as structured test sets — one variable per cell — so your testing actually produces answers.",
+    a: "That's the core advantage. Hooks, angles, and CTA variations are delivered as structured test sets (one variable per cell) so your testing actually produces answers.",
   },
   {
     q: "Do you provide scripts and storyboards?",
@@ -285,14 +285,14 @@ export const FAQS = [
   },
   {
     q: "Can you work with our existing footage?",
-    a: "Yes — existing footage, product shots, and past creative can be edited, extended, or blended with AI-generated scenes to stretch what you already have.",
+    a: "Yes, existing footage, product shots, and past creative can be edited, extended, or blended with AI-generated scenes to stretch what you already have.",
   },
 ];
 
-/* ─── Testimonials — placeholders only, never fabricated ─────────────────── */
+/* ─── Testimonials (placeholders only, never fabricated) ─────────────────── */
 
 export const TESTIMONIAL_PLACEHOLDERS = [
-  { quote: null, author: null, role: "eCommerce Brand — Coming Soon" },
-  { quote: null, author: null, role: "Marketing Agency — Coming Soon" },
-  { quote: null, author: null, role: "DTC Founder — Coming Soon" },
+  { quote: null, author: null, role: "eCommerce Brand · Coming Soon" },
+  { quote: null, author: null, role: "Marketing Agency · Coming Soon" },
+  { quote: null, author: null, role: "DTC Founder · Coming Soon" },
 ];

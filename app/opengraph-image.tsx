@@ -3,7 +3,7 @@ import { SITE } from "@/lib/constants";
 
 // Edge runtime: @vercel/og fails to prerender in the Node runtime on Windows
 export const runtime = "edge";
-export const alt = `${SITE.name} — ${SITE.tagline}`;
+export const alt = `${SITE.name} · ${SITE.tagline}`;
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -47,7 +47,7 @@ export default function OpengraphImage() {
             maxWidth: 1000,
           }}
         >
-          AI video ads that stop the scroll — and sell.
+          AI video ads that stop the scroll and sell.
         </div>
         <div
           style={{

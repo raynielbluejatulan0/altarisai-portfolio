@@ -41,7 +41,7 @@ export function ServicesSection() {
             Everything your ad account needs, <span className="text-gradient">nothing it doesn&apos;t.</span>
           </>
         }
-        subtitle="Not a list of tools — a set of outcomes. Each service exists to put better-performing creative into your campaigns."
+        subtitle="Not a list of tools, but a set of outcomes. Each service exists to put better-performing creative into your campaigns."
       />
 
       <motion.div

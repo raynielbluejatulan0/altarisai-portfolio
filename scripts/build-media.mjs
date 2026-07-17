@@ -73,7 +73,7 @@ const CATEGORY_ORDER = [
 ];
 
 const DESCRIPTIONS = {
-  ugc: "Authentic, creator-style ads engineered to feel native to the feed — and built to convert.",
+  ugc: "Authentic, creator-style ads engineered to feel native to the feed, and built to convert.",
   vsl: "Long-form video sales letters that hold attention and walk viewers all the way to the buy.",
   "3d-pixar": "Stylized 3D character animation with a cinematic, studio-quality finish.",
   "graphics-designs": "Brand graphics, thumbnails, and static ad creative designed to stop the scroll.",
@@ -271,7 +271,7 @@ function main() {
       categories.push({
         slug: catSlug,
         name: displayName,
-        description: DESCRIPTIONS[catSlug] || `${displayName} — AI-produced creative from my portfolio.`,
+        description: DESCRIPTIONS[catSlug] || `${displayName}: AI-produced creative from my portfolio.`,
         count: items.length,
         items,
       });

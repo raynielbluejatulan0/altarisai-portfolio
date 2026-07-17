@@ -16,7 +16,7 @@ export function TechStackSection() {
             Best-in-class tools, <span className="text-gradient">one seamless pipeline.</span>
           </>
         }
-        subtitle="The stack isn't the point — the output is. Each tool covers one stage of production, curated and swapped as the state of the art moves."
+        subtitle="The stack isn't the point. The output is. Each tool covers one stage of production, curated and swapped as the state of the art moves."
       />
 
       <motion.div

@@ -4,9 +4,9 @@ import { CTASection } from "@/components/sections/CTASection";
 import { TOTAL_CATEGORIES, TOTAL_ITEMS } from "@/lib/media";
 
 export const metadata: Metadata = {
-  title: "Portfolio — AI Video Ads & Creative",
+  title: "Portfolio · AI Video Ads & Creative",
   description:
-    "The full body of work: UGC ads, VSLs, 3D Pixar-style animation, product commercials, news-style segments, real estate walkthroughs, podcasts, and more — produced end to end with AI.",
+    "The full body of work: UGC ads, VSLs, 3D Pixar-style animation, product commercials, news-style segments, real estate walkthroughs, podcasts, and more, produced end to end with AI.",
 };
 
 export default function PortfolioPage() {
@@ -21,7 +21,7 @@ export default function PortfolioPage() {
               My work, <span className="text-gradient">start to finish.</span>
             </h1>
             <p className="section-subtitle">
-              {TOTAL_ITEMS} pieces across {TOTAL_CATEGORIES} categories — every one produced through my
+              {TOTAL_ITEMS} pieces across {TOTAL_CATEGORIES} categories. Every one is produced through my
               full AI pipeline, from strategy and script to final edit. Browse by style, tap any piece
               to play it full screen.
             </p>

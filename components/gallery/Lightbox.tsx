@@ -70,7 +70,7 @@ export function Lightbox({ items, index, onClose, onIndexChange }: LightboxProps
           onClick={onClose}
           role="dialog"
           aria-modal="true"
-          aria-label={`${current.title} — ${current.category}`}
+          aria-label={`${current.title}, ${current.category}`}
         >
           {/* Top bar */}
           <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex items-center justify-between p-4 sm:p-6">
@@ -169,6 +169,7 @@ function MediaStage({ item }: { item: MediaItem }) {
         poster={item.poster}
         controls
         autoPlay
+        muted
         playsInline
         className={`rounded-xl bg-black object-contain shadow-2xl ${sizing}`}
         style={{ aspectRatio: aspectRatio(item) }}

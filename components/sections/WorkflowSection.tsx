@@ -16,7 +16,7 @@ export function WorkflowSection() {
             Every piece follows the same <span className="text-gradient">proven pipeline.</span>
           </>
         }
-        subtitle="From product research to final delivery — this is the workflow behind every ad in my portfolio. Research first, generation late, editing always."
+        subtitle="From product research to final delivery, this is the workflow behind every ad in my portfolio. Research first, generation late, editing always."
       />
 
       <motion.ol

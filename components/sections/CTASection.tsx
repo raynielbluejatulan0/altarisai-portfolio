@@ -26,7 +26,7 @@ export function CTASection() {
         </motion.h2>
         <motion.p variants={fadeInUp} className="mx-auto mt-6 max-w-xl text-lg text-foreground-muted">
           Tell me what you&apos;re selling and where you&apos;re running ads. I&apos;ll come back within
-          24 hours with creative angles worth testing — no pitch deck, no pressure.
+          24 hours with creative angles worth testing. No pitch deck, no pressure.
         </motion.p>
 
         <motion.div

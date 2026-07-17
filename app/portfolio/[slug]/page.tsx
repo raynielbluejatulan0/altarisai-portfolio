@@ -18,7 +18,7 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
   const cat = getCategory(params.slug);
   if (!cat) return {};
   return {
-    title: `${cat.name} — Portfolio`,
+    title: `${cat.name} · Portfolio`,
     description: cat.description,
   };
 }
