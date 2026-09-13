@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { heroStagger, fadeInUp } from "@/lib/animations";
 import { Button } from "@/components/ui/Button";
-import { HERO, CTA_PRIMARY, CTA_SECONDARY, SITE } from "@/lib/constants";
+import { HERO, CTA_PRIMARY, CTA_SECONDARY } from "@/lib/constants";
 
 const MARQUEE_ITEMS = [
   "AI UGC Ads",
@@ -17,35 +17,12 @@ const MARQUEE_ITEMS = [
   "Creative Testing",
 ];
 
-// L-shaped corner ticks — film-frame framing device
-const CORNERS = [
-  "left-4 top-4 border-l border-t sm:left-6 sm:top-6",
-  "right-4 top-4 border-r border-t sm:right-6 sm:top-6",
-  "left-4 bottom-4 border-l border-b sm:left-6 sm:bottom-6",
-  "right-4 bottom-4 border-r border-b sm:right-6 sm:bottom-6",
-];
-
 export function HeroSection() {
   return (
     <section
       id="hero"
       className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden bg-background pt-20"
     >
-      {/* Cinematic frame + corner ticks */}
-      <div aria-hidden className="pointer-events-none absolute inset-4 border border-white/[0.06] sm:inset-6" />
-      {CORNERS.map((pos) => (
-        <span key={pos} aria-hidden className={`pointer-events-none absolute h-5 w-5 border-accent/70 ${pos}`} />
-      ))}
-
-      {/* Film-slate markers */}
-      <span aria-hidden className="pointer-events-none absolute left-8 top-8 hidden font-mono text-[0.65rem] uppercase tracking-[0.35em] text-foreground-dim md:block">
-        {SITE.name}
-      </span>
-      <span aria-hidden className="pointer-events-none absolute right-8 top-8 hidden items-center gap-2 font-mono text-[0.65rem] uppercase tracking-[0.3em] text-foreground-dim md:flex">
-        <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent" />
-        REC · 4K · 16:9
-      </span>
-
       {/* ── Text block ─────────────────────────────────────────────────────── */}
       <motion.div
         className="relative z-10 mx-auto max-w-5xl px-6 pb-20 text-center sm:px-8"
