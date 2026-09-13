@@ -264,7 +264,6 @@ export const TECH_STACK = [
   { name: "GPT Image 2.5", role: "AI image generation" },
   { name: "ElevenLabs", role: "Voiceover & sound" },
   { name: "Adobe Premiere Pro", role: "Editing & captions" },
-  { name: "Photoshop", role: "Finishing & retouch" },
 ];
 
 /* ─── FAQ ─────────────────────────────────────────────────────────────────── */
