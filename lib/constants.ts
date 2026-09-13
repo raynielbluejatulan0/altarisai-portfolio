@@ -117,8 +117,6 @@ export const AUDIENCE_NICHES = [
   "Food & Beverage",
   "Home Products",
   "Pet Products",
-  "Tech",
-  "SaaS",
 ];
 
 /* ─── Services (outcome-focused) ──────────────────────────────────────────── */
