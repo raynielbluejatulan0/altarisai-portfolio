@@ -78,7 +78,7 @@ export const VALUE_PROPS = [
   },
 ];
 
-/* ─── Who I help ──────────────────────────────────────────────────────────── */
+/* ─── Who we help ─────────────────────────────────────────────────────────── */
 
 export const AUDIENCES = [
   {
@@ -222,7 +222,7 @@ export const WORKFLOW_STEPS = [
   { step: "12", title: "Final Delivery", description: "Every format, ratio, and variant, organized and ready to launch." },
 ];
 
-/* ─── Why work with me ────────────────────────────────────────────────────── */
+/* ─── Why work with us ────────────────────────────────────────────────────── */
 
 export const WHY_ME = [
   {

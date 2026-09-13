@@ -10,7 +10,7 @@ export function WorkflowSection() {
   return (
     <SectionContainer id="process" bordered>
       <SectionHeading
-        eyebrow="My Creative Process"
+        eyebrow="Our Creative Process"
         title={
           <>
             Every piece follows the same <span className="text-gradient">proven pipeline.</span>
