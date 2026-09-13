@@ -57,7 +57,7 @@ export function WhoIHelpSection() {
         {AUDIENCE_NICHES.map((niche) => (
           <span
             key={niche}
-            className="rounded-full border border-white/[0.08] bg-white/[0.03] px-4 py-1.5 text-xs tracking-wide text-foreground-muted"
+            className="rounded-none border border-white/[0.08] bg-white/[0.03] px-4 py-1.5 font-mono text-xs uppercase tracking-[0.15em] text-foreground-muted"
           >
             {niche}
           </span>

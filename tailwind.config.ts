@@ -35,17 +35,17 @@ const config: Config = {
           800: "#404040",
           900: "#262626",
         },
-        // Brand: gold accent
+        // Brand: gold accent (precious, used sparingly)
         accent: {
-          DEFAULT: "#C8A96E",
+          DEFAULT: "#CBA35A",
           muted: "#8C7A55",
-          faint: "rgba(200, 169, 110, 0.12)",
+          faint: "rgba(203, 163, 90, 0.12)",
         },
         // Brand: metallic silver
         silver: {
           DEFAULT: "#C7CAD1",
-          light: "#E4E4E7",
-          muted: "#B0B4BB",
+          light: "#ECECEE",
+          muted: "#A6ABB3",
           dim: "#8A8E96",
         },
         // Brand: black base
@@ -58,8 +58,8 @@ const config: Config = {
         },
         foreground: {
           DEFAULT: "#E4E4E7",
-          // Neutral silver (was bluish #A0A8B8)
-          muted: "#B0B4BB",
+          // Neutral silver
+          muted: "#A6ABB3",
           // Dim silver — clears WCAG 4.5:1 on the near-black bg
           dim: "#8A8E96",
         },
@@ -80,17 +80,22 @@ const config: Config = {
         "body-sm": ["0.875rem", { lineHeight: "1.65" }],
         "body-xs": ["0.75rem", { lineHeight: "1.5" }],
       },
-      borderRadius: {
-        "2xl": "1rem",
-        "3xl": "1.5rem",
-        "4xl": "2rem",
+      fontFamily: {
+        display: ["var(--font-display)", "Georgia", "serif"],
+        sans: ["var(--font-body)", "system-ui", "sans-serif"],
+        body: ["var(--font-body)", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "monospace"],
       },
+      // Sharp editorial corners — no glassy rounding
+      borderRadius: {
+        "2xl": "3px",
+        "3xl": "4px",
+        "4xl": "6px",
+      },
+      // Flat, crisp elevation — no glow
       boxShadow: {
-        "glow-sm": "0 0 15px rgba(255, 255, 255, 0.08)",
-        "glow-md": "0 0 30px rgba(255, 255, 255, 0.10), 0 0 60px rgba(255, 255, 255, 0.04)",
-        "glow-lg": "0 0 60px rgba(255, 255, 255, 0.12), 0 0 120px rgba(255, 255, 255, 0.05)",
-        "card": "0 4px 24px rgba(0, 0, 0, 0.4)",
-        "card-hover": "0 8px 40px rgba(0, 0, 0, 0.5)",
+        "card": "0 18px 44px -26px rgba(0, 0, 0, 0.75)",
+        "card-hover": "0 26px 64px -28px rgba(0, 0, 0, 0.85)",
       },
       keyframes: {
         "marquee-left": {
@@ -101,10 +106,6 @@ const config: Config = {
           "0%": { transform: "translateX(-50%)" },
           "100%": { transform: "translateX(0)" },
         },
-        "pulse-glow": {
-          "0%, 100%": { boxShadow: "0 0 15px rgba(255, 255, 255, 0.08)" },
-          "50%": { boxShadow: "0 0 40px rgba(255, 255, 255, 0.18)" },
-        },
         "float": {
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(-8px)" },
@@ -113,13 +114,7 @@ const config: Config = {
       animation: {
         "marquee-left": "marquee-left 30s linear infinite",
         "marquee-right": "marquee-right 30s linear infinite",
-        "pulse-glow": "pulse-glow 3s ease-in-out infinite",
         "float": "float 4s ease-in-out infinite",
-      },
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "hero-glow": "radial-gradient(ellipse at top, rgba(255, 255, 255, 0.015) 0%, transparent 60%)",
-        "card-gradient": "linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%)",
       },
       maxWidth: {
         "8xl": "88rem",

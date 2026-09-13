@@ -12,9 +12,9 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variantStyles = {
-  primary: "bg-white hover:bg-white/90 text-black font-semibold",
+  primary: "bg-accent text-black font-semibold hover:bg-[#d9b56d]",
   secondary: "bg-white/[0.06] text-white border border-white/10 hover:bg-white/[0.10] hover:border-white/20",
-  outline: "bg-transparent text-white border border-white/20 hover:border-white/40 hover:bg-white/[0.05]",
+  outline: "bg-transparent text-white border border-white/20 hover:border-accent/60 hover:text-accent",
   ghost: "bg-transparent text-foreground-muted hover:text-foreground hover:bg-white/5",
 };
 
@@ -39,7 +39,7 @@ export function Button({
   className = "",
   ...props
 }: ButtonProps) {
-  const classes = `inline-flex items-center justify-center rounded-full font-medium transition-colors duration-200 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
+  const classes = `inline-flex items-center justify-center rounded-none font-medium tracking-wide transition-colors duration-200 ${variantStyles[variant]} ${sizeStyles[size]} ${className}`;
 
   if (href) {
     return (

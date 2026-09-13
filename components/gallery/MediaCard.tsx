@@ -81,8 +81,8 @@ export function MediaCard({ item, onOpen, sizes, priority = false }: MediaCardPr
         />
       )}
 
-      {/* Gradient scrim */}
-      <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/70 via-black/0 to-black/10 opacity-70 transition-opacity duration-300 group-hover:opacity-90" />
+      {/* Flat scrim — darkens for title legibility, no gradient */}
+      <div className="pointer-events-none absolute inset-0 bg-black/25 transition-colors duration-300 group-hover:bg-black/45" />
 
       {/* Play affordance */}
       {isVideo && (

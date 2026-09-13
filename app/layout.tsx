@@ -1,21 +1,33 @@
 import type { Metadata } from "next";
-import { Inter, Syne } from "next/font/google";
+import { Bodoni_Moda, Manrope, JetBrains_Mono } from "next/font/google";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { MotionProvider } from "@/components/providers/MotionProvider";
 import { SITE, CONTACT } from "@/lib/constants";
 import "./globals.css";
 
-const inter = Inter({
+// Display: high-contrast Didone — cinematic film-title character
+const display = Bodoni_Moda({
   subsets: ["latin"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700", "900"],
+  style: ["normal", "italic"],
+  variable: "--font-display",
   display: "swap",
 });
 
-const syne = Syne({
+// Body: clean geometric grotesque
+const body = Manrope({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-  variable: "--font-syne",
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+  display: "swap",
+});
+
+// Labels: technical / cinema-slate monospace
+const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+  variable: "--font-mono",
   display: "swap",
 });
 
@@ -73,7 +85,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark" dir="ltr">
-      <body className={`${inter.variable} ${syne.variable} antialiased`}>
+      <body className={`${display.variable} ${body.variable} ${mono.variable} antialiased`}>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -10,7 +10,6 @@ import { CONTACT, CTA_PRIMARY } from "@/lib/constants";
 export function CTASection() {
   return (
     <SectionContainer id="contact" bordered className="relative overflow-hidden">
-      <div className="section-blob section-blob-br" aria-hidden />
       <motion.div
         className="relative mx-auto max-w-2xl text-center"
         variants={staggerContainer}

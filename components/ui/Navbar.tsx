@@ -48,7 +48,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2.5" aria-label={`${SITE.name} home`}>
-            <span className="w-8 h-8 rounded-md overflow-hidden border border-white/15 bg-black flex items-center justify-center shrink-0">
+            <span className="w-8 h-8 rounded-none overflow-hidden border border-white/15 bg-black flex items-center justify-center shrink-0">
               <Image
                 src="/logo.png"
                 alt=""
@@ -97,7 +97,7 @@ export function Navbar() {
                     transition={{ duration: 0.18 }}
                     role="menu"
                     aria-label="Social links"
-                    className="absolute right-0 top-full mt-3 w-52 rounded-2xl border border-white/10 bg-surface/95 p-2 shadow-[0_12px_48px_rgba(0,0,0,0.55)] backdrop-blur-md"
+                    className="absolute right-0 top-full mt-3 w-52 rounded-none border border-white/10 bg-surface/95 p-2 shadow-[0_18px_44px_-20px_rgba(0,0,0,0.85)] backdrop-blur-md"
                   >
                     {SOCIALS.map((social) => {
                       const Icon = SOCIAL_ICONS[social.icon];
@@ -110,7 +110,7 @@ export function Navbar() {
                           target={external ? "_blank" : undefined}
                           rel={external ? "noopener noreferrer" : undefined}
                           onClick={() => setSocialsOpen(false)}
-                          className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-foreground-muted transition-colors hover:bg-white/[0.05] hover:text-accent"
+                          className="flex items-center gap-3 rounded-none px-3 py-2.5 text-sm text-foreground-muted transition-colors hover:bg-white/[0.05] hover:text-accent"
                         >
                           <Icon className="h-[18px] w-[18px]" />
                           {social.label}
@@ -124,7 +124,7 @@ export function Navbar() {
 
             <a
               href={CTA_PRIMARY.href}
-              className="text-sm border border-accent/30 text-white px-4 py-1.5 rounded-full hover:bg-accent-faint hover:border-accent/50 transition-all duration-200"
+              className="text-sm border border-accent/40 text-white px-4 py-1.5 rounded-none hover:bg-accent-faint hover:border-accent/70 hover:text-accent transition-all duration-200"
             >
               {CTA_PRIMARY.label}
             </a>
@@ -163,7 +163,7 @@ export function Navbar() {
               <a
                 href={CTA_PRIMARY.href}
                 onClick={() => setIsOpen(false)}
-                className="mt-2 text-sm text-center border border-accent/30 text-white px-4 py-2 rounded-full hover:bg-accent-faint transition-all"
+                className="mt-2 text-sm text-center border border-accent/40 text-white px-4 py-2 rounded-none hover:bg-accent-faint hover:text-accent transition-all"
               >
                 {CTA_PRIMARY.label}
               </a>
@@ -180,7 +180,7 @@ export function Navbar() {
                       target={external ? "_blank" : undefined}
                       rel={external ? "noopener noreferrer" : undefined}
                       onClick={() => setIsOpen(false)}
-                      className="flex h-9 w-9 items-center justify-center rounded-full border border-white/10 bg-white/[0.02] text-foreground-muted transition-all hover:border-accent/50 hover:text-accent"
+                      className="flex h-9 w-9 items-center justify-center rounded-none border border-white/10 bg-white/[0.02] text-foreground-muted transition-all hover:border-accent/50 hover:text-accent"
                     >
                       <Icon className="h-[18px] w-[18px]" />
                     </a>

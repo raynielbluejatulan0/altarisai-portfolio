@@ -18,7 +18,7 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "center",
           padding: "80px",
-          background: "linear-gradient(160deg, #121212 0%, #070707 55%, #101010 100%)",
+          background: "#0A0A0A",
           fontFamily: "sans-serif",
         }}
       >
@@ -27,13 +27,13 @@ export default function OpengraphImage() {
             display: "flex",
             alignItems: "center",
             gap: "16px",
-            color: "#C8A96E",
+            color: "#CBA35A",
             fontSize: 24,
             letterSpacing: "0.3em",
             textTransform: "uppercase",
           }}
         >
-          <div style={{ width: 48, height: 2, background: "#C8A96E", display: "flex" }} />
+          <div style={{ width: 48, height: 2, background: "#CBA35A", display: "flex" }} />
           {SITE.tagline}
         </div>
         <div

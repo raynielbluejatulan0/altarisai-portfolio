@@ -2,13 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ─── Brand palette: Silver · Black · Gold (flat, no gradients) ───────────── */
+:root {
+  --black: #0A0A0A;
+  --ink: #ECECEE;          /* silver-white — headings */
+  --silver: #C7CAD1;       /* accent ink */
+  --silver-muted: #A6ABB3; /* body copy */
+  --silver-dim: #8A8E96;   /* meta / labels */
+  --gold: #CBA35A;         /* precious accent */
+  --gold-deep: #8C7A55;
+  --hairline: rgba(255, 255, 255, 0.09);
+  --hairline-strong: rgba(255, 255, 255, 0.16);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: linear-gradient(160deg, #121212 0%, #070707 45%, #101010 100%);
-    background-attachment: fixed;
+    background: var(--black);
     min-height: 100%;
   }
 
@@ -22,109 +34,87 @@
   }
 
   body {
-    background: transparent;
+    background: var(--black);
     @apply text-foreground antialiased;
-    font-family: var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-body), system-ui, sans-serif;
+    position: relative;
   }
 
-  /* Display font for headings */
+  /* Cinematic film grain — a flat texture overlay, not a gradient */
+  body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.045;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    background-size: 140px 140px;
+  }
+
   h1, h2, h3 {
-    font-family: var(--font-syne), var(--font-inter), system-ui, sans-serif;
+    font-family: var(--font-display), Georgia, serif;
+    font-weight: 700;
   }
 
   :focus-visible {
-    outline: 2px solid #FFFFFF;
+    outline: 2px solid var(--gold);
     outline-offset: 2px;
   }
 
   ::selection {
-    background: rgba(255, 255, 255, 0.18);
+    background: rgba(203, 163, 90, 0.28);
     color: #fff;
   }
 
   ::-webkit-scrollbar { width: 5px; }
   ::-webkit-scrollbar-track { background: #0e0e0e; }
-  ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.15); border-radius: 9999px; }
-  ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.28); }
+  ::-webkit-scrollbar-thumb { background: rgba(199, 202, 209, 0.22); }
+  ::-webkit-scrollbar-thumb:hover { background: rgba(199, 202, 209, 0.4); }
 }
 
 @layer components {
-  /* Section titles — Syne bold, tight tracking */
+  /* Section titles — Bodoni Moda, high contrast */
   .section-title {
-    font-family: var(--font-syne), system-ui, sans-serif;
-    @apply text-4xl sm:text-5xl font-bold text-foreground tracking-tight;
+    font-family: var(--font-display), Georgia, serif;
+    @apply text-4xl sm:text-5xl font-semibold tracking-tight;
+    color: var(--ink);
+    line-height: 1.04;
   }
 
-  /* Muted subtitle — Inter, lighter weight */
+  /* Muted subtitle — Manrope */
   .section-subtitle {
-    font-family: var(--font-inter), system-ui, sans-serif;
-    @apply mt-4 text-lg text-foreground-muted max-w-2xl mx-auto font-normal leading-relaxed;
+    font-family: var(--font-body), system-ui, sans-serif;
+    @apply mt-5 text-lg max-w-2xl mx-auto font-normal leading-relaxed;
+    color: var(--silver-muted);
   }
 
-  /* Cards */
+  /* Editorial panel — hairline border, flat surface, crisp shadow on hover */
   .glow-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.07);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--hairline);
+    transition: border-color 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
   }
   .glow-card:hover {
-    border-color: rgba(255, 255, 255, 0.14);
-    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    border-color: rgba(203, 163, 90, 0.42);
+    background: rgba(255, 255, 255, 0.035);
+    box-shadow: 0 24px 60px -28px rgba(0, 0, 0, 0.8);
   }
 
   .glow-border {
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--hairline-strong);
   }
 
-  /* Metallic silver sheen for headline accents */
-  .text-gradient {
-    background: linear-gradient(135deg, #FFFFFF 0%, #C7CAD1 45%, #8A8E96 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
+  /* Accent inks — flat solid colors (no gradient) */
+  .text-gradient { color: var(--silver); }
+  .text-gradient-gold { color: var(--gold); }
 
-  /* Eyebrow / section tags — champagne accent pill */
+  /* Eyebrow — film-slate mono label */
   .tag {
-    @apply text-xs border px-3 py-1 rounded-full font-medium;
-    color: #8C7A55;
-    border-color: rgba(200, 169, 110, 0.2);
-    background: rgba(200, 169, 110, 0.06);
-    font-family: var(--font-inter), system-ui, sans-serif;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-  }
-
-  /* White → champagne gradient — reserve for ONE hero keyword */
-  .text-gradient-gold {
-    background: linear-gradient(120deg, #FFFFFF 10%, #E8D9B8 45%, #C8A96E 90%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
-  /* Gradient blob — decorative background radial glow for sections */
-  .section-blob {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-    filter: blur(80px);
-    opacity: 0.18;
-  }
-  .section-blob-tl {
-    top: -10%;
-    left: -5%;
-    width: 45%;
-    padding-top: 45%;
-    background: radial-gradient(circle, #3a3a3a 0%, transparent 70%);
-  }
-  .section-blob-br {
-    bottom: -10%;
-    right: -5%;
-    width: 40%;
-    padding-top: 40%;
-    background: radial-gradient(circle, #2a2a2a 0%, transparent 70%);
+    font-family: var(--font-mono), monospace;
+    @apply inline-block text-xs font-medium uppercase;
+    color: var(--gold);
+    letter-spacing: 0.28em;
   }
 }
 
@@ -135,18 +125,17 @@
   .scrollbar-none { -ms-overflow-style: none; scrollbar-width: none; }
   .scrollbar-none::-webkit-scrollbar { display: none; }
 
-  .glow-text {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.25), 0 0 40px rgba(255, 255, 255, 0.08);
-  }
+  /* Kept for compatibility — flat, no glow */
+  .glow-text { text-shadow: none; }
 
+  /* Fine hairline grid — flat SVG lines, not a gradient */
   .bg-grid {
-    background-image:
-      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72'%3E%3Cpath d='M72 0H0V72' fill='none' stroke='rgba(255,255,255,0.028)' stroke-width='1'/%3E%3C/svg%3E");
+    background-size: 72px 72px;
   }
 
   /* Font helpers */
-  .font-display { font-family: var(--font-syne), system-ui, sans-serif; }
-  .font-body    { font-family: var(--font-inter), system-ui, sans-serif; }
+  .font-display { font-family: var(--font-display), Georgia, serif; }
+  .font-body    { font-family: var(--font-body), system-ui, sans-serif; }
+  .font-mono    { font-family: var(--font-mono), monospace; }
 }
