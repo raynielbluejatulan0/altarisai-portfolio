@@ -55,7 +55,7 @@ export const HERO = {
   headlineAccent: "stop the scroll",
   headlinePost: "and sell.",
   subheadline:
-    "We partner with eCommerce and DTC brands to produce high-converting video ads end to end: strategy, script, and final cut delivered in days, not weeks. No studios, no shoot days, no production bottlenecks.",
+    "We partner with eCommerce and DTC brands to produce high-converting video ads end to end: strategy, script, and final cut delivered in days, not weeks. No soundstages, no shoot days, no production bottlenecks.",
   status: "Now booking select brand partnerships · GMT+8",
 };
 
