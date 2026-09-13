@@ -23,14 +23,14 @@ export function ClientWorkSection() {
       />
 
       <motion.div
-        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        className="grid grid-cols-2 gap-3 sm:gap-5 md:grid-cols-3 lg:grid-cols-4"
         variants={staggerContainer}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
       >
-        {CLIENT_WORK.map((client) => (
-          <motion.div key={client.brand} variants={fadeInUp} className="h-full">
+        {CLIENT_WORK.map((client, i) => (
+          <motion.div key={client.video ?? i} variants={fadeInUp} className="h-full">
             <ClientCard item={client} />
           </motion.div>
         ))}
@@ -71,8 +71,8 @@ function ClientCard({ item }: { item: ClientWork }) {
               className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
             {hasVideo && (
-              <span className="pointer-events-none absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-black/55">
-                <Play className="h-5 w-5 translate-x-[1px] fill-current" />
+              <span className="pointer-events-none absolute left-1/2 top-1/2 grid h-10 w-10 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-black/55 sm:h-14 sm:w-14">
+                <Play className="h-4 w-4 translate-x-[1px] fill-current sm:h-5 sm:w-5" />
               </span>
             )}
           </button>
@@ -88,7 +88,7 @@ function ClientCard({ item }: { item: ClientWork }) {
       </div>
 
       {/* Testimonial (honest interim until real, approved words are added) */}
-      <figcaption className="flex flex-1 flex-col p-6">
+      <figcaption className="flex flex-1 flex-col p-4 sm:p-5">
         {item.quote ? (
           <>
             {item.rating ? (
@@ -114,8 +114,8 @@ function ClientCard({ item }: { item: ClientWork }) {
           </>
         ) : (
           <div className="flex flex-1 items-center gap-2 text-foreground-dim">
-            <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent/70" aria-hidden />
-            <span className="font-mono text-[0.65rem] uppercase tracking-[0.25em]">
+            <span className="inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent/70" aria-hidden />
+            <span className="font-mono text-[0.55rem] uppercase leading-tight tracking-[0.12em] sm:text-[0.62rem] sm:tracking-[0.2em]">
               Client results coming soon
             </span>
           </div>
