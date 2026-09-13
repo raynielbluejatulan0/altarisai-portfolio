@@ -43,6 +43,9 @@ export const metadata: Metadata = {
   creator: SITE.name,
   publisher: SITE.name,
   category: "Advertising",
+  verification: {
+    google: "a_VZktDjEQWhQXEoSXs84oZnNNJ3-pAUBibZf7alTsc",
+  },
   keywords: [
     "AI video ads",
     "AI video ad studio",
