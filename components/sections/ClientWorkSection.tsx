@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { Play, Star } from "lucide-react";
@@ -41,7 +41,23 @@ export function ClientWorkSection() {
 
 function ClientCard({ item }: { item: ClientWork }) {
   const [playing, setPlaying] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
   const hasVideo = Boolean(item.video);
+
+  // Pause the video when it scrolls out of view (stops audio/playback)
+  useEffect(() => {
+    if (!playing) return;
+    const el = videoRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (!entry.isIntersecting) el.pause();
+      },
+      { threshold: 0.5 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, [playing]);
 
   return (
     <figure className="glow-card flex h-full flex-col overflow-hidden">
@@ -49,6 +65,7 @@ function ClientCard({ item }: { item: ClientWork }) {
       <div className="relative w-full overflow-hidden bg-black" style={{ aspectRatio: "9 / 16" }}>
         {playing && item.video ? (
           <video
+            ref={videoRef}
             src={item.video}
             poster={item.poster ?? undefined}
             controls
