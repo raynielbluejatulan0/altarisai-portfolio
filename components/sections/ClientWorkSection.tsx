@@ -13,13 +13,13 @@ export function ClientWorkSection() {
   return (
     <SectionContainer bordered>
       <SectionHeading
-        eyebrow="Client Work"
+        eyebrow="UGC Ads"
         title={
           <>
-            Real brands, <span className="text-gradient">real results.</span>
+            Ads built to <span className="text-gradient">convert.</span>
           </>
         }
-        subtitle="AI UGC ads we've produced for growing brands, in their own words."
+        subtitle="A selection of the UGC ads we've produced. Verified client results, in their own words, are being added."
       />
 
       <motion.div
@@ -87,22 +87,39 @@ function ClientCard({ item }: { item: ClientWork }) {
         )}
       </div>
 
-      {/* Testimonial */}
+      {/* Testimonial (honest interim until real, approved words are added) */}
       <figcaption className="flex flex-1 flex-col p-6">
-        <div className="flex gap-0.5 text-accent" aria-label={`${item.rating} out of 5`}>
-          {Array.from({ length: item.rating }).map((_, i) => (
-            <Star key={i} className="h-3.5 w-3.5 fill-current" aria-hidden />
-          ))}
-        </div>
-        <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground-muted">
-          “{item.quote}”
-        </blockquote>
-        <div className="mt-5 border-t border-white/[0.06] pt-4">
-          <p className="font-display text-base font-semibold text-foreground">{item.brand}</p>
-          <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-foreground-dim">
-            {item.person}
-          </p>
-        </div>
+        {item.quote ? (
+          <>
+            {item.rating ? (
+              <div className="flex gap-0.5 text-accent" aria-label={`${item.rating} out of 5`}>
+                {Array.from({ length: item.rating }).map((_, i) => (
+                  <Star key={i} className="h-3.5 w-3.5 fill-current" aria-hidden />
+                ))}
+              </div>
+            ) : null}
+            <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground-muted">
+              “{item.quote}”
+            </blockquote>
+            <div className="mt-5 border-t border-white/[0.06] pt-4">
+              {item.brand ? (
+                <p className="font-display text-base font-semibold text-foreground">{item.brand}</p>
+              ) : null}
+              {item.person ? (
+                <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-foreground-dim">
+                  {item.person}
+                </p>
+              ) : null}
+            </div>
+          </>
+        ) : (
+          <div className="flex flex-1 items-center gap-2 text-foreground-dim">
+            <span className="inline-block h-1.5 w-1.5 rounded-full bg-accent/70" aria-hidden />
+            <span className="font-mono text-[0.65rem] uppercase tracking-[0.25em]">
+              Client results coming soon
+            </span>
+          </div>
+        )}
       </figcaption>
     </figure>
   );
