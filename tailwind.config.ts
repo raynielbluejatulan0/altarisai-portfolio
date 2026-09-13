@@ -35,11 +35,20 @@ const config: Config = {
           800: "#404040",
           900: "#262626",
         },
+        // Brand: gold accent
         accent: {
           DEFAULT: "#C8A96E",
           muted: "#8C7A55",
           faint: "rgba(200, 169, 110, 0.12)",
         },
+        // Brand: metallic silver
+        silver: {
+          DEFAULT: "#C7CAD1",
+          light: "#E4E4E7",
+          muted: "#B0B4BB",
+          dim: "#8A8E96",
+        },
+        // Brand: black base
         background: "#0A0A0A",
         surface: {
           DEFAULT: "#141414",
@@ -48,10 +57,11 @@ const config: Config = {
           200: "#1C1C1C",
         },
         foreground: {
-          DEFAULT: "#E0E0E0",
-          muted: "#A0A8B8",
-          // Lightened from #6B7280 to clear WCAG 4.5:1 on the near-black bg
-          dim: "#8B93A1",
+          DEFAULT: "#E4E4E7",
+          // Neutral silver (was bluish #A0A8B8)
+          muted: "#B0B4BB",
+          // Dim silver — clears WCAG 4.5:1 on the near-black bg
+          dim: "#8A8E96",
         },
         success: "#10B981",
         warning: "#F59E0B",

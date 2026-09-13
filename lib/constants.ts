@@ -1,6 +1,6 @@
 export const SITE = {
-  name: "Rayniel Blue Jatulan",
-  tagline: "AI Video Ads Specialist",
+  name: "Altaris AI",
+  tagline: "AI Video Ad Studio",
   description:
     "AI-powered video ad creatives for eCommerce and DTC brands: UGC-style ads, product commercials, and creative testing assets built to convert.",
   url: "https://altarisai.online",
@@ -15,10 +15,20 @@ export const NAV_LINKS = [
 ];
 
 export const CONTACT = {
-  email: "raynielbluejatulan0@gmail.com",
-  whatsapp: "https://wa.me/639171425738",
-  whatsappDisplay: "+63 917 142 5738",
+  email: "business.altarisai@gmail.com",
+  whatsapp: "https://wa.me/639608688682",
+  whatsappDisplay: "+63 960 868 8682",
 };
+
+/* ─── Social profiles (placeholder hrefs — replace "#" with real URLs) ─────── */
+
+export const SOCIALS = [
+  { label: "Facebook", href: "#", icon: "facebook" },
+  { label: "Instagram", href: "#", icon: "instagram" },
+  { label: "Threads", href: "#", icon: "threads" },
+  { label: "TikTok", href: "#", icon: "tiktok" },
+  { label: "X", href: "#", icon: "x" },
+] as const;
 
 /* ─── CTAs (single swap point: replace href with Calendly URL later) ─────── */
 
@@ -35,13 +45,13 @@ export const CTA_SECONDARY = {
 /* ─── Hero ────────────────────────────────────────────────────────────────── */
 
 export const HERO = {
-  eyebrow: "AI Video Ads Specialist",
+  eyebrow: "AI Video Ad Studio",
   // headline is split so the accent word can be styled independently
   headlinePre: "AI video ads that",
   headlineAccent: "stop the scroll",
   headlinePost: "and sell.",
   subheadline:
-    "I help eCommerce and DTC brands ship high-converting ad creatives: strategy, script, and final cut in days, not weeks. No studios, no shoot days, no production bottleneck.",
+    "We help eCommerce and DTC brands ship high-converting ad creatives: strategy, script, and final cut in days, not weeks. No studios, no shoot days, no production bottleneck.",
   status: "Available for projects · GMT+8",
 };
 
@@ -221,7 +231,7 @@ export const WHY_ME = [
       "The goal is never 'impressive AI'. It's ads that convert. Every creative decision traces back to customer psychology and performance.",
   },
   {
-    title: "Full pipeline, one person",
+    title: "Full pipeline, one team",
     description:
       "Strategy, script, visuals, edit, delivery: no handoffs, no telephone game, no waiting on a production chain.",
   },
@@ -233,14 +243,14 @@ export const WHY_ME = [
   {
     title: "Direct collaboration",
     description:
-      "You work with the person making your ads. Feedback lands directly on the work, usually turned around within a day.",
+      "You work directly with the team making your ads. Feedback lands directly on the work, usually turned around within a day.",
   },
 ];
 
 export const ABOUT = {
   paragraphs: [
-    "I build advertising creatives, not AI demos. Since 2022 I've worked across the full generative stack (images, video, voice) with one lens: does this make someone stop, watch, and buy?",
-    "Today I run a complete AI production pipeline for eCommerce and DTC brands: research-backed creative strategy in, finished ad creatives out. The tools change monthly. The marketing thinking is what compounds.",
+    "We build advertising creatives, not AI demos. Since 2022 we've worked across the full generative stack (images, video, voice) with one lens: does this make someone stop, watch, and buy?",
+    "Today we run a complete AI production pipeline for eCommerce and DTC brands: research-backed creative strategy in, finished ad creatives out. The tools change monthly. The marketing thinking is what compounds.",
   ],
 };
 
@@ -265,7 +275,7 @@ export const FAQS = [
   },
   {
     q: "Can you match our brand's look and style?",
-    a: "Yes, brand matching is step one. I work from your brand guidelines, existing creative, and product imagery so everything delivered looks like it came from your team.",
+    a: "Yes, brand matching is step one. We work from your brand guidelines, existing creative, and product imagery so everything delivered looks like it came from your team.",
   },
   {
     q: "Is everything made with AI?",

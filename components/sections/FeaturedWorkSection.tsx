@@ -16,7 +16,7 @@ export function FeaturedWorkSection() {
         eyebrow="Featured Work"
         title={
           <>
-            A cross-section of what I <span className="text-gradient">create.</span>
+            A cross-section of what we <span className="text-gradient">create.</span>
           </>
         }
         subtitle={`One highlight from each style: UGC, VSL, 3D animation, product commercials and more. ${TOTAL_ITEMS} pieces across ${TOTAL_CATEGORIES} categories in the full portfolio.`}

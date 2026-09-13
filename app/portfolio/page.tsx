@@ -18,10 +18,10 @@ export default function PortfolioPage() {
           <div className="mb-4 text-center">
             <span className="tag">Portfolio</span>
             <h1 className="section-title mt-5 text-balance">
-              My work, <span className="text-gradient">start to finish.</span>
+              Our work, <span className="text-gradient">start to finish.</span>
             </h1>
             <p className="section-subtitle">
-              {TOTAL_ITEMS} pieces across {TOTAL_CATEGORIES} categories. Every one is produced through my
+              {TOTAL_ITEMS} pieces across {TOTAL_CATEGORIES} categories. Every one is produced through our
               full AI pipeline, from strategy and script to final edit. Browse by style, tap any piece
               to play it full screen.
             </p>

@@ -17,10 +17,10 @@ export function WhyMeSection() {
           viewport={{ once: true, margin: "-80px" }}
         >
           <motion.span variants={fadeInUp} className="tag inline-block">
-            Why Work With Me
+            Why Work With Us
           </motion.span>
           <motion.h2 variants={fadeInUp} className="section-title mt-5 text-balance">
-            An ad maker who happens <span className="text-gradient">to use AI.</span>
+            Ad makers who happen <span className="text-gradient">to use AI.</span>
           </motion.h2>
           {ABOUT.paragraphs.map((paragraph) => (
             <motion.p

@@ -25,7 +25,7 @@ export function CTASection() {
           Your next winning ad is <span className="text-gradient-gold">one call away.</span>
         </motion.h2>
         <motion.p variants={fadeInUp} className="mx-auto mt-6 max-w-xl text-lg text-foreground-muted">
-          Tell me what you&apos;re selling and where you&apos;re running ads. I&apos;ll come back within
+          Tell us what you&apos;re selling and where you&apos;re running ads. We&apos;ll come back within
           24 hours with creative angles worth testing. No pitch deck, no pressure.
         </motion.p>
 

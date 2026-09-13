@@ -18,7 +18,7 @@ export function WhoIHelpSection() {
   return (
     <SectionContainer bordered>
       <SectionHeading
-        eyebrow="Who I Help"
+        eyebrow="Who We Help"
         title={
           <>
             Built for brands that <span className="text-gradient">live on paid social.</span>

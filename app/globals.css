@@ -77,9 +77,9 @@
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
   }
 
-  /* White → gray gradient for headline accents */
+  /* Metallic silver sheen for headline accents */
   .text-gradient {
-    background: linear-gradient(135deg, #FFFFFF 0%, #888888 100%);
+    background: linear-gradient(135deg, #FFFFFF 0%, #C7CAD1 45%, #8A8E96 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;

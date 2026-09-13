@@ -26,9 +26,6 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   metadataBase: new URL(SITE.url),
-  icons: {
-    icon: "/favicon.svg",
-  },
   openGraph: {
     title: `${SITE.name} · ${SITE.tagline}`,
     description: SITE.description,
@@ -47,12 +44,14 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Person",
-      "@id": `${SITE.url}/#person`,
+      "@type": "Organization",
+      "@id": `${SITE.url}/#organization`,
       name: SITE.name,
       url: SITE.url,
-      jobTitle: SITE.tagline,
+      slogan: SITE.tagline,
+      description: SITE.description,
       email: `mailto:${CONTACT.email}`,
+      logo: `${SITE.url}/logo.png`,
     },
     {
       "@type": "ProfessionalService",
@@ -62,7 +61,7 @@ const jsonLd = {
       description: SITE.description,
       serviceType: "AI Video Advertising Production",
       areaServed: "Worldwide",
-      provider: { "@id": `${SITE.url}/#person` },
+      provider: { "@id": `${SITE.url}/#organization` },
     },
   ],
 };
