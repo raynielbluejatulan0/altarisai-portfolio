@@ -2,16 +2,45 @@ import type { Metadata } from "next";
 import { PortfolioExplorer } from "@/components/gallery/PortfolioExplorer";
 import { CTASection } from "@/components/sections/CTASection";
 import { TOTAL_CATEGORIES, TOTAL_ITEMS } from "@/lib/media";
+import { SITE } from "@/lib/constants";
+
+const PORTFOLIO_DESCRIPTION =
+  "The full body of work: UGC ads, VSLs, 3D Pixar-style animation, product commercials, news-style segments, real estate walkthroughs, podcasts, and more, produced end to end with AI.";
 
 export const metadata: Metadata = {
   title: "Portfolio · AI Video Ads & Creative",
-  description:
-    "The full body of work: UGC ads, VSLs, 3D Pixar-style animation, product commercials, news-style segments, real estate walkthroughs, podcasts, and more, produced end to end with AI.",
+  description: PORTFOLIO_DESCRIPTION,
+  alternates: { canonical: "/portfolio" },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+        { "@type": "ListItem", position: 2, name: "Portfolio", item: `${SITE.url}/portfolio` },
+      ],
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": `${SITE.url}/portfolio#collection`,
+      name: `Portfolio · ${SITE.name}`,
+      url: `${SITE.url}/portfolio`,
+      description: PORTFOLIO_DESCRIPTION,
+      isPartOf: { "@id": `${SITE.url}/#website` },
+    },
+  ],
 };
 
 export default function PortfolioPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="px-4 pb-24 pt-32 sm:px-6 sm:pb-28 sm:pt-40 lg:px-8">
         <div className="mx-auto max-w-7xl">
           {/* Page header */}

@@ -4,7 +4,8 @@ import { notFound } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 import { GalleryGrid } from "@/components/gallery/GalleryGrid";
 import { CTASection } from "@/components/sections/CTASection";
-import { CATEGORIES, getCategory } from "@/lib/media";
+import { CATEGORIES, getCategory, GENERATED_AT, isoDuration } from "@/lib/media";
+import { SITE } from "@/lib/constants";
 
 interface CategoryPageProps {
   params: { slug: string };
@@ -20,8 +21,11 @@ export function generateMetadata({ params }: CategoryPageProps): Metadata {
   return {
     title: `${cat.name} · Portfolio`,
     description: cat.description,
+    alternates: { canonical: `/portfolio/${cat.slug}` },
   };
 }
+
+const abs = (p: string) => (p.startsWith("http") ? p : `${SITE.url}${p}`);
 
 export default function CategoryPage({ params }: CategoryPageProps) {
   const cat = getCategory(params.slug);
@@ -29,8 +33,61 @@ export default function CategoryPage({ params }: CategoryPageProps) {
 
   const others = CATEGORIES.filter((c) => c.slug !== cat.slug);
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: SITE.url },
+          { "@type": "ListItem", position: 2, name: "Portfolio", item: `${SITE.url}/portfolio` },
+          { "@type": "ListItem", position: 3, name: cat.name, item: `${SITE.url}/portfolio/${cat.slug}` },
+        ],
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": `${SITE.url}/portfolio/${cat.slug}#collection`,
+        name: `${cat.name} · ${SITE.name}`,
+        url: `${SITE.url}/portfolio/${cat.slug}`,
+        description: cat.description,
+        isPartOf: { "@id": `${SITE.url}/#website` },
+      },
+      {
+        "@type": "ItemList",
+        numberOfItems: cat.items.length,
+        itemListElement: cat.items.map((it, i) => ({
+          "@type": "ListItem",
+          position: i + 1,
+          item:
+            it.type === "video"
+              ? {
+                  "@type": "VideoObject",
+                  name: it.title,
+                  description: `${it.title} — ${cat.name} by ${SITE.name}.`,
+                  thumbnailUrl: abs(it.poster),
+                  contentUrl: abs(it.src),
+                  uploadDate: GENERATED_AT,
+                  duration: isoDuration(it.duration),
+                  publisher: { "@id": `${SITE.url}/#organization` },
+                }
+              : {
+                  "@type": "ImageObject",
+                  name: it.title,
+                  description: `${it.title} — ${cat.name} by ${SITE.name}.`,
+                  contentUrl: abs(it.src),
+                  thumbnailUrl: abs(it.poster),
+                },
+        })),
+      },
+    ],
+  };
+
   return (
     <div className="px-4 pb-24 pt-32 sm:px-6 sm:pb-28 sm:pt-40 lg:px-8">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-7xl">
         {/* Back */}
         <Link

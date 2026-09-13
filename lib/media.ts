@@ -48,6 +48,15 @@ export const CATEGORIES: MediaCategory[] = data.categories;
 
 export const TOTAL_ITEMS: number = data.itemCount;
 export const TOTAL_CATEGORIES: number = data.categoryCount;
+export const GENERATED_AT: string = data.generatedAt;
+
+/** Seconds → ISO 8601 duration (e.g. 75 → "PT1M15S"), for VideoObject schema. */
+export function isoDuration(seconds: number): string {
+  if (!seconds || seconds <= 0) return "PT0S";
+  const m = Math.floor(seconds / 60);
+  const s = Math.round(seconds % 60);
+  return `PT${m > 0 ? `${m}M` : ""}${s}S`;
+}
 
 export function getCategory(slug: string): MediaCategory | undefined {
   return CATEGORIES.find((c) => c.slug === slug);

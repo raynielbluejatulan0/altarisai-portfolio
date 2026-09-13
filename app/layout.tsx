@@ -3,7 +3,7 @@ import { Bodoni_Moda, Manrope, JetBrains_Mono } from "next/font/google";
 import { Navbar } from "@/components/ui/Navbar";
 import { Footer } from "@/components/ui/Footer";
 import { MotionProvider } from "@/components/providers/MotionProvider";
-import { SITE, CONTACT } from "@/lib/constants";
+import { SITE, CONTACT, SOCIALS } from "@/lib/constants";
 import "./globals.css";
 
 // Display: high-contrast Didone — cinematic film-title character
@@ -38,11 +38,41 @@ export const metadata: Metadata = {
   },
   description: SITE.description,
   metadataBase: new URL(SITE.url),
+  applicationName: SITE.name,
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  publisher: SITE.name,
+  category: "Advertising",
+  keywords: [
+    "AI video ads",
+    "AI video ad studio",
+    "AI UGC ads",
+    "AI product commercials",
+    "eCommerce video ads",
+    "DTC video ads",
+    "AI video production",
+    "creative testing",
+    "performance creative",
+    "video ad agency",
+  ],
+  alternates: { canonical: "/" },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: `${SITE.name} · ${SITE.tagline}`,
     description: SITE.description,
     url: SITE.url,
     siteName: SITE.name,
+    locale: "en_US",
     type: "website",
   },
   twitter: {
@@ -51,6 +81,8 @@ export const metadata: Metadata = {
     description: SITE.description,
   },
 };
+
+const socialLinks = SOCIALS.filter((s) => s.href !== "#").map((s) => s.href);
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -63,7 +95,22 @@ const jsonLd = {
       slogan: SITE.tagline,
       description: SITE.description,
       email: `mailto:${CONTACT.email}`,
-      logo: `${SITE.url}/logo.png`,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE.url}/logo.png`,
+        width: 1254,
+        height: 1254,
+      },
+      ...(socialLinks.length ? { sameAs: socialLinks } : {}),
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE.url}/#website`,
+      url: SITE.url,
+      name: SITE.name,
+      description: SITE.description,
+      inLanguage: "en",
+      publisher: { "@id": `${SITE.url}/#organization` },
     },
     {
       "@type": "ProfessionalService",
