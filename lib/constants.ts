@@ -20,15 +20,17 @@ export const CONTACT = {
   whatsappDisplay: "+63 960 868 8682",
 };
 
-/* ─── Social profiles (placeholder hrefs — replace "#" with real URLs) ─────── */
+/* ─── Social profiles ─────────────────────────────────────────────────────── */
 
-export const SOCIALS = [
-  { label: "Facebook", href: "#", icon: "facebook" },
-  { label: "Instagram", href: "#", icon: "instagram" },
-  { label: "Threads", href: "#", icon: "threads" },
-  { label: "TikTok", href: "#", icon: "tiktok" },
-  { label: "X", href: "#", icon: "x" },
-] as const;
+type SocialIcon = "facebook" | "instagram" | "threads" | "tiktok" | "x";
+
+export const SOCIALS: readonly { label: string; href: string; icon: SocialIcon }[] = [
+  { label: "Facebook", href: "https://www.facebook.com/profile.php?id=61594000755438", icon: "facebook" },
+  { label: "Instagram", href: "https://www.instagram.com/business.altarisai/", icon: "instagram" },
+  { label: "Threads", href: "https://www.threads.com/@business.altarisai", icon: "threads" },
+  { label: "TikTok", href: "https://www.tiktok.com/@businessaltarisai", icon: "tiktok" },
+  { label: "X", href: "https://x.com/altarisai", icon: "x" },
+];
 
 /* ─── CTAs (single swap point: replace href with Calendly URL later) ─────── */
 
