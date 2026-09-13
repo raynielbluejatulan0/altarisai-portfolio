@@ -2,7 +2,7 @@ export const SITE = {
   name: "Altaris AI",
   tagline: "AI Video Ad Studio",
   description:
-    "AI-powered video ad creatives for eCommerce and DTC brands: UGC-style ads, product commercials, and creative testing assets built to convert.",
+    "A premium AI video ad studio for eCommerce and DTC brands: UGC-style ads, product commercials, and creative-testing systems engineered to convert.",
   url: "https://altarisai.online",
 };
 
@@ -51,8 +51,8 @@ export const HERO = {
   headlineAccent: "stop the scroll",
   headlinePost: "and sell.",
   subheadline:
-    "We help eCommerce and DTC brands ship high-converting ad creatives: strategy, script, and final cut in days, not weeks. No studios, no shoot days, no production bottleneck.",
-  status: "Available for projects · GMT+8",
+    "We partner with eCommerce and DTC brands to produce high-converting video ads end to end: strategy, script, and final cut delivered in days, not weeks. No studios, no shoot days, no production bottlenecks.",
+  status: "Now booking select brand partnerships · GMT+8",
 };
 
 /* ─── Value proposition ───────────────────────────────────────────────────── */
@@ -61,19 +61,19 @@ export const VALUE_PROPS = [
   {
     title: "Strategy before pixels",
     description:
-      "Every ad starts with research, customer psychology, and a hook plan, not a prompt. The creative is engineered to convert before a single frame is generated.",
+      "Every ad begins with research, customer psychology, and a deliberate hook plan, never a prompt. The creative is engineered to convert before a single frame is generated.",
     icon: "Target",
   },
   {
     title: "Production quality, AI speed",
     description:
-      "Commercial-grade visuals without casting, studios, or shoot days. Concepts become finished ads in days, so you can test more angles for less.",
+      "Commercial-grade visuals without casting, studios, or shoot days. Concepts become finished, on-brand ads in days, so you can test more angles for less.",
     icon: "Zap",
   },
   {
     title: "Built for testing",
     description:
-      "Hooks, scripts, and variations delivered as structured test cells, so your media buyer learns something from every dollar spent.",
+      "Hooks, scripts, and variations delivered as structured test cells, so every dollar your media buyer spends returns a clear, usable signal.",
     icon: "FlaskConical",
   },
 ];
@@ -84,13 +84,13 @@ export const AUDIENCES = [
   {
     title: "eCommerce & DTC Brands",
     description:
-      "You need a steady stream of fresh ad creative to fight fatigue, without burning budget on monthly shoots.",
+      "You need a dependable stream of fresh ad creative to outpace fatigue, without tying up budget in monthly shoots.",
     icon: "ShoppingBag",
   },
   {
     title: "Shopify Stores",
     description:
-      "You're scaling paid social and the bottleneck isn't media buying, it's creative volume and iteration speed.",
+      "You are scaling paid social, and the constraint is not media buying. It is creative volume and the speed to iterate on it.",
     icon: "Store",
   },
   {
@@ -102,7 +102,7 @@ export const AUDIENCES = [
   {
     title: "Marketing Agencies",
     description:
-      "You need a reliable creative partner who delivers client-ready ad assets on agency timelines, white-label friendly.",
+      "You need a dependable creative partner who ships client-ready assets on agency timelines, fully white-label.",
     icon: "Briefcase",
   },
 ];
@@ -125,18 +125,18 @@ export const SERVICES = [
   {
     title: "AI UGC Ads",
     icon: "Users",
-    problem: "Real UGC is slow, inconsistent, and expensive to source at volume.",
+    problem: "Authentic UGC is slow to source, inconsistent in quality, and expensive to produce at volume.",
     solution:
-      "Authentic-feeling, UGC-style video ads generated and edited to platform-native standards, ready for Meta and TikTok.",
+      "Authentic-feeling, UGC-style video ads generated and edited to platform-native standards, ready to run on Meta and TikTok.",
     benefits: ["Native feel that earns watch time", "Unlimited talent variety", "Days, not weeks"],
     deliverables: ["9:16 UGC ads", "Hook variations", "Caption versions"],
   },
   {
     title: "AI Product Commercials",
     icon: "Clapperboard",
-    problem: "Commercial production quality is priced out of reach for most growing brands.",
+    problem: "Commercial-grade production has long been priced out of reach for most growing brands.",
     solution:
-      "Cinematic product spots (macro shots, dynamic scenes, brand-grade polish) produced entirely through an AI pipeline.",
+      "Cinematic product spots, from macro detail to dynamic scenes and brand-grade finishing, produced entirely through our AI pipeline.",
     benefits: ["Broadcast-level visuals", "No studio or crew costs", "Full creative control"],
     deliverables: ["Hero commercial", "16:9 + 9:16 versions", "Cutdowns"],
   },
@@ -145,25 +145,25 @@ export const SERVICES = [
     icon: "Smartphone",
     problem: "Feeds move fast. Last month's creative is already invisible.",
     solution:
-      "Platform-tuned ad creatives built for the scroll: thumb-stopping openers, tight pacing, and sound-off-safe storytelling.",
+      "Platform-tuned ad creatives engineered for the scroll: thumb-stopping openers, disciplined pacing, and sound-off storytelling.",
     benefits: ["Placement-optimized formats", "Fresh angles monthly", "Consistent brand system"],
     deliverables: ["Feed + Stories + Reels formats", "Multiple aspect ratios", "Text-overlay variants"],
   },
   {
     title: "Product Launch Videos",
     icon: "Rocket",
-    problem: "Launches get one first impression. Most products waste it on a spec list.",
+    problem: "A launch gets one first impression, and most products spend it on a spec list.",
     solution:
-      "A launch package that makes the product feel inevitable: hero film for the moment, cutdowns for the campaign that follows.",
+      "A launch suite that makes the product feel inevitable: a hero film for the moment, cutdowns for the campaign that follows.",
     benefits: ["One cohesive launch story", "Assets for every channel", "Momentum past day one"],
     deliverables: ["Launch film", "Feature cutdowns", "Teaser assets"],
   },
   {
     title: "Creative Strategy",
     icon: "Compass",
-    problem: "Great production wasted on the wrong angle still doesn't convert.",
+    problem: "Even flawless production fails when it is aimed at the wrong angle.",
     solution:
-      "Research-driven creative direction: competitor analysis, customer psychology, and angle mapping before anything is produced.",
+      "Research-led creative direction: competitor analysis, customer psychology, and angle mapping before anything goes into production.",
     benefits: ["Angles grounded in research", "Clear testing roadmap", "No guesswork creative"],
     deliverables: ["Creative brief", "Angle map", "Testing plan"],
   },
@@ -172,34 +172,34 @@ export const SERVICES = [
     icon: "PenLine",
     problem: "Weak scripts make even beautiful footage forgettable.",
     solution:
-      "Conversion-focused scripts with beat-by-beat timing, plus visual storyboards that lock the creative before production.",
+      "Conversion-focused scripts with beat-by-beat timing, paired with visual storyboards that lock the creative before production.",
     benefits: ["Hooks engineered first", "Every second accounted for", "Alignment before production"],
     deliverables: ["Full scripts", "Storyboard frames", "Hook alternatives"],
   },
   {
     title: "AI Image & Video Production",
     icon: "Sparkles",
-    problem: "Brands need constant visual content, but shoots don't scale.",
+    problem: "Brands need a constant flow of visual content, but traditional shoots do not scale.",
     solution:
-      "A full AI production pipeline (product imagery, lifestyle scenes, and video generation) matched to your brand's look.",
+      "A complete AI production pipeline, from product imagery to lifestyle scenes and video, matched precisely to your brand's look.",
     benefits: ["Brand-consistent output", "Any scene, any setting", "Volume without fatigue"],
     deliverables: ["Product imagery sets", "Lifestyle scenes", "Generated video"],
   },
   {
     title: "Editing & Post-Production",
     icon: "Scissors",
-    problem: "Raw generative output isn't an ad. The edit is where it converts.",
+    problem: "Raw generative output is not an ad. The edit is where it converts.",
     solution:
-      "Professional editing: pacing, sound design, captions, color, and platform-specific finishing on every deliverable.",
+      "Professional post: pacing, sound design, captions, color, and platform-specific finishing on every deliverable.",
     benefits: ["Retention-focused pacing", "Sound-off optimized", "Polished final delivery"],
     deliverables: ["Final edits", "Caption styling", "Format exports"],
   },
   {
     title: "Creative Testing Assets",
     icon: "FlaskConical",
-    problem: "One ad tells you nothing. Structured variation is how accounts scale.",
+    problem: "A single ad tells you nothing. Structured variation is how accounts scale.",
     solution:
-      "Variant sets built for clean testing: one variable per cell across hooks, angles, and CTAs, mapped in a testing matrix.",
+      "Variant sets built for clean testing, one variable per cell across hooks, angles, and CTAs, mapped in a clear testing matrix.",
     benefits: ["Readable test results", "Faster winning-ad discovery", "Efficient iteration loop"],
     deliverables: ["Variant sets", "Testing matrix", "Iteration recommendations"],
   },
@@ -208,17 +208,17 @@ export const SERVICES = [
 /* ─── Creative workflow (12 steps) ────────────────────────────────────────── */
 
 export const WORKFLOW_STEPS = [
-  { step: "01", title: "Discovery", description: "Brand, product, offer, and goals, aligned before anything is made." },
+  { step: "01", title: "Discovery", description: "Brand, product, offer, and objectives aligned before anything is made." },
   { step: "02", title: "Product Research", description: "Reviews, objections, and use cases mined for creative raw material." },
-  { step: "03", title: "Competitor Research", description: "What the market is running, what's saturated, and where the gaps are." },
-  { step: "04", title: "Customer Psychology", description: "The real reason people buy, mapped into angles that resonate." },
+  { step: "03", title: "Competitor Research", description: "What the market is running, what is saturated, and where the openings are." },
+  { step: "04", title: "Customer Psychology", description: "The real reasons people buy, mapped into angles that resonate." },
   { step: "05", title: "Creative Strategy", description: "Angles, formats, and a testing plan grounded in the research." },
   { step: "06", title: "Hooks", description: "The first two seconds, engineered, with multiple openers per concept." },
-  { step: "07", title: "Script", description: "Beat-by-beat scripts where every line earns the next second of watch time." },
+  { step: "07", title: "Script", description: "Beat-by-beat scripts where every line earns the next second of attention." },
   { step: "08", title: "Storyboard", description: "The full ad visualized frame by frame before production begins." },
   { step: "09", title: "AI Images", description: "Product and scene imagery generated to match your brand's look." },
   { step: "10", title: "AI Video", description: "Scenes brought to motion through a professional AI video pipeline." },
-  { step: "11", title: "Editing", description: "Pacing, sound design, captions, and grade: where the ad becomes an ad." },
+  { step: "11", title: "Editing", description: "Pacing, sound design, captions, and color: where the ad becomes an ad." },
   { step: "12", title: "Final Delivery", description: "Every format, ratio, and variant, organized and ready to launch." },
 ];
 
@@ -228,29 +228,29 @@ export const WHY_ME = [
   {
     title: "A marketer first",
     description:
-      "The goal is never 'impressive AI'. It's ads that convert. Every creative decision traces back to customer psychology and performance.",
+      "The goal is never 'impressive AI'. It is ads that convert. Every creative decision traces back to customer psychology and measured performance.",
   },
   {
     title: "Full pipeline, one team",
     description:
-      "Strategy, script, visuals, edit, delivery: no handoffs, no telephone game, no waiting on a production chain.",
+      "Strategy, script, visuals, edit, and delivery under one roof. No handoffs, no telephone game, no waiting on a production chain.",
   },
   {
     title: "Testing velocity",
     description:
-      "AI production means more concepts tested per month. More tests, faster learning, quicker path to your winning creative.",
+      "AI production means more concepts tested every month. More tests, faster learning, and a quicker path to your winning creative.",
   },
   {
     title: "Direct collaboration",
     description:
-      "You work directly with the team making your ads. Feedback lands directly on the work, usually turned around within a day.",
+      "You work directly with the team building your ads. Feedback lands straight on the work, typically turned around within a day.",
   },
 ];
 
 export const ABOUT = {
   paragraphs: [
-    "We build advertising creatives, not AI demos. Since 2022 we've worked across the full generative stack (images, video, voice) with one lens: does this make someone stop, watch, and buy?",
-    "Today we run a complete AI production pipeline for eCommerce and DTC brands: research-backed creative strategy in, finished ad creatives out. The tools change monthly. The marketing thinking is what compounds.",
+    "We build advertising creative, not AI demos. Since 2022 we have worked across the full generative stack, images, video, and voice, through a single lens: does this make someone stop, watch, and buy?",
+    "Today we operate a complete AI production pipeline for eCommerce and DTC brands. Research-backed creative strategy in, finished ad creative out. The tools evolve monthly; the marketing thinking is what compounds.",
   ],
 };
 
@@ -271,31 +271,31 @@ export const TECH_STACK = [
 export const FAQS = [
   {
     q: "How long does production take?",
-    a: "Most ad packages are delivered within 3–7 business days depending on scope. A single UGC-style ad with hook variations typically ships in 3–4 days; full launch packages take about a week.",
+    a: "Most ad packages are delivered within 3 to 7 business days, depending on scope. A single UGC-style ad with hook variations typically ships in 3 to 4 days; full launch packages take about a week.",
   },
   {
     q: "Can you match our brand's look and style?",
-    a: "Yes, brand matching is step one. We work from your brand guidelines, existing creative, and product imagery so everything delivered looks like it came from your team.",
+    a: "Yes. Brand matching is step one. We work from your brand guidelines, existing creative, and product imagery, so everything we deliver looks like it came from your own team.",
   },
   {
     q: "Is everything made with AI?",
-    a: "Generation is AI-powered; the thinking isn't. Strategy, scripts, direction, curation, and editing are human work. AI replaces the camera and the studio, not the marketer.",
+    a: "Generation is AI-powered; the thinking is not. Strategy, scripts, direction, curation, and editing are human work. AI replaces the camera and the studio, not the marketer.",
   },
   {
     q: "Can I request revisions?",
-    a: "Of course. Every project includes revision rounds, and direction-level feedback is usually turned around within a day. The goal is an ad you're confident putting spend behind.",
+    a: "Absolutely. Every project includes revision rounds, and direction-level feedback is usually turned around within a day. The goal is an ad you are confident putting real spend behind.",
   },
   {
     q: "Can you create multiple ad variations?",
-    a: "That's the core advantage. Hooks, angles, and CTA variations are delivered as structured test sets (one variable per cell) so your testing actually produces answers.",
+    a: "That is the core advantage. Hooks, angles, and CTA variations are delivered as structured test sets, one variable per cell, so your testing actually produces answers.",
   },
   {
     q: "Do you provide scripts and storyboards?",
-    a: "Yes. Every video is built on a beat-timed script and a visual storyboard, which you approve before production. You'll always know exactly what's being made.",
+    a: "Yes. Every video is built on a beat-timed script and a visual storyboard that you approve before production. You will always know exactly what is being made.",
   },
   {
     q: "Can you work with our existing footage?",
-    a: "Yes, existing footage, product shots, and past creative can be edited, extended, or blended with AI-generated scenes to stretch what you already have.",
+    a: "Yes. Existing footage, product shots, and past creative can be edited, extended, or blended with AI-generated scenes to get more from what you already have.",
   },
 ];
 
