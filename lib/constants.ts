@@ -10,7 +10,7 @@ export const SITE = {
 
 export const NAV_LINKS = [
   { label: "Services", href: "/#services" },
-  { label: "Portfolio", href: "/portfolio" },
+  { label: "Work", href: "/#work" },
   { label: "Process", href: "/#process" },
   { label: "FAQ", href: "/#faq" },
   { label: "Contact", href: "/#contact" },
@@ -42,8 +42,8 @@ export const CTA_PRIMARY = {
 };
 
 export const CTA_SECONDARY = {
-  label: "View Portfolio",
-  href: "/portfolio",
+  label: "View Our Work",
+  href: "/#work",
 };
 
 /* ─── Hero ────────────────────────────────────────────────────────────────── */

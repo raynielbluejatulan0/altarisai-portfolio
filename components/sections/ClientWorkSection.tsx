@@ -11,7 +11,7 @@ import { CLIENT_WORK, type ClientWork } from "@/lib/constants";
 
 export function ClientWorkSection() {
   return (
-    <SectionContainer bordered>
+    <SectionContainer id="work" bordered>
       <SectionHeading
         eyebrow="UGC Ads"
         title={
