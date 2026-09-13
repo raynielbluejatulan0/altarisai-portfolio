@@ -299,6 +299,34 @@ export const FAQS = [
   },
 ];
 
+/* ─── Client work (real, approved brands + their AI UGC ads) ──────────────────
+   PLACEHOLDERS for now. When ready:
+     1. Drop each ad video + poster into /public/portfolio/clients/
+     2. Set `video` and `poster` to those paths
+     3. Replace `brand`, `person`, and `quote` with the client's REAL, APPROVED words
+   Never fabricate a testimonial. */
+
+export interface ClientWork {
+  brand: string;
+  person: string; // name and/or role
+  quote: string;
+  rating: number; // 1–5
+  video: string | null; // e.g. "/portfolio/clients/brand-01.mp4"
+  poster: string | null; // e.g. "/portfolio/clients/brand-01.jpg"
+}
+
+const CLIENT_WORK_PLACEHOLDER_QUOTE =
+  "Placeholder testimonial. This is where the brand's real, approved words about the ad and the results it drove will appear.";
+
+export const CLIENT_WORK: ClientWork[] = Array.from({ length: 10 }, (_, i) => ({
+  brand: `Brand ${String(i + 1).padStart(2, "0")}`,
+  person: "Founder",
+  quote: CLIENT_WORK_PLACEHOLDER_QUOTE,
+  rating: 5,
+  video: null,
+  poster: null,
+}));
+
 /* ─── Testimonials (placeholders only, never fabricated) ─────────────────── */
 
 export const TESTIMONIAL_PLACEHOLDERS = [

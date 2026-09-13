@@ -1,0 +1,109 @@
+"use client";
+
+import { useState } from "react";
+import Image from "next/image";
+import { motion } from "framer-motion";
+import { Play, Star } from "lucide-react";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { SectionContainer } from "@/components/ui/SectionContainer";
+import { SectionHeading } from "@/components/ui/SectionHeading";
+import { CLIENT_WORK, type ClientWork } from "@/lib/constants";
+
+export function ClientWorkSection() {
+  return (
+    <SectionContainer bordered>
+      <SectionHeading
+        eyebrow="Client Work"
+        title={
+          <>
+            Real brands, <span className="text-gradient">real results.</span>
+          </>
+        }
+        subtitle="AI UGC ads we've produced for growing brands, in their own words."
+      />
+
+      <motion.div
+        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        variants={staggerContainer}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-80px" }}
+      >
+        {CLIENT_WORK.map((client) => (
+          <motion.div key={client.brand} variants={fadeInUp} className="h-full">
+            <ClientCard item={client} />
+          </motion.div>
+        ))}
+      </motion.div>
+    </SectionContainer>
+  );
+}
+
+function ClientCard({ item }: { item: ClientWork }) {
+  const [playing, setPlaying] = useState(false);
+  const hasVideo = Boolean(item.video);
+
+  return (
+    <figure className="glow-card flex h-full flex-col overflow-hidden">
+      {/* 9:16 ad */}
+      <div className="relative w-full overflow-hidden bg-black" style={{ aspectRatio: "9 / 16" }}>
+        {playing && item.video ? (
+          <video
+            src={item.video}
+            poster={item.poster ?? undefined}
+            controls
+            autoPlay
+            playsInline
+            className="absolute inset-0 h-full w-full object-cover"
+          />
+        ) : item.poster ? (
+          <button
+            type="button"
+            onClick={() => hasVideo && setPlaying(true)}
+            className="group absolute inset-0 h-full w-full"
+            aria-label={`Play ${item.brand} ad`}
+          >
+            <Image
+              src={item.poster}
+              alt={`${item.brand} AI UGC ad`}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+            {hasVideo && (
+              <span className="pointer-events-none absolute left-1/2 top-1/2 grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 place-items-center rounded-full border border-white/30 bg-black/40 text-white backdrop-blur-sm transition-all duration-300 group-hover:scale-110 group-hover:bg-black/55">
+                <Play className="h-5 w-5 translate-x-[1px] fill-current" />
+              </span>
+            )}
+          </button>
+        ) : (
+          /* Placeholder: awaiting the real ad file */
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 text-foreground-dim">
+            <span className="grid h-14 w-14 place-items-center border border-white/15">
+              <Play className="h-5 w-5" />
+            </span>
+            <span className="font-mono text-[0.65rem] uppercase tracking-[0.25em]">Reel coming soon</span>
+          </div>
+        )}
+      </div>
+
+      {/* Testimonial */}
+      <figcaption className="flex flex-1 flex-col p-6">
+        <div className="flex gap-0.5 text-accent" aria-label={`${item.rating} out of 5`}>
+          {Array.from({ length: item.rating }).map((_, i) => (
+            <Star key={i} className="h-3.5 w-3.5 fill-current" aria-hidden />
+          ))}
+        </div>
+        <blockquote className="mt-4 flex-1 text-sm leading-relaxed text-foreground-muted">
+          “{item.quote}”
+        </blockquote>
+        <div className="mt-5 border-t border-white/[0.06] pt-4">
+          <p className="font-display text-base font-semibold text-foreground">{item.brand}</p>
+          <p className="font-mono text-[0.7rem] uppercase tracking-[0.2em] text-foreground-dim">
+            {item.person}
+          </p>
+        </div>
+      </figcaption>
+    </figure>
+  );
+}
