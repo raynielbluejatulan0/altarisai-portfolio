@@ -260,11 +260,10 @@ export const ABOUT = {
 
 export const TECH_STACK = [
   { name: "Claude", role: "Research, strategy & scripts" },
-  { name: "Google Flow", role: "Production orchestration" },
-  { name: "Veo 3", role: "AI video generation" },
-  { name: "Nano Banana Pro", role: "AI image generation" },
+  { name: "Seedance 2.5", role: "AI video generation" },
+  { name: "GPT Image 2.5", role: "AI image generation" },
   { name: "ElevenLabs", role: "Voiceover & sound" },
-  { name: "CapCut Pro", role: "Editing & captions" },
+  { name: "Adobe Premiere Pro", role: "Editing & captions" },
   { name: "Photoshop", role: "Finishing & retouch" },
 ];
 
