@@ -3,18 +3,19 @@
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, slideInRight } from "@/lib/animations";
 import { SectionContainer } from "@/components/ui/SectionContainer";
-import { ABOUT, WHY_ME } from "@/lib/constants";
+import { WHY_ME } from "@/lib/constants";
 
 export function WhyMeSection() {
   return (
-    <SectionContainer id="about" bordered>
+    <SectionContainer bordered>
       <div className="grid items-start gap-14 lg:grid-cols-2">
-        {/* About */}
+        {/* Positioning statement */}
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
+          className="lg:sticky lg:top-28"
         >
           <motion.span variants={fadeInUp} className="tag inline-block">
             Why Work With Us
@@ -22,15 +23,10 @@ export function WhyMeSection() {
           <motion.h2 variants={fadeInUp} className="section-title mt-5 text-balance">
             Ad makers who happen <span className="text-gradient">to use AI.</span>
           </motion.h2>
-          {ABOUT.paragraphs.map((paragraph) => (
-            <motion.p
-              key={paragraph.slice(0, 24)}
-              variants={fadeInUp}
-              className="mt-6 text-base leading-relaxed text-foreground-muted"
-            >
-              {paragraph}
-            </motion.p>
-          ))}
+          <motion.p variants={fadeInUp} className="mt-6 text-base leading-relaxed text-foreground-muted">
+            AI is the production advantage, not the strategy. The thinking that decides what to make,
+            and why it should work, is where every engagement starts.
+          </motion.p>
         </motion.div>
 
         {/* Differentiators */}

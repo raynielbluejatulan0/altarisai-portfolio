@@ -1,13 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { type ReactNode, type ButtonHTMLAttributes } from "react";
+import { type ReactNode, type MouseEventHandler } from "react";
 import { ease, tapShrink } from "@/lib/animations";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
   variant?: "primary" | "secondary" | "outline" | "ghost";
   size?: "sm" | "md" | "lg";
   href?: string;
+  target?: string;
+  rel?: string;
+  type?: "button" | "submit" | "reset";
+  disabled?: boolean;
+  onClick?: MouseEventHandler<HTMLAnchorElement | HTMLButtonElement>;
+  "aria-label"?: string;
+  className?: string;
   children: ReactNode;
 }
 
@@ -43,7 +50,13 @@ export function Button({
 
   if (href) {
     return (
-      <motion.a href={href} className={classes} whileHover={hoverVariants[variant]} whileTap={tapShrink}>
+      <motion.a
+        href={href}
+        className={classes}
+        whileHover={hoverVariants[variant]}
+        whileTap={tapShrink}
+        {...(props as object)}
+      >
         {children}
       </motion.a>
     );

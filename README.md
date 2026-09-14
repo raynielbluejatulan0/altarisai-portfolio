@@ -1,23 +1,39 @@
-# AI Video Ads Portfolio
+# ALTARIS AI — altarisai.online
 
-Premium portfolio site for an AI Video Ads Specialist, built with Next.js 14 (App
-Router), Tailwind, and Framer Motion.
+Marketing site for **ALTARIS AI**, an AI-powered creative production company for
+eCommerce and DTC brands. Built with Next.js 14 (App Router), Tailwind, and
+Framer Motion. Deploys to [Vercel](https://vercel.com).
 
-## The portfolio is data-driven
+## Structure
 
-The entire portfolio is generated from a single source folder — **`/AI Videos`** —
-where each subfolder is a category and each file is a piece of work. Add a folder,
-drop in clips, re-run the pipeline, and a new portfolio category appears
-automatically. Nothing is hard-coded.
+Single landing page (`app/page.tsx`) composed of sections in
+`components/sections/`, plus `/privacy`, `/terms`, and a branded 404.
+All copy lives in **`lib/constants.ts`** — the single source of truth for
+every section. External integrations are centralized in **`lib/config.ts`**.
 
-```
-AI Videos/
-  UGC/            1.mp4, 2.mp4, ...
-  VSL/            1.mp4, ...
-  3D PIXAR/       1.mp4, ...
-  GRAPHICS DESIGNS/  1.jpg, ...   ← images work too
-  ...
-```
+## External integrations (env-driven — see `lib/config.ts`)
+
+Nothing is hardcoded; connect services by setting environment variables in
+`.env.local` and on Vercel, then redeploying:
+
+| Variable | Connects | Until configured |
+| --- | --- | --- |
+| `NEXT_PUBLIC_CALENDLY_URL` | "Book a Discovery Call" CTAs → Calendly | CTAs route to the contact form |
+| `NEXT_PUBLIC_FORM_ENDPOINT` | Qualification form POST (e.g. Formspree) | Form composes a prefilled email |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | hello@altarisai.online (once the mailbox exists) | Working Gmail address is used |
+| `NEXT_PUBLIC_GA_ID` | Google Analytics 4 | Not loaded |
+| `NEXT_PUBLIC_META_PIXEL_ID` | Meta Pixel | Not loaded |
+
+CTA/interaction events (`lib/analytics.ts`) flow to Vercel Analytics (enable it
+on the Vercel project — no keys needed) and forward to GA4/Pixel when enabled.
+
+## Portfolio is data-driven
+
+The portfolio is generated from a single source folder — **`/AI Videos`** —
+where each subfolder is a category and each file is a piece of work. The
+homepage curates it: UGC ads and commercial formats in **Selected Work**,
+experimental formats in the **Creative Lab** (`lib/constants.ts` controls
+which category appears where).
 
 ### Media pipeline
 
@@ -39,6 +55,24 @@ npm run media
 Output lands in `public/portfolio/media/<category>/…` and is committed/deployed.
 The raw `/AI Videos` folder is git-ignored (local source only).
 
+The hero showreel (`public/showreel/`) is a hand-cut ffmpeg montage of the
+strongest advertising clips; the founder photo (`public/founder.jpg`) is the
+optimized version of the local source portrait.
+
+## How it fits together
+
+| Piece | File |
+| --- | --- |
+| All site copy / content data | `lib/constants.ts` |
+| Integration configuration | `lib/config.ts` |
+| Event tracking | `lib/analytics.ts` |
+| Manifest generator | `scripts/build-media.mjs` |
+| Typed media layer | `lib/media.ts` |
+| Portfolio card / grid / player | `components/gallery/` |
+| Curated work + labels | `components/sections/WorkSection.tsx` |
+| Creative Lab | `components/sections/CreativeLabSection.tsx` |
+| Qualification form | `components/forms/QualificationForm.tsx` |
+
 ## Development
 
 ```bash
@@ -47,22 +81,3 @@ npm run dev      # http://localhost:3000
 npm run build    # production build
 npm run lint
 ```
-
-## How it fits together
-
-| Piece | File |
-| --- | --- |
-| Manifest generator | `scripts/build-media.mjs` |
-| Typed data layer + helpers | `lib/media.ts` |
-| Portfolio card (poster, hover-preview, play) | `components/gallery/MediaCard.tsx` |
-| Fullscreen player (prev/next, keyboard, Esc) | `components/gallery/Lightbox.tsx` |
-| Masonry grid + lightbox owner | `components/gallery/GalleryGrid.tsx` |
-| Tabbed category browser | `components/gallery/PortfolioExplorer.tsx` |
-| Homepage featured reel | `components/sections/FeaturedWorkSection.tsx` |
-| Portfolio page | `app/portfolio/page.tsx` |
-| Per-category pages | `app/portfolio/[slug]/page.tsx` |
-
-## Deploy
-
-Deploys to [Vercel](https://vercel.com). The optimized media in
-`public/portfolio/media` ships with the build; the raw source folder does not.

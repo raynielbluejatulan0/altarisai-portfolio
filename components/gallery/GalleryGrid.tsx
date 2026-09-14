@@ -10,6 +10,8 @@ interface GalleryGridProps {
   /** column density preset */
   density?: "comfortable" | "dense";
   priorityCount?: number;
+  /** analytics hook — fired when an item is opened in the lightbox */
+  onItemOpen?: (item: MediaItem) => void;
 }
 
 /**
@@ -17,7 +19,7 @@ interface GalleryGridProps {
  * etc.) and owns a Lightbox scoped to its own items, so prev/next cycles the
  * visible set. CSS multi-column keeps mixed orientations looking intentional.
  */
-export function GalleryGrid({ items, density = "comfortable", priorityCount = 0 }: GalleryGridProps) {
+export function GalleryGrid({ items, density = "comfortable", priorityCount = 0, onItemOpen }: GalleryGridProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const columns =
@@ -30,7 +32,14 @@ export function GalleryGrid({ items, density = "comfortable", priorityCount = 0 
       <div className={`${columns} gap-4 [column-fill:_balance] sm:gap-5`}>
         {items.map((item, i) => (
           <div key={item.id} className="mb-4 break-inside-avoid sm:mb-5">
-            <MediaCard item={item} onOpen={() => setOpenIndex(i)} priority={i < priorityCount} />
+            <MediaCard
+              item={item}
+              onOpen={() => {
+                setOpenIndex(i);
+                onItemOpen?.(item);
+              }}
+              priority={i < priorityCount}
+            />
           </div>
         ))}
       </div>

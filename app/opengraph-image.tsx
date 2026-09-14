@@ -54,9 +54,10 @@ export default function OpengraphImage() {
             marginTop: 48,
             color: "#C7CAD1",
             fontSize: 30,
+            display: "flex",
           }}
         >
-          {SITE.name} · altarisai.online
+          {`${SITE.name} · altarisai.online`}
         </div>
       </div>
     ),

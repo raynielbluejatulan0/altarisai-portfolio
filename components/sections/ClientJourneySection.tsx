@@ -4,41 +4,34 @@ import { motion } from "framer-motion";
 import { fadeInUp, staggerContainerFast } from "@/lib/animations";
 import { SectionContainer } from "@/components/ui/SectionContainer";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { WORKFLOW_STEPS } from "@/lib/constants";
+import { CLIENT_JOURNEY } from "@/lib/constants";
 
-export function WorkflowSection() {
+export function ClientJourneySection() {
   return (
-    <SectionContainer id="pipeline" bordered>
+    <SectionContainer id="process" bordered>
       <SectionHeading
-        eyebrow="Inside the Pipeline"
+        eyebrow="Working Together"
         title={
           <>
-            Every piece follows the same <span className="text-gradient">proven pipeline.</span>
+            From first call to <span className="text-gradient">final creative.</span>
           </>
         }
-        subtitle="The client journey above is what you experience. This is the internal production process behind it: research first, generation late, editing always."
+        subtitle="What an engagement actually looks like from your side, in six steps."
       />
 
       <motion.ol
-        className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        className="mx-auto grid max-w-5xl gap-5 sm:grid-cols-2 lg:grid-cols-3"
         variants={staggerContainerFast}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-80px" }}
       >
-        {WORKFLOW_STEPS.map((step) => (
+        {CLIENT_JOURNEY.map((step) => (
           <motion.li
             key={step.step}
             variants={fadeInUp}
             className="glow-card relative overflow-hidden rounded-3xl p-7"
           >
-            {/* oversized ghost numeral */}
-            <span
-              className="font-display pointer-events-none absolute -right-2 -top-6 text-[6rem] font-bold leading-none text-white/[0.04]"
-              aria-hidden
-            >
-              {step.step}
-            </span>
             <span className="font-display text-sm font-bold text-accent">{step.step}</span>
             <h3 className="font-display mt-3 text-lg font-bold text-foreground">{step.title}</h3>
             <p className="mt-2 text-sm leading-relaxed text-foreground-muted">{step.description}</p>
